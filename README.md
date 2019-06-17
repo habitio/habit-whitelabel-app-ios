@@ -3,12 +3,12 @@
 This repository contains the source code to build a Habit Whitelabel application for iOS 
 
 This Application interacts with the Habit Platform API in order to:
-. Create new user Accounts and Login
-. Pair IoT devices available to a specific application. To have devices available on your specific application please get in touch by sending us an email to support@habit.io.
-. List and interact with the user’s paired devices
-. Create and manage the user’s Agent list. These Agents are automation rules that enables integrations between different manufacturer devices.
-. Possible to enable/disable a cards/messages screen, for you to be able to interact with your user. 
-. User’s profile screen, where the user can define his preferences.
+* Create new user Accounts and Login
+* Pair IoT devices available to a specific application. To have devices available on your specific application please get in touch by sending us an email to support@habit.io.
+* List and interact with the user’s paired devices
+* Create and manage the user’s Agent list. These Agents are automation rules that enables integrations between different manufacturer devices.
+* Possible to enable/disable a cards/messages screen, for you to be able to interact with your user. 
+* User’s profile screen, where the user can define his preferences.
 
 ## Getting Started
 
