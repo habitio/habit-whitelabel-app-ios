@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SanFranciscoDisplay-Medium.otf">
+            <string>SanFranciscoDisplay-Medium</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MZCardsViewController">
+            <connections>
+                <outlet property="uiBlankState" destination="6YU-vV-d08" id="PQH-pa-Tbv"/>
+                <outlet property="uiBtClearCards" destination="gZD-o4-tpD" id="Rfo-DA-Znc"/>
+                <outlet property="uiCardsTableView" destination="Wol-7W-1th" id="noo-Io-nZX"/>
+                <outlet property="uiCardsView" destination="cvi-Ds-dVc" id="LFE-A5-RzG"/>
+                <outlet property="uiClearButtonView" destination="E5I-DP-O8m" id="sZO-17-Jcq"/>
+                <outlet property="uiOverlayView" destination="tvJ-uv-XCL" id="veZ-mP-bW6"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cvi-Ds-dVc">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E5I-DP-O8m" userLabel="uiClearButtonView">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="36"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gZD-o4-tpD">
+                                    <rect key="frame" x="323" y="3.5" width="42" height="29"/>
+                                    <fontDescription key="fontDescription" name="SanFranciscoDisplay-Medium" family="San Francisco Display" pointSize="14"/>
+                                    <state key="normal" title="Button"/>
+                                    <connections>
+                                        <action selector="uiBtClearCards_TouchUpInside:" destination="-1" eventType="touchUpInside" id="Hkp-Ib-Zdy"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="36" id="A9o-x0-WgU"/>
+                                <constraint firstItem="gZD-o4-tpD" firstAttribute="centerY" secondItem="E5I-DP-O8m" secondAttribute="centerY" id="xg2-yw-ct6"/>
+                                <constraint firstAttribute="trailing" secondItem="gZD-o4-tpD" secondAttribute="trailing" constant="10" id="z2I-eV-ye2"/>
+                            </constraints>
+                        </view>
+                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Wol-7W-1th">
+                            <rect key="frame" x="0.0" y="36" width="375" height="631"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </tableView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="E5I-DP-O8m" secondAttribute="trailing" id="BhF-8j-SPG"/>
+                        <constraint firstItem="E5I-DP-O8m" firstAttribute="leading" secondItem="cvi-Ds-dVc" secondAttribute="leading" id="CXO-Jn-xLB"/>
+                        <constraint firstItem="E5I-DP-O8m" firstAttribute="top" secondItem="cvi-Ds-dVc" secondAttribute="top" id="T4d-3g-vPb"/>
+                        <constraint firstAttribute="bottom" secondItem="Wol-7W-1th" secondAttribute="bottom" id="dh3-N3-snP"/>
+                        <constraint firstItem="Wol-7W-1th" firstAttribute="leading" secondItem="cvi-Ds-dVc" secondAttribute="leading" id="fMy-Bc-rs0"/>
+                        <constraint firstItem="Wol-7W-1th" firstAttribute="top" secondItem="E5I-DP-O8m" secondAttribute="bottom" id="lih-nQ-A9z"/>
+                        <constraint firstAttribute="trailing" secondItem="Wol-7W-1th" secondAttribute="trailing" id="nNr-oS-zpX"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6YU-vV-d08" userLabel="uiBlankState" customClass="MZBlankStateView" customModule="Muzzley_iOS" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="70" width="375" height="597"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="nibName" value="MZBlankStateView"/>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tvJ-uv-XCL">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
+            </subviews>
+            <gestureRecognizers/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="cvi-Ds-dVc" secondAttribute="bottom" id="3ag-wq-Sec"/>
+                <constraint firstAttribute="trailing" secondItem="tvJ-uv-XCL" secondAttribute="trailing" id="AoL-HX-C9t"/>
+                <constraint firstAttribute="bottom" secondItem="tvJ-uv-XCL" secondAttribute="bottom" id="DKX-kU-eFv"/>
+                <constraint firstAttribute="trailing" secondItem="cvi-Ds-dVc" secondAttribute="trailing" id="Dp3-9l-Wk3"/>
+                <constraint firstItem="6YU-vV-d08" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="LGo-mR-xbF"/>
+                <constraint firstItem="tvJ-uv-XCL" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Rts-gr-U0T"/>
+                <constraint firstAttribute="bottom" secondItem="6YU-vV-d08" secondAttribute="bottom" id="XZd-As-lIt"/>
+                <constraint firstItem="6YU-vV-d08" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="70" id="Xud-dl-g3u"/>
+                <constraint firstItem="cvi-Ds-dVc" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="fCU-rM-Nme"/>
+                <constraint firstItem="cvi-Ds-dVc" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="gTK-84-rHv"/>
+                <constraint firstAttribute="trailing" secondItem="6YU-vV-d08" secondAttribute="trailing" id="jd2-Pi-6e0"/>
+                <constraint firstItem="tvJ-uv-XCL" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="uME-D5-Iyd"/>
+            </constraints>
+            <point key="canvasLocation" x="276" y="404.34782608695656"/>
+        </view>
+    </objects>
+</document>

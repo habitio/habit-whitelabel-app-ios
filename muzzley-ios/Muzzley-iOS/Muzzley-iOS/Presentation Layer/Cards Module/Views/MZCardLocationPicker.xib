@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SanFranciscoText-Medium.otf">
+            <string>SanFranciscoText-Medium</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MZCardLocationPicker" customModule="Muzzley_iOS" customModuleProvider="target">
+            <connections>
+                <outlet property="pinView" destination="LtY-wl-5SF" id="G5P-I9-daK"/>
+                <outlet property="placeHolderMapView" destination="wvE-3t-xTC" id="Gmy-Df-S6N"/>
+                <outlet property="view" destination="VhZ-uj-Png" id="GBE-QR-fgE"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="VhZ-uj-Png">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="220"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B0y-ub-0kq">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="220"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LOCATION" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="nfi-Ug-Z9K">
+                            <rect key="frame" x="16" y="8" width="288" height="20"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="15" id="ODD-0s-K9F"/>
+                                <constraint firstAttribute="height" constant="20" id="eIK-jP-RqM"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="SanFranciscoText-Medium" family="San Francisco Text" pointSize="15"/>
+                            <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                            <variation key="default">
+                                <mask key="constraints">
+                                    <exclude reference="ODD-0s-K9F"/>
+                                </mask>
+                            </variation>
+                        </label>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wvE-3t-xTC">
+                            <rect key="frame" x="16" y="36" width="288" height="176"/>
+                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="191" id="Ape-Uf-KdE"/>
+                            </constraints>
+                            <variation key="default">
+                                <mask key="constraints">
+                                    <exclude reference="Ape-Uf-KdE"/>
+                                </mask>
+                            </variation>
+                        </view>
+                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" image="Location_Pin" translatesAutoresizingMaskIntoConstraints="NO" id="LtY-wl-5SF">
+                            <rect key="frame" x="147" y="84" width="26" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="26" id="9bD-K0-5LN"/>
+                                <constraint firstAttribute="height" constant="40" id="fxA-y3-C3m"/>
+                            </constraints>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="nfi-Ug-Z9K" secondAttribute="trailing" id="3B7-bf-klh"/>
+                        <constraint firstItem="LtY-wl-5SF" firstAttribute="centerY" secondItem="wvE-3t-xTC" secondAttribute="centerY" constant="-20" id="478-HD-iWA"/>
+                        <constraint firstAttribute="trailing" secondItem="wvE-3t-xTC" secondAttribute="trailing" constant="16" id="9at-bo-2JN"/>
+                        <constraint firstItem="LtY-wl-5SF" firstAttribute="centerY" secondItem="B0y-ub-0kq" secondAttribute="centerY" id="Clf-Am-fvt"/>
+                        <constraint firstAttribute="trailing" secondItem="nfi-Ug-Z9K" secondAttribute="trailing" constant="16" id="GW8-w0-0C3"/>
+                        <constraint firstItem="wvE-3t-xTC" firstAttribute="top" secondItem="nfi-Ug-Z9K" secondAttribute="bottom" constant="8" id="Oju-ZR-ogF"/>
+                        <constraint firstItem="wvE-3t-xTC" firstAttribute="leading" secondItem="B0y-ub-0kq" secondAttribute="leading" constant="16" id="ZUL-nX-2ga"/>
+                        <constraint firstItem="nfi-Ug-Z9K" firstAttribute="top" secondItem="B0y-ub-0kq" secondAttribute="top" constant="8" id="aVh-sI-ON0"/>
+                        <constraint firstItem="nfi-Ug-Z9K" firstAttribute="top" secondItem="B0y-ub-0kq" secondAttribute="top" constant="14" id="b8z-hp-f1L"/>
+                        <constraint firstItem="nfi-Ug-Z9K" firstAttribute="leading" secondItem="B0y-ub-0kq" secondAttribute="leading" id="fCq-wm-F24"/>
+                        <constraint firstAttribute="bottom" secondItem="wvE-3t-xTC" secondAttribute="bottom" constant="8" id="rVg-TF-ede"/>
+                        <constraint firstItem="LtY-wl-5SF" firstAttribute="centerX" secondItem="B0y-ub-0kq" secondAttribute="centerX" id="roT-LZ-dqy"/>
+                        <constraint firstItem="nfi-Ug-Z9K" firstAttribute="leading" secondItem="B0y-ub-0kq" secondAttribute="leading" constant="16" id="vMk-PM-jMa"/>
+                        <constraint firstAttribute="height" constant="220" id="ytR-nc-eZO"/>
+                    </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="3B7-bf-klh"/>
+                            <exclude reference="b8z-hp-f1L"/>
+                            <exclude reference="fCq-wm-F24"/>
+                            <exclude reference="Clf-Am-fvt"/>
+                        </mask>
+                    </variation>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="B0y-ub-0kq" secondAttribute="trailing" id="122-UR-9hJ"/>
+                <constraint firstItem="B0y-ub-0kq" firstAttribute="top" secondItem="VhZ-uj-Png" secondAttribute="top" id="UqA-Gb-dXt"/>
+                <constraint firstAttribute="bottom" secondItem="B0y-ub-0kq" secondAttribute="bottom" id="qLl-Mo-1wR"/>
+                <constraint firstItem="B0y-ub-0kq" firstAttribute="leading" secondItem="VhZ-uj-Png" secondAttribute="leading" id="uCU-jR-fXz"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Location_Pin" width="55" height="80"/>
+    </resources>
+</document>

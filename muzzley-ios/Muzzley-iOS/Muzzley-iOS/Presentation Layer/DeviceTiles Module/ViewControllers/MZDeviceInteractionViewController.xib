@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MZDeviceInteractionViewController" customModule="Muzzley_iOS" customModuleProvider="target">
+            <connections>
+                <outlet property="collectionView" destination="A3G-55-bBh" id="Q34-Ya-Lka"/>
+                <outlet property="collectionViewHeight" destination="num-yo-fsx" id="LZh-Wv-slG"/>
+                <outlet property="expandButton" destination="knq-9C-ih5" id="EDY-9W-mEL"/>
+                <outlet property="expandButtonPosition" destination="eeu-si-sK1" id="Er5-68-1su"/>
+                <outlet property="expandView" destination="RX1-jK-x17" id="qiQ-g8-hv1"/>
+                <outlet property="expandViewBotttom" destination="peq-q4-dLb" id="VNE-BR-qEp"/>
+                <outlet property="nativeComponentsView" destination="b2q-In-0gJ" id="oku-Lj-zcw"/>
+                <outlet property="nativeComponentsViewHeight" destination="4GS-8J-csO" id="FNf-L5-cLs"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="webViewPlaceholder" destination="yTn-Bn-Js3" id="aBp-RC-6Eg"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b2q-In-0gJ">
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="300" id="4GS-8J-csO"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yTn-Bn-Js3"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RX1-jK-x17">
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="knq-9C-ih5">
+                            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="knq-9C-ih5" secondAttribute="height" multiplier="7:2" id="Hrp-Aw-8dc"/>
+                                <constraint firstAttribute="width" constant="22" id="nvj-Ya-JcZ"/>
+                            </constraints>
+                            <color key="tintColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <state key="normal" image="IconOpenGroup"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="color" keyPath="defaultBackgroundColor">
+                                    <color key="value" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="highlightBackgroundColor">
+                                    <color key="value" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                    <color key="value" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="expandAction:" destination="-1" eventType="touchUpInside" id="RO3-sF-DYE"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.71764705880000002" green="0.76862745099999996" blue="0.77647058820000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <gestureRecognizers/>
+                    <constraints>
+                        <constraint firstItem="knq-9C-ih5" firstAttribute="centerX" secondItem="RX1-jK-x17" secondAttribute="centerX" id="7KI-fh-LpM"/>
+                        <constraint firstItem="knq-9C-ih5" firstAttribute="centerY" secondItem="RX1-jK-x17" secondAttribute="centerY" constant="5" id="eeu-si-sK1"/>
+                        <constraint firstAttribute="height" constant="38" id="v0r-jj-6fx"/>
+                    </constraints>
+                    <connections>
+                        <outletCollection property="gestureRecognizers" destination="5y1-iA-SDy" appends="YES" id="j80-cs-BFh"/>
+                    </connections>
+                </view>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="A3G-55-bBh" customClass="MZCollectionView">
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="110" id="num-yo-fsx"/>
+                    </constraints>
+                    <inset key="scrollIndicatorInsets" minX="8" minY="10" maxX="8" maxY="1"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="LwF-94-Si0">
+                        <size key="itemSize" width="50" height="50"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="5Sd-fT-V2u"/>
+                    </connections>
+                </collectionView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="b2q-In-0gJ" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="2Iu-mC-NWL"/>
+                <constraint firstItem="yTn-Bn-Js3" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="2yl-BN-I5j"/>
+                <constraint firstAttribute="trailing" secondItem="yTn-Bn-Js3" secondAttribute="trailing" id="5rM-lX-Ors"/>
+                <constraint firstItem="yTn-Bn-Js3" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="5uq-JM-Jpf"/>
+                <constraint firstAttribute="bottom" secondItem="A3G-55-bBh" secondAttribute="bottom" id="AVM-VF-EpJ"/>
+                <constraint firstItem="b2q-In-0gJ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="BkT-tf-C2B"/>
+                <constraint firstItem="RX1-jK-x17" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Exq-fT-kYX"/>
+                <constraint firstAttribute="bottom" secondItem="yTn-Bn-Js3" secondAttribute="bottom" id="IIh-Yg-i68"/>
+                <constraint firstItem="A3G-55-bBh" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="ILW-am-Yxi"/>
+                <constraint firstAttribute="trailing" secondItem="b2q-In-0gJ" secondAttribute="trailing" id="LPa-Oa-YWa"/>
+                <constraint firstItem="yTn-Bn-Js3" firstAttribute="top" secondItem="b2q-In-0gJ" secondAttribute="bottom" id="M7h-L9-RNR"/>
+                <constraint firstItem="yTn-Bn-Js3" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="OtB-I8-JN3"/>
+                <constraint firstItem="A3G-55-bBh" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Scx-uT-OAm"/>
+                <constraint firstAttribute="bottom" secondItem="yTn-Bn-Js3" secondAttribute="bottom" id="UFt-aG-Ndr"/>
+                <constraint firstItem="b2q-In-0gJ" firstAttribute="bottom" secondItem="yTn-Bn-Js3" secondAttribute="top" id="UG5-eS-lf0"/>
+                <constraint firstAttribute="trailing" secondItem="A3G-55-bBh" secondAttribute="trailing" id="aAA-I6-LMh"/>
+                <constraint firstItem="RX1-jK-x17" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="coW-5o-7OJ"/>
+                <constraint firstAttribute="trailing" secondItem="yTn-Bn-Js3" secondAttribute="trailing" id="h6D-qo-ssL"/>
+                <constraint firstAttribute="trailing" secondItem="RX1-jK-x17" secondAttribute="trailing" id="m14-6Y-yAo"/>
+                <constraint firstItem="A3G-55-bBh" firstAttribute="top" secondItem="RX1-jK-x17" secondAttribute="bottom" constant="6" id="peq-q4-dLb"/>
+            </constraints>
+            <point key="canvasLocation" x="502.5" y="481.5"/>
+        </view>
+        <tapGestureRecognizer id="5y1-iA-SDy">
+            <connections>
+                <action selector="expandAction:" destination="-1" id="wh9-AF-7vC"/>
+            </connections>
+        </tapGestureRecognizer>
+    </objects>
+    <resources>
+        <image name="IconOpenGroup" width="44" height="12"/>
+    </resources>
+</document>

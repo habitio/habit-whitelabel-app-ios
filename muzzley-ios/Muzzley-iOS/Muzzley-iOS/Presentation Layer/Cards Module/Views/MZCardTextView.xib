@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MZCardTextView" customModule="Muzzley_iOS" customModuleProvider="target">
+            <connections>
+                <outlet property="cntrtHeight" destination="fKK-sj-vpv" id="DWz-x2-QDn"/>
+                <outlet property="cntrtWidth" destination="Q6T-JK-tXT" id="5Sp-9m-2qU"/>
+                <outlet property="imgIcon" destination="ZTQ-tV-zj5" id="QRo-8o-AJ1"/>
+                <outlet property="txtView" destination="dfp-OB-6Ta" id="baf-fH-CLc"/>
+                <outlet property="view" destination="wFz-4W-YYt" id="Zlj-s4-9Yw"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" id="wFz-4W-YYt">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dfp-OB-6Ta">
+                    <rect key="frame" x="16" y="-1" width="256" height="669"/>
+                    <rect key="contentStretch" x="0.050000000000000003" y="0.0" width="1" height="1"/>
+                    <attributedString key="attributedText">
+                        <fragment>
+                            <string key="content">It seems that this is where you live
+</string>
+                            <attributes>
+                                <color key="NSColor" red="0.1505631506" green="0.1505586505" blue="0.15056121350000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <font key="NSFont" size="17" name="HelveticaNeue"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="right" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                            </attributes>
+                        </fragment>
+                        <fragment content="Are you at home?">
+                            <attributes>
+                                <color key="NSColor" red="0.1505631506" green="0.1505586505" blue="0.15056121350000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <font key="NSFont" size="17" name="HelveticaNeue"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                            </attributes>
+                        </fragment>
+                    </attributedString>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZTQ-tV-zj5">
+                    <rect key="frame" x="288" y="0.0" width="87" height="87"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="ZTQ-tV-zj5" secondAttribute="height" multiplier="1:1" id="3OO-VG-7ZL"/>
+                        <constraint firstAttribute="width" relation="lessThanOrEqual" constant="87" id="Q6T-JK-tXT"/>
+                        <constraint firstAttribute="height" constant="87" id="fKK-sj-vpv"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="dfp-OB-6Ta" secondAttribute="trailing" constant="10" id="4wA-gq-Y3K"/>
+                <constraint firstItem="dfp-OB-6Ta" firstAttribute="centerY" secondItem="wFz-4W-YYt" secondAttribute="centerY" id="80z-6k-zVR"/>
+                <constraint firstItem="dfp-OB-6Ta" firstAttribute="leading" secondItem="wFz-4W-YYt" secondAttribute="leading" constant="10" id="DZz-uz-J0d"/>
+                <constraint firstAttribute="trailing" secondItem="dfp-OB-6Ta" secondAttribute="trailing" constant="16" id="Dfp-8x-DYI"/>
+                <constraint firstItem="ZTQ-tV-zj5" firstAttribute="leading" secondItem="dfp-OB-6Ta" secondAttribute="trailing" constant="16" id="Evn-0F-gxO"/>
+                <constraint firstItem="dfp-OB-6Ta" firstAttribute="leading" secondItem="wFz-4W-YYt" secondAttribute="leading" constant="16" id="Eyb-yR-6DH"/>
+                <constraint firstItem="ZTQ-tV-zj5" firstAttribute="leading" secondItem="dfp-OB-6Ta" secondAttribute="trailing" priority="500" constant="10" id="Jzs-za-CbG"/>
+                <constraint firstItem="dfp-OB-6Ta" firstAttribute="leading" secondItem="wFz-4W-YYt" secondAttribute="leadingMargin" id="Q7f-wy-eVh"/>
+                <constraint firstItem="dfp-OB-6Ta" firstAttribute="leading" secondItem="wFz-4W-YYt" secondAttribute="leading" constant="16" id="VFG-u3-rUq"/>
+                <constraint firstAttribute="bottom" secondItem="dfp-OB-6Ta" secondAttribute="bottom" constant="16" id="Ynp-4H-Mc1"/>
+                <constraint firstAttribute="bottom" secondItem="dfp-OB-6Ta" secondAttribute="bottom" constant="-1" id="b3D-JE-sWw"/>
+                <constraint firstItem="ZTQ-tV-zj5" firstAttribute="top" secondItem="wFz-4W-YYt" secondAttribute="top" id="bty-3A-8BY"/>
+                <constraint firstAttribute="trailing" secondItem="ZTQ-tV-zj5" secondAttribute="trailing" id="csq-Qh-kol"/>
+                <constraint firstItem="dfp-OB-6Ta" firstAttribute="trailing" secondItem="wFz-4W-YYt" secondAttribute="trailingMargin" constant="16" id="dio-HU-mwz"/>
+                <constraint firstItem="dfp-OB-6Ta" firstAttribute="top" secondItem="wFz-4W-YYt" secondAttribute="top" constant="16" id="dk5-HP-iEk"/>
+                <constraint firstItem="ZTQ-tV-zj5" firstAttribute="leading" secondItem="dfp-OB-6Ta" secondAttribute="trailing" constant="10" id="dtc-fm-gj7"/>
+                <constraint firstItem="dfp-OB-6Ta" firstAttribute="top" secondItem="wFz-4W-YYt" secondAttribute="top" id="mx3-uK-4PS"/>
+                <constraint firstItem="dfp-OB-6Ta" firstAttribute="top" secondItem="wFz-4W-YYt" secondAttribute="top" constant="-1" id="uCO-Ib-DDP"/>
+            </constraints>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="4wA-gq-Y3K"/>
+                    <exclude reference="80z-6k-zVR"/>
+                    <exclude reference="DZz-uz-J0d"/>
+                    <exclude reference="Dfp-8x-DYI"/>
+                    <exclude reference="Eyb-yR-6DH"/>
+                    <exclude reference="Q7f-wy-eVh"/>
+                    <exclude reference="Ynp-4H-Mc1"/>
+                    <exclude reference="dio-HU-mwz"/>
+                    <exclude reference="dk5-HP-iEk"/>
+                    <exclude reference="mx3-uK-4PS"/>
+                    <exclude reference="Jzs-za-CbG"/>
+                    <exclude reference="dtc-fm-gj7"/>
+                </mask>
+            </variation>
+        </view>
+    </objects>
+</document>

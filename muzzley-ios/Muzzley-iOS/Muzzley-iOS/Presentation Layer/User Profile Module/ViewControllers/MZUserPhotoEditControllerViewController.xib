@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MZUserPhotoEditControllerViewController" customModule="Muzzley_iOS" customModuleProvider="target">
+            <connections>
+                <outlet property="doneButton" destination="smA-tQ-lHU" id="wxp-7f-Pz7"/>
+                <outlet property="hintLabel" destination="Xpv-Z4-24y" id="Z5q-n7-AkQ"/>
+                <outlet property="libraryButton" destination="QEo-Xi-luG" id="NXx-NP-tUD"/>
+                <outlet property="takePhotoButton" destination="bef-ND-Swq" id="3Fm-4I-pAW"/>
+                <outlet property="userPhotoImageView" destination="GWD-5N-ZiG" id="jBb-cV-oDk"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="GWD-5N-ZiG">
+                    <rect key="frame" x="57.5" y="70" width="260" height="260"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="260" id="ToD-qD-GId"/>
+                        <constraint firstAttribute="width" secondItem="GWD-5N-ZiG" secondAttribute="height" multiplier="1:1" id="uaq-IW-Xb4"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xpv-Z4-24y">
+                    <rect key="frame" x="100" y="342" width="175" height="17"/>
+                    <constraints>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="17" id="9Dl-Lm-3Zm"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" tag="200" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bef-ND-Swq" customClass="MZColorButton">
+                    <rect key="frame" x="36" y="485" width="303" height="40"/>
+                    <state key="normal" title="Button"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="invertedButton" value="NO"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="openPhotoSourceAction:" destination="-1" eventType="touchUpInside" id="XVt-dd-kPm"/>
+                    </connections>
+                </button>
+                <button opaque="NO" tag="201" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QEo-Xi-luG" customClass="MZColorButton">
+                    <rect key="frame" x="36" y="541" width="303" height="40"/>
+                    <state key="normal" title="Button"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="invertedButton" value="NO"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="openPhotoSourceAction:" destination="-1" eventType="touchUpInside" id="a2k-gl-yOc"/>
+                    </connections>
+                </button>
+                <button opaque="NO" tag="202" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="smA-tQ-lHU" customClass="MZColorButton">
+                    <rect key="frame" x="36" y="597" width="303" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="5EC-ao-hJb"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="invertedButton" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="donePressed:" destination="-1" eventType="touchUpInside" id="gfQ-pM-nBy"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="Xpv-Z4-24y" secondAttribute="trailing" constant="100" id="0nk-VH-vKK"/>
+                <constraint firstItem="QEo-Xi-luG" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="2ED-ca-hKJ"/>
+                <constraint firstItem="GWD-5N-ZiG" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="70" id="3Vr-lO-XEo"/>
+                <constraint firstItem="GWD-5N-ZiG" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="9Fi-1U-IJE"/>
+                <constraint firstItem="QEo-Xi-luG" firstAttribute="height" secondItem="smA-tQ-lHU" secondAttribute="height" id="HHj-b7-JLb"/>
+                <constraint firstItem="smA-tQ-lHU" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="IGu-gJ-Ur7"/>
+                <constraint firstItem="Xpv-Z4-24y" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="100" id="LgZ-zC-caV"/>
+                <constraint firstAttribute="bottom" secondItem="smA-tQ-lHU" secondAttribute="bottom" constant="30" id="MHC-TY-Cbv"/>
+                <constraint firstItem="Xpv-Z4-24y" firstAttribute="centerX" secondItem="GWD-5N-ZiG" secondAttribute="centerX" id="NWd-Ot-BAm"/>
+                <constraint firstAttribute="trailing" secondItem="smA-tQ-lHU" secondAttribute="trailing" constant="36" id="OaV-lc-f3I"/>
+                <constraint firstItem="QEo-Xi-luG" firstAttribute="centerX" secondItem="smA-tQ-lHU" secondAttribute="centerX" id="YeA-pS-gsE"/>
+                <constraint firstItem="smA-tQ-lHU" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="36" id="Zbd-T7-5ca"/>
+                <constraint firstItem="bef-ND-Swq" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="j27-S7-i2y"/>
+                <constraint firstItem="bef-ND-Swq" firstAttribute="height" secondItem="QEo-Xi-luG" secondAttribute="height" id="kaH-fh-CEy"/>
+                <constraint firstItem="QEo-Xi-luG" firstAttribute="top" secondItem="bef-ND-Swq" secondAttribute="bottom" constant="16" id="p5K-8R-xeO"/>
+                <constraint firstItem="bef-ND-Swq" firstAttribute="centerX" secondItem="QEo-Xi-luG" secondAttribute="centerX" id="rqg-xT-rsh"/>
+                <constraint firstItem="bef-ND-Swq" firstAttribute="width" secondItem="QEo-Xi-luG" secondAttribute="width" id="xnc-bY-5XK"/>
+                <constraint firstItem="QEo-Xi-luG" firstAttribute="width" secondItem="smA-tQ-lHU" secondAttribute="width" id="xsl-8c-7AU"/>
+                <constraint firstItem="Xpv-Z4-24y" firstAttribute="top" secondItem="GWD-5N-ZiG" secondAttribute="bottom" constant="12" id="zHa-ma-1W8"/>
+                <constraint firstItem="smA-tQ-lHU" firstAttribute="top" secondItem="QEo-Xi-luG" secondAttribute="bottom" constant="16" id="zjG-1A-KgF"/>
+            </constraints>
+        </view>
+    </objects>
+</document>

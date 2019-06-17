@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2657" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="M0r-Wl-hPt" customClass="MZInfoView" customModule="Muzzley_iOS" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="446" height="554"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Sjl-hx-BVI">
+                    <rect key="frame" x="33" y="175" width="380" height="205"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bc3-Ak-e3E">
+                            <rect key="frame" x="16" y="24" width="348" height="21"/>
+                            <constraints>
+                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="AUj-pb-DWl"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hkg-9Y-qYO" customClass="OAStackView">
+                            <rect key="frame" x="0.0" y="163" width="40" height="42"/>
+                            <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="42" id="FeE-31-2ez"/>
+                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="40" id="LBX-oH-gLr"/>
+                                <constraint firstAttribute="height" constant="40" id="Nct-HA-zgA"/>
+                                <constraint firstAttribute="height" constant="40" id="qV0-bS-tj5"/>
+                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="uyh-12-VMs"/>
+                            </constraints>
+                            <variation key="default">
+                                <mask key="constraints">
+                                    <exclude reference="uyh-12-VMs"/>
+                                    <exclude reference="Nct-HA-zgA"/>
+                                    <exclude reference="qV0-bS-tj5"/>
+                                </mask>
+                            </variation>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="hkg-9Y-qYO" secondAttribute="bottom" id="6YP-bC-2AE"/>
+                        <constraint firstAttribute="trailing" secondItem="Bc3-Ak-e3E" secondAttribute="trailing" constant="16" id="HiU-TE-oII"/>
+                        <constraint firstItem="Bc3-Ak-e3E" firstAttribute="top" secondItem="Sjl-hx-BVI" secondAttribute="top" constant="24" id="IYG-ha-eMf"/>
+                        <constraint firstItem="hkg-9Y-qYO" firstAttribute="leading" secondItem="Sjl-hx-BVI" secondAttribute="leading" id="NHs-LU-tN3"/>
+                        <constraint firstAttribute="trailing" secondItem="hkg-9Y-qYO" secondAttribute="trailing" id="Shq-Zk-sDN"/>
+                        <constraint firstItem="Bc3-Ak-e3E" firstAttribute="leading" secondItem="Sjl-hx-BVI" secondAttribute="leading" constant="16" id="iYt-Jd-2sh"/>
+                    </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="Shq-Zk-sDN"/>
+                        </mask>
+                    </variation>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="Sjl-hx-BVI" secondAttribute="trailing" constant="33" id="3Fl-K0-YyJ"/>
+                <constraint firstItem="Sjl-hx-BVI" firstAttribute="leading" secondItem="M0r-Wl-hPt" secondAttribute="leading" constant="33" id="RqC-FE-2jL"/>
+                <constraint firstItem="Sjl-hx-BVI" firstAttribute="centerX" secondItem="M0r-Wl-hPt" secondAttribute="centerX" id="iI9-YP-M4g"/>
+                <constraint firstItem="Sjl-hx-BVI" firstAttribute="centerY" secondItem="M0r-Wl-hPt" secondAttribute="centerY" id="ufd-kX-EcK"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="baseView" destination="Sjl-hx-BVI" id="h3i-wt-Qnw"/>
+                <outlet property="lbTitle" destination="Bc3-Ak-e3E" id="2c1-Pn-AYj"/>
+                <outlet property="stButtons" destination="hkg-9Y-qYO" id="mYi-7b-qFq"/>
+            </connections>
+            <point key="canvasLocation" x="342" y="350"/>
+        </view>
+    </objects>
+</document>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="SanFranciscoDisplay-Light.otf">
+            <string>SanFranciscoDisplay-Light</string>
+        </mutableArray>
+        <mutableArray key="SanFranciscoDisplay-Regular.otf">
+            <string>SanFranciscoDisplay-Regular</string>
+        </mutableArray>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="49" id="KGk-i7-Jjw" customClass="MZRadioTableViewCell" customModule="Muzzley_iOS" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="341" height="49"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="341" height="48.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HOx-3I-Mhy" customClass="MZRadioItemView" customModule="Muzzley_iOS" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="45"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fkE-hp-UJT">
+                                <rect key="frame" x="8" y="23" width="249" height="23"/>
+                                <fontDescription key="fontDescription" name="SanFranciscoDisplay-Regular" family="San Francisco Display" pointSize="13"/>
+                                <color key="textColor" red="0.60271793600000001" green="0.60269987579999995" blue="0.60271006819999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fTV-eK-ik1">
+                                <rect key="frame" x="8" y="4" width="249" height="23"/>
+                                <fontDescription key="fontDescription" name="SanFranciscoDisplay-Light" family="San Francisco Display" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="fkE-hp-UJT" firstAttribute="trailing" secondItem="fTV-eK-ik1" secondAttribute="trailing" id="CzU-BX-eko"/>
+                            <constraint firstItem="fkE-hp-UJT" firstAttribute="top" secondItem="HOx-3I-Mhy" secondAttribute="top" constant="23" id="EtA-Rh-OKP"/>
+                            <constraint firstAttribute="trailing" secondItem="fTV-eK-ik1" secondAttribute="trailing" constant="63" id="LM6-7X-xZ3"/>
+                            <constraint firstAttribute="bottom" secondItem="fTV-eK-ik1" secondAttribute="bottom" constant="23" id="Lny-JH-kU0"/>
+                            <constraint firstItem="fTV-eK-ik1" firstAttribute="leading" secondItem="fkE-hp-UJT" secondAttribute="leading" id="dgY-TS-sJc"/>
+                            <constraint firstItem="fkE-hp-UJT" firstAttribute="leading" secondItem="HOx-3I-Mhy" secondAttribute="leadingMargin" id="psS-sY-oPa"/>
+                            <constraint firstItem="fTV-eK-ik1" firstAttribute="top" secondItem="HOx-3I-Mhy" secondAttribute="top" constant="4" id="u80-NT-PER"/>
+                            <constraint firstAttribute="bottom" secondItem="fkE-hp-UJT" secondAttribute="bottom" constant="4" id="v0M-Ks-IL5"/>
+                        </constraints>
+                        <connections>
+                            <outlet property="subtitleLabel" destination="fkE-hp-UJT" id="eqN-mJ-HOF"/>
+                            <outlet property="textLabel" destination="fTV-eK-ik1" id="gKs-tT-wAW"/>
+                        </connections>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="HOx-3I-Mhy" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="AUO-ey-qqu"/>
+                    <constraint firstItem="HOx-3I-Mhy" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="Gx7-Jd-iG5"/>
+                    <constraint firstAttribute="trailing" secondItem="HOx-3I-Mhy" secondAttribute="trailing" id="TZn-DN-J41"/>
+                    <constraint firstAttribute="bottom" secondItem="HOx-3I-Mhy" secondAttribute="bottom" id="WSb-om-oqz"/>
+                    <constraint firstItem="HOx-3I-Mhy" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="2" id="YUc-f9-yIU"/>
+                    <constraint firstItem="HOx-3I-Mhy" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="ovJ-1t-EM3"/>
+                </constraints>
+                <variation key="default">
+                    <mask key="constraints">
+                        <exclude reference="WSb-om-oqz"/>
+                        <exclude reference="ovJ-1t-EM3"/>
+                    </mask>
+                </variation>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <connections>
+                <outlet property="radioItem" destination="HOx-3I-Mhy" id="bIs-Jb-1or"/>
+            </connections>
+            <point key="canvasLocation" x="334.5" y="260.5"/>
+        </tableViewCell>
+    </objects>
+</document>

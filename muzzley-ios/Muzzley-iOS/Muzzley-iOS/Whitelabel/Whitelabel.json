@@ -1,0 +1,84 @@
+{
+    "mobile": {
+        "ios" : {
+            "application_name" : "-REPLACEME-",
+            "app_id" : "-REPLACEME-",
+            "app_scheme" : "-REPLACEME-",
+            "namespace" : "-REPLACEME-",
+            "bundle_id" : "-REPLACEME-",
+            "google_maps_api_key" : "-REPLACEME-",
+           
+            "plugins" : {
+                "notifications_azure" : {
+                    "endpoint" : "-REPLACEME-",
+                    "namespace" : "-REPLACEME-",
+                    "hubname" : "-REPLACEME-"
+                }
+            },
+            
+            
+            
+            "colors": {
+                "primary_color" : "#DB001B",
+                "primary_color_text" : "#FFFFFF",
+                "secondary_color" : "#10B5D8",
+                "secondary_color_text" : "#FFFFFF",
+                "complementary_color" : "#10B5D8",
+                "complementary_color_text" : "#FFFFFF"
+            },
+            "urls": {
+                "faq" : "-REPLACEME-",
+                "terms_services" : "-REPLACEME-",
+                "privacy_policy" : "-REPLACEME-",
+                "website" : "-REPLACEME-",
+                "facebook" : "-REPLACEME-",
+                "twitter" : "-REPLACEME-",
+                "blog" : "-REPLACEME-"
+            },
+            "copyright": {
+                "company_name" : "-REPLACEME-",
+                "start_date" : "-REPLACEME-"
+            },
+            "features" : {
+                "cards" : false
+            },
+            "shared_interface": {
+                "google_maps_web_key": "-REPLACEME-",
+                "application_name" : "-REPLACEME-",
+                "primary_color" : "#DB001B",
+                "primary_color_text" : "#FFFFFF",
+                "secondary_color" : "#10B5D8",
+                "secondary_color_text" : "#FFFFFF",
+                "complementary_color" : "#10B5D8",
+                "complementary_color_text" : "#FFFFFF"
+            },
+            
+            
+            "localization_copy": {
+                "en" : {
+                    "mobile_start_title_html" : "Create and Enjoy your smart homee",
+                    "mobile_start_text_html" : "Muzzley simplifies your life by connecting all your smart devices together and creating scenarios with only one App!"
+                },
+                "pt" : {
+                    "mobile_start_title_html" : "Crie e aproveite a sua casa inteligente",
+                    "mobile_start_text_html" : "Muzzley simplifica a sua vida conectando todos os seus dispositivos inteligentes e criando cenários usando apenas uma aplicação!"
+                },
+                "fr" : {
+                    "mobile_start_title_html" : "Créez et profitez de votre maison connectée",
+                    "mobile_start_text_html" : "Muzzley vous simplifie la vie en connectant l'ensemble de vos objets connectés et en créant des scénarios, avec seulement une App!"
+                },
+                "ro" : {
+                    "mobile_start_title_html" : "Creați și bucurați-vă de casa inteligentă",
+                    "mobile_start_text_html" : "Muzzley vă simplifică viața conectând toate dispozitivele dvs. inteligente împreună și creând scenarii cu o singură aplicație!"
+                }
+            }
+        }
+    },
+    
+    "endpoints" : {
+        "auth_base_url" : "https://api.platform.muzzley.com",
+        "worker_editor_url" : "https://www.muzzley.com/worker-editor-v3/",
+        "web_base_url" : "https://www.muzzley.com"
+    }
+}
+

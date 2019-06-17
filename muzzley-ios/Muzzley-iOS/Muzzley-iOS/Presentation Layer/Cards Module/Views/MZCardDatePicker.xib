@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SanFranciscoDisplay-Medium.otf">
+            <string>SanFranciscoDisplay-Medium</string>
+        </array>
+        <array key="SanFranciscoText-Medium.otf">
+            <string>SanFranciscoText-Medium</string>
+        </array>
+        <array key="SanFranciscoText-Regular.otf">
+            <string>SanFranciscoText-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MZCardDatePicker" customModule="Muzzley_iOS" customModuleProvider="target">
+            <connections>
+                <outlet property="atButton" destination="6Vx-x6-Vii" id="Jwm-wk-j2V"/>
+                <outlet property="atLabel" destination="cD5-09-lZ1" id="KeZ-1g-nAd"/>
+                <outlet property="datePicker" destination="Pns-ZG-BlJ" id="RbZ-bh-9Sr"/>
+                <outlet property="datePickerBgView" destination="G5g-Oh-bEt" id="6cZ-vo-aej"/>
+                <outlet property="view" destination="c7c-Db-D6y" id="e3H-HS-Y9W"/>
+                <outletCollection property="daysButtons" destination="v3c-BH-pfw" collectionClass="NSMutableArray" id="bI8-Rb-UTW"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="c7c-Db-D6y">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="102"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sIR-hc-Qrc" userLabel="Content View">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="102"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="At" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cD5-09-lZ1">
+                            <rect key="frame" x="16" y="83" width="31" height="18"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="31" id="MUb-kA-TH6"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="SanFranciscoText-Medium" family="San Francisco Text" pointSize="15"/>
+                            <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Vx-x6-Vii">
+                            <rect key="frame" x="57" y="75" width="70" height="34"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="70" id="fk5-81-m4Z"/>
+                            </constraints>
+                            <color key="tintColor" red="0.9360984564" green="0.93607044220000002" blue="0.93608629700000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <state key="normal" title="09 : 00 PM">
+                                <color key="titleColor" red="0.32584697010000002" green="0.32583722469999998" blue="0.32584273819999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="When?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="st3-QK-Bec">
+                            <rect key="frame" x="16" y="12" width="288" height="15"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="78" id="bkW-aZ-5Mw"/>
+                                <constraint firstAttribute="height" constant="15" id="xRX-rs-SoI"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="SanFranciscoText-Medium" family="San Francisco Text" pointSize="15"/>
+                            <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                            <variation key="default">
+                                <mask key="constraints">
+                                    <exclude reference="bkW-aZ-5Mw"/>
+                                </mask>
+                            </variation>
+                        </label>
+                        <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gXI-cN-7Dq" customClass="MZToggleButton" customModule="Muzzley_iOS" customModuleProvider="target">
+                            <rect key="frame" x="100" y="39" width="32" height="32"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="32" id="btC-2U-ehS"/>
+                                <constraint firstAttribute="height" constant="32" id="vz1-T6-Om9"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="SanFranciscoText-Regular" family="San Francisco Text" pointSize="14"/>
+                            <color key="tintColor" red="0.9360984564" green="0.93607044220000002" blue="0.93608629700000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <state key="normal" title="T"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="15"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="onColor">
+                                    <color key="value" red="0.062745101750000004" green="0.70980393890000004" blue="0.84705883260000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="offColor">
+                                    <color key="value" red="0.062745101749897003" green="0.70980393886566162" blue="0.84705883264541626" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="onTextColor">
+                                    <color key="value" red="0.9360984564" green="0.93607044220000002" blue="0.93608629700000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="offTextColor">
+                                    <color key="value" red="0.062745101750000004" green="0.70980393890000004" blue="0.84705883260000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </button>
+                        <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z9Z-fP-fCC" customClass="MZToggleButton" customModule="Muzzley_iOS" customModuleProvider="target">
+                            <rect key="frame" x="184" y="39" width="32" height="32"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="32" id="fW7-Q2-Fp0"/>
+                                <constraint firstAttribute="height" constant="32" id="hoM-is-FXK"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="SanFranciscoText-Regular" family="San Francisco Text" pointSize="14"/>
+                            <color key="tintColor" red="0.9360984564" green="0.93607044220000002" blue="0.93608629700000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <state key="normal" title="T"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="15"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="onColor">
+                                    <color key="value" red="0.062745101750000004" green="0.70980393890000004" blue="0.84705883260000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="offColor">
+                                    <color key="value" red="0.062745101749897003" green="0.70980393886566162" blue="0.84705883264541626" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="onTextColor">
+                                    <color key="value" red="0.9360984564" green="0.93607044220000002" blue="0.93608629700000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="offTextColor">
+                                    <color key="value" red="0.062745101750000004" green="0.70980393890000004" blue="0.84705883260000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </button>
+                        <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ILN-y8-bux" customClass="MZToggleButton" customModule="Muzzley_iOS" customModuleProvider="target">
+                            <rect key="frame" x="16" y="39" width="32" height="32"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="32" id="93W-6t-aTH"/>
+                                <constraint firstAttribute="width" constant="32" id="FBX-oA-6TF"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="SanFranciscoText-Regular" family="San Francisco Text" pointSize="14"/>
+                            <color key="tintColor" red="0.9360984564" green="0.93607044220000002" blue="0.93608629700000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <state key="normal" title="S"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="16"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="onColor">
+                                    <color key="value" red="0.062745101750000004" green="0.70980393890000004" blue="0.84705883260000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="offColor">
+                                    <color key="value" red="0.062745101750000004" green="0.70980393890000004" blue="0.84705883260000003" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="onTextColor">
+                                    <color key="value" red="0.9360984564" green="0.93607044220000002" blue="0.93608629700000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="offTextColor">
+                                    <color key="value" red="0.062745101750000004" green="0.70980393890000004" blue="0.84705883260000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </button>
+                        <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nLT-nf-jfo" customClass="MZToggleButton" customModule="Muzzley_iOS" customModuleProvider="target">
+                            <rect key="frame" x="58" y="39" width="32" height="32"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="32" id="gsj-vm-x9O"/>
+                                <constraint firstAttribute="height" constant="32" id="jR6-qY-9Pq"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="SanFranciscoText-Regular" family="San Francisco Text" pointSize="14"/>
+                            <color key="tintColor" red="0.9360984564" green="0.93607044220000002" blue="0.93608629700000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <state key="normal" title="M"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="15"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="onColor">
+                                    <color key="value" red="0.062745101750000004" green="0.70980393890000004" blue="0.84705883260000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="offColor">
+                                    <color key="value" red="0.062745101749897003" green="0.70980393886566162" blue="0.84705883264541626" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="onTextColor">
+                                    <color key="value" red="0.9360984564" green="0.93607044220000002" blue="0.93608629700000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="offTextColor">
+                                    <color key="value" red="0.062745101750000004" green="0.70980393890000004" blue="0.84705883260000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </button>
+                        <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Rc-rC-8pY" customClass="MZToggleButton" customModule="Muzzley_iOS" customModuleProvider="target">
+                            <rect key="frame" x="142" y="39" width="32" height="32"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="32" id="6er-u0-OHg"/>
+                                <constraint firstAttribute="width" constant="32" id="gTT-Ch-OjR"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="SanFranciscoText-Regular" family="San Francisco Text" pointSize="14"/>
+                            <color key="tintColor" red="0.9360984564" green="0.93607044220000002" blue="0.93608629700000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <state key="normal" title="W"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="15"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="onColor">
+                                    <color key="value" red="0.062745101750000004" green="0.70980393890000004" blue="0.84705883260000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="offColor">
+                                    <color key="value" red="0.062745101749897003" green="0.70980393886566162" blue="0.84705883264541626" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="onTextColor">
+                                    <color key="value" red="0.9360984564" green="0.93607044220000002" blue="0.93608629700000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="offTextColor">
+                                    <color key="value" red="0.062745101750000004" green="0.70980393890000004" blue="0.84705883260000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </button>
+                        <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qja-WJ-CUC" customClass="MZToggleButton" customModule="Muzzley_iOS" customModuleProvider="target">
+                            <rect key="frame" x="226" y="39" width="32" height="32"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="32" id="55t-aT-6ZT"/>
+                                <constraint firstAttribute="height" constant="32" id="Pz0-ew-oQB"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="SanFranciscoText-Regular" family="San Francisco Text" pointSize="14"/>
+                            <color key="tintColor" red="0.9360984564" green="0.93607044220000002" blue="0.93608629700000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <state key="normal" title="F"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="15"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="onColor">
+                                    <color key="value" red="0.062745101750000004" green="0.70980393890000004" blue="0.84705883260000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="offColor">
+                                    <color key="value" red="0.062745101749897003" green="0.70980393886566162" blue="0.84705883264541626" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="onTextColor">
+                                    <color key="value" red="0.9360984564" green="0.93607044220000002" blue="0.93608629700000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="offTextColor">
+                                    <color key="value" red="0.062745101750000004" green="0.70980393890000004" blue="0.84705883260000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </button>
+                        <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v3c-BH-pfw" customClass="MZToggleButton" customModule="Muzzley_iOS" customModuleProvider="target">
+                            <rect key="frame" x="268" y="39" width="32" height="32"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="32" id="9XH-j0-qJe"/>
+                                <constraint firstAttribute="height" constant="32" id="GGo-Bn-aFO"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="SanFranciscoText-Regular" family="San Francisco Text" pointSize="14"/>
+                            <color key="tintColor" red="0.9360984564" green="0.93607044220000002" blue="0.93608629700000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <state key="normal" title="S"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="15"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="onColor">
+                                    <color key="value" red="0.062745101750000004" green="0.70980393890000004" blue="0.84705883260000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="offColor">
+                                    <color key="value" red="0.062745101749897003" green="0.70980393886566162" blue="0.84705883264541626" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="onTextColor">
+                                    <color key="value" red="0.9360984564" green="0.93607044220000002" blue="0.93608629700000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="offTextColor">
+                                    <color key="value" red="0.062745101750000004" green="0.70980393890000004" blue="0.84705883260000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </button>
+                        <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G5g-Oh-bEt">
+                            <rect key="frame" x="8" y="221" width="304" height="150"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=":" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Wu-As-aZ0">
+                                    <rect key="frame" x="132" y="62.5" width="40" height="25"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="25" id="8kl-Q1-rii"/>
+                                        <constraint firstAttribute="width" constant="40" id="U6S-x7-F1g"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="SanFranciscoDisplay-Medium" family="San Francisco Display" pointSize="17"/>
+                                    <color key="textColor" red="0.60271793603897095" green="0.602699875831604" blue="0.6027100682258606" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <datePicker hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="Pns-ZG-BlJ">
+                                    <rect key="frame" x="77" y="-33" width="150" height="216"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="150" id="67R-UT-Cd7"/>
+                                        <constraint firstAttribute="height" constant="216" id="gG7-ra-3Oo"/>
+                                    </constraints>
+                                    <date key="date" timeIntervalSinceReferenceDate="474562460.97615701">
+                                        <!--2016-01-15 14:54:20 +0000-->
+                                    </date>
+                                </datePicker>
+                            </subviews>
+                            <color key="backgroundColor" red="0.93333333333333335" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstItem="Pns-ZG-BlJ" firstAttribute="centerY" secondItem="G5g-Oh-bEt" secondAttribute="centerY" id="3ZO-79-IZi"/>
+                                <constraint firstAttribute="height" constant="150" id="But-eu-HH6"/>
+                                <constraint firstItem="Pns-ZG-BlJ" firstAttribute="centerX" secondItem="G5g-Oh-bEt" secondAttribute="centerX" id="RIF-Sg-a0L"/>
+                                <constraint firstItem="4Wu-As-aZ0" firstAttribute="centerX" secondItem="G5g-Oh-bEt" secondAttribute="centerX" id="Ssg-W4-aW1"/>
+                                <constraint firstItem="4Wu-As-aZ0" firstAttribute="centerY" secondItem="G5g-Oh-bEt" secondAttribute="centerY" id="Tpe-DD-aO5"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="Qja-WJ-CUC" firstAttribute="leading" secondItem="Z9Z-fP-fCC" secondAttribute="trailing" constant="10" id="027-JS-C4D"/>
+                        <constraint firstItem="gXI-cN-7Dq" firstAttribute="baseline" secondItem="5Rc-rC-8pY" secondAttribute="baseline" id="2Vn-QW-wBI"/>
+                        <constraint firstItem="6Vx-x6-Vii" firstAttribute="centerY" secondItem="cD5-09-lZ1" secondAttribute="centerY" id="4j8-Cv-Y6d"/>
+                        <constraint firstAttribute="trailing" secondItem="G5g-Oh-bEt" secondAttribute="trailing" constant="8" id="55L-TS-bvT"/>
+                        <constraint firstItem="gXI-cN-7Dq" firstAttribute="baseline" secondItem="nLT-nf-jfo" secondAttribute="baseline" id="5N1-yH-Z6z"/>
+                        <constraint firstItem="cD5-09-lZ1" firstAttribute="top" secondItem="ILN-y8-bux" secondAttribute="bottom" constant="12" id="5fR-G3-D2s"/>
+                        <constraint firstItem="v3c-BH-pfw" firstAttribute="leading" secondItem="Qja-WJ-CUC" secondAttribute="trailing" constant="10" id="6MT-1D-sPM"/>
+                        <constraint firstItem="G5g-Oh-bEt" firstAttribute="top" secondItem="sIR-hc-Qrc" secondAttribute="bottom" constant="119" id="89P-4a-Wz3"/>
+                        <constraint firstItem="ILN-y8-bux" firstAttribute="baseline" secondItem="nLT-nf-jfo" secondAttribute="baseline" id="8Bc-RU-CUl"/>
+                        <constraint firstItem="G5g-Oh-bEt" firstAttribute="leading" secondItem="sIR-hc-Qrc" secondAttribute="leading" constant="8" id="ALr-4P-AFs"/>
+                        <constraint firstAttribute="trailing" secondItem="st3-QK-Bec" secondAttribute="trailing" constant="16" id="AgJ-re-gHD"/>
+                        <constraint firstItem="6Vx-x6-Vii" firstAttribute="leading" secondItem="cD5-09-lZ1" secondAttribute="trailing" constant="10" id="Azq-1z-a4G"/>
+                        <constraint firstItem="Qja-WJ-CUC" firstAttribute="baseline" secondItem="v3c-BH-pfw" secondAttribute="baseline" id="CYi-ul-cUf"/>
+                        <constraint firstItem="nLT-nf-jfo" firstAttribute="leading" secondItem="ILN-y8-bux" secondAttribute="trailing" constant="10" id="F30-MJ-Rmc"/>
+                        <constraint firstItem="gXI-cN-7Dq" firstAttribute="leading" secondItem="nLT-nf-jfo" secondAttribute="trailing" constant="10" id="IRE-ez-FwJ"/>
+                        <constraint firstItem="5Rc-rC-8pY" firstAttribute="leading" secondItem="gXI-cN-7Dq" secondAttribute="trailing" constant="10" id="KYc-PR-uOq"/>
+                        <constraint firstItem="ILN-y8-bux" firstAttribute="top" secondItem="st3-QK-Bec" secondAttribute="bottom" constant="12" id="MBZ-Fi-Hhe"/>
+                        <constraint firstItem="st3-QK-Bec" firstAttribute="leading" secondItem="sIR-hc-Qrc" secondAttribute="leading" constant="16" id="PuU-UV-jwU"/>
+                        <constraint firstItem="cD5-09-lZ1" firstAttribute="leading" secondItem="sIR-hc-Qrc" secondAttribute="leading" constant="16" id="QeA-YQ-ppq"/>
+                        <constraint firstItem="nLT-nf-jfo" firstAttribute="baseline" secondItem="gXI-cN-7Dq" secondAttribute="firstBaseline" id="TNl-Ou-A5N"/>
+                        <constraint firstItem="nLT-nf-jfo" firstAttribute="baseline" secondItem="ILN-y8-bux" secondAttribute="firstBaseline" id="Wns-3X-c1W"/>
+                        <constraint firstItem="st3-QK-Bec" firstAttribute="top" secondItem="sIR-hc-Qrc" secondAttribute="top" constant="12" id="X0B-fJ-Tj6"/>
+                        <constraint firstItem="ILN-y8-bux" firstAttribute="leading" secondItem="sIR-hc-Qrc" secondAttribute="leading" constant="16" id="dYi-iu-ryi"/>
+                        <constraint firstItem="Z9Z-fP-fCC" firstAttribute="leading" secondItem="5Rc-rC-8pY" secondAttribute="trailing" constant="10" id="djF-UA-iGR"/>
+                        <constraint firstItem="5Rc-rC-8pY" firstAttribute="baseline" secondItem="Z9Z-fP-fCC" secondAttribute="baseline" id="e3A-V4-lma"/>
+                        <constraint firstItem="Z9Z-fP-fCC" firstAttribute="baseline" secondItem="Qja-WJ-CUC" secondAttribute="baseline" id="eXq-QQ-6en"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="sIR-hc-Qrc" firstAttribute="top" secondItem="c7c-Db-D6y" secondAttribute="top" id="7Hh-WP-5D5"/>
+                <constraint firstAttribute="trailing" secondItem="sIR-hc-Qrc" secondAttribute="trailing" id="BtG-T3-8ji"/>
+                <constraint firstAttribute="bottom" secondItem="sIR-hc-Qrc" secondAttribute="bottom" id="DP8-Bg-wuS"/>
+                <constraint firstItem="sIR-hc-Qrc" firstAttribute="leading" secondItem="c7c-Db-D6y" secondAttribute="leading" id="oTI-XX-4Jl"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+        </view>
+    </objects>
+</document>

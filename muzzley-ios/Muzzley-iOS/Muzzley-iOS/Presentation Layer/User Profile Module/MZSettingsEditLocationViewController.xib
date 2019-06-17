@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SanFranciscoDisplay-Light.otf">
+            <string>SanFranciscoDisplay-Light</string>
+        </array>
+        <array key="SanFranciscoDisplay-Medium.otf">
+            <string>SanFranciscoDisplay-Medium</string>
+        </array>
+        <array key="SanFranciscoDisplay-Regular.otf">
+            <string>SanFranciscoDisplay-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MZSettingsEditLocationViewController" customModule="Muzzley_iOS" customModuleProvider="target">
+            <connections>
+                <outlet property="btCurrentUserLocation" destination="WKZ-xF-Vhq" id="bR1-aF-xfk"/>
+                <outlet property="btDone" destination="25b-aa-33Q" id="Pwl-ab-E5A"/>
+                <outlet property="btRemoveWifi" destination="uLu-gi-2uX" id="0se-uf-iWb"/>
+                <outlet property="btSetWifi" destination="bE3-O7-dR2" id="8Ko-ml-1ly"/>
+                <outlet property="iconEdit" destination="pl0-F4-0BY" id="l2S-Iz-IgY"/>
+                <outlet property="lbWifiName" destination="jUq-ar-VIc" id="fGu-qP-aYC"/>
+                <outlet property="mapView" destination="Icz-Z3-I2l" id="DgG-Cw-TSF"/>
+                <outlet property="nameView" destination="mfT-Vo-dNR" id="TBw-JD-gcz"/>
+                <outlet property="pinView" destination="wcJ-7z-gyt" id="zfz-3x-a1d"/>
+                <outlet property="tfAddress" destination="Er7-95-9dv" id="s9M-g3-wHu"/>
+                <outlet property="tfName" destination="YkJ-Op-YWc" id="DA8-xU-J5L"/>
+                <outlet property="tvSearchResults" destination="c64-hg-y5j" id="b7B-4d-MeE"/>
+                <outlet property="view" destination="I0t-pe-n5m" id="L3N-q5-TNQ"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="I0t-pe-n5m">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Icz-Z3-I2l" userLabel="mapView" customClass="GMSMapView">
+                    <rect key="frame" x="0.0" y="158" width="600" height="442"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </view>
+                <imageView opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Location_Pin" translatesAutoresizingMaskIntoConstraints="NO" id="wcJ-7z-gyt" userLabel="pinView">
+                    <rect key="frame" x="275" y="329" width="50" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="Duc-Vh-kPd"/>
+                        <constraint firstAttribute="width" constant="50" id="R6Z-wL-G7U"/>
+                    </constraints>
+                </imageView>
+                <view alpha="0.60000002384185791" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gLa-Ee-N1O">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="158"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mfT-Vo-dNR" userLabel="NameView">
+                            <rect key="frame" x="8" y="8" width="584" height="50"/>
+                            <subviews>
+                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Location Name" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="YkJ-Op-YWc" userLabel="tfName">
+                                    <rect key="frame" x="8" y="14" width="544" height="22"/>
+                                    <fontDescription key="fontDescription" name="SanFranciscoDisplay-Medium" family="San Francisco Display" pointSize="18"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                </textField>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="IconEdit" translatesAutoresizingMaskIntoConstraints="NO" id="pl0-F4-0BY">
+                                    <rect key="frame" x="552" y="13" width="24" height="24"/>
+                                </imageView>
+                            </subviews>
+                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstItem="pl0-F4-0BY" firstAttribute="centerY" secondItem="mfT-Vo-dNR" secondAttribute="centerY" id="Wae-dR-zBs"/>
+                                <constraint firstAttribute="height" constant="50" id="XSq-IN-PKu"/>
+                                <constraint firstAttribute="trailing" secondItem="pl0-F4-0BY" secondAttribute="trailing" constant="8" id="buV-fx-I3s"/>
+                                <constraint firstItem="YkJ-Op-YWc" firstAttribute="centerY" secondItem="mfT-Vo-dNR" secondAttribute="centerY" id="bvC-Mo-XUT"/>
+                                <constraint firstItem="pl0-F4-0BY" firstAttribute="leading" secondItem="YkJ-Op-YWc" secondAttribute="trailing" constant="17" id="ms8-MF-o9O"/>
+                                <constraint firstItem="YkJ-Op-YWc" firstAttribute="leading" secondItem="mfT-Vo-dNR" secondAttribute="leading" constant="8" id="rR8-K1-oH7"/>
+                                <constraint firstItem="pl0-F4-0BY" firstAttribute="leading" secondItem="YkJ-Op-YWc" secondAttribute="trailing" id="t4g-1W-1OH"/>
+                            </constraints>
+                            <variation key="default">
+                                <mask key="constraints">
+                                    <exclude reference="ms8-MF-o9O"/>
+                                </mask>
+                            </variation>
+                        </view>
+                        <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6O5-Ni-ICT" userLabel="WifiView">
+                            <rect key="frame" x="8" y="58" width="584" height="50"/>
+                            <subviews>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_wifi" translatesAutoresizingMaskIntoConstraints="NO" id="CWX-L7-KNM">
+                                    <rect key="frame" x="8" y="20" width="13" height="10"/>
+                                </imageView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Get current Wi-Fi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jUq-ar-VIc" userLabel="lbWifiName">
+                                    <rect key="frame" x="29" y="15" width="115" height="20"/>
+                                    <fontDescription key="fontDescription" name="SanFranciscoDisplay-Light" family="San Francisco Display" pointSize="16"/>
+                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bE3-O7-dR2" userLabel="btSetWifi">
+                                    <rect key="frame" x="543" y="9" width="33" height="33"/>
+                                    <color key="backgroundColor" red="0.34509803919999998" green="0.74901960779999999" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="33" id="ln4-Z9-ECM"/>
+                                        <constraint firstAttribute="height" constant="33" id="xVt-iG-yi2"/>
+                                    </constraints>
+                                    <state key="normal" image="icon_find_wifi"/>
+                                    <connections>
+                                        <action selector="btSetWifiPressed:" destination="-1" eventType="touchUpInside" id="6qH-6T-1w4"/>
+                                    </connections>
+                                </button>
+                                <button hidden="YES" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uLu-gi-2uX" userLabel="btRemoveWifi">
+                                    <rect key="frame" x="543" y="9" width="33" height="33"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="33" id="Bs1-IM-n87"/>
+                                        <constraint firstAttribute="height" constant="33" id="lkO-dI-aUq"/>
+                                    </constraints>
+                                    <inset key="contentEdgeInsets" minX="8" minY="8" maxX="8" maxY="8"/>
+                                    <state key="normal" image="clearButton"/>
+                                    <connections>
+                                        <action selector="btRemoveWifi_Pressed:" destination="-1" eventType="touchUpInside" id="lLb-db-yCS"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstItem="jUq-ar-VIc" firstAttribute="leading" secondItem="CWX-L7-KNM" secondAttribute="trailing" constant="8" id="081-47-NkC"/>
+                                <constraint firstAttribute="trailing" secondItem="bE3-O7-dR2" secondAttribute="trailing" constant="8" id="1DA-82-h5n"/>
+                                <constraint firstItem="CWX-L7-KNM" firstAttribute="leading" secondItem="6O5-Ni-ICT" secondAttribute="leading" constant="8" id="Nrk-0Y-Wdj"/>
+                                <constraint firstItem="CWX-L7-KNM" firstAttribute="centerY" secondItem="6O5-Ni-ICT" secondAttribute="centerY" id="TtM-m7-FO5"/>
+                                <constraint firstItem="jUq-ar-VIc" firstAttribute="centerY" secondItem="6O5-Ni-ICT" secondAttribute="centerY" id="Ul7-Gy-doO"/>
+                                <constraint firstItem="uLu-gi-2uX" firstAttribute="centerY" secondItem="6O5-Ni-ICT" secondAttribute="centerY" id="WNk-Az-dks"/>
+                                <constraint firstAttribute="trailing" secondItem="bE3-O7-dR2" secondAttribute="trailing" constant="8" id="tkd-bW-HgQ"/>
+                                <constraint firstItem="bE3-O7-dR2" firstAttribute="centerY" secondItem="6O5-Ni-ICT" secondAttribute="centerY" id="vpR-pm-1tD"/>
+                                <constraint firstAttribute="trailing" secondItem="uLu-gi-2uX" secondAttribute="trailing" constant="8" id="w9b-uy-OwM"/>
+                                <constraint firstAttribute="height" constant="50" id="wAT-P8-9be"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cso-5t-109" userLabel="AddressView">
+                            <rect key="frame" x="8" y="108" width="584" height="50"/>
+                            <subviews>
+                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Search address" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Er7-95-9dv" userLabel="tfAddress">
+                                    <rect key="frame" x="40" y="10" width="536" height="30"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" name="SanFranciscoDisplay-Light" family="San Francisco Display" pointSize="16"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                </textField>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="IconSearch" translatesAutoresizingMaskIntoConstraints="NO" id="tBT-s9-KRb">
+                                    <rect key="frame" x="6" y="16" width="20" height="20"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="tintColor" red="0.23004928690000001" green="0.0" blue="0.21345427850000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </imageView>
+                            </subviews>
+                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="3oJ-pq-7Ql"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="cso-5t-109" firstAttribute="top" secondItem="6O5-Ni-ICT" secondAttribute="bottom" id="GG2-oY-KPz"/>
+                        <constraint firstItem="6O5-Ni-ICT" firstAttribute="leading" secondItem="gLa-Ee-N1O" secondAttribute="leading" constant="8" id="HvO-82-VPh"/>
+                        <constraint firstAttribute="trailing" secondItem="6O5-Ni-ICT" secondAttribute="trailing" constant="8" id="OFH-o3-RHe"/>
+                        <constraint firstItem="cso-5t-109" firstAttribute="leading" secondItem="gLa-Ee-N1O" secondAttribute="leading" constant="8" id="Vek-yu-QKz"/>
+                        <constraint firstItem="mfT-Vo-dNR" firstAttribute="top" secondItem="gLa-Ee-N1O" secondAttribute="top" constant="8" id="XsB-yp-obb" userLabel="NameView.top = View + 8"/>
+                        <constraint firstItem="6O5-Ni-ICT" firstAttribute="leading" secondItem="gLa-Ee-N1O" secondAttribute="leading" constant="8" id="YcT-cy-Fca" userLabel="WifiView.leading = leading +8"/>
+                        <constraint firstItem="6O5-Ni-ICT" firstAttribute="top" secondItem="mfT-Vo-dNR" secondAttribute="bottom" id="Zdg-MA-zHN"/>
+                        <constraint firstAttribute="trailing" secondItem="cso-5t-109" secondAttribute="trailing" constant="8" id="dOV-Tn-1KR"/>
+                        <constraint firstItem="mfT-Vo-dNR" firstAttribute="leading" secondItem="gLa-Ee-N1O" secondAttribute="leading" constant="8" id="qRB-tg-70i"/>
+                        <constraint firstAttribute="trailing" secondItem="mfT-Vo-dNR" secondAttribute="trailing" constant="8" id="qUS-M4-EeD"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleAspectFit" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WKZ-xF-Vhq" userLabel="btCurrentUserLocation">
+                    <rect key="frame" x="532" y="464" width="44" height="44"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="6ar-eb-8Wi"/>
+                        <constraint firstAttribute="width" constant="44" id="ida-VS-abd"/>
+                    </constraints>
+                    <color key="tintColor" red="0.062745101750000004" green="0.70980393890000004" blue="0.84705883260000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <inset key="imageEdgeInsets" minX="11" minY="11" maxX="11" maxY="11"/>
+                    <state key="normal" image="User_Location"/>
+                    <connections>
+                        <action selector="toggleShowUserLocation" destination="-1" eventType="touchUpInside" id="biu-Mx-kMH"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleAspectFit" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="25b-aa-33Q" userLabel="btDone">
+                    <rect key="frame" x="24" y="532" width="552" height="44"/>
+                    <color key="backgroundColor" red="0.062745101750000004" green="0.70980393890000004" blue="0.84705883260000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="Pwm-Fa-WY1"/>
+                        <constraint firstAttribute="width" constant="44" id="mry-Lh-XAV"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="SanFranciscoDisplay-Regular" family="San Francisco Display" pointSize="15"/>
+                    <color key="tintColor" red="0.062745101750000004" green="0.70980393890000004" blue="0.84705883260000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <inset key="imageEdgeInsets" minX="11" minY="11" maxX="11" maxY="11"/>
+                    <state key="normal" title="Done">
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="mry-Lh-XAV"/>
+                        </mask>
+                    </variation>
+                    <connections>
+                        <action selector="setLocationBtnTapped" destination="-1" eventType="touchUpInside" id="1mW-2S-m92"/>
+                    </connections>
+                </button>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" style="plain" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="c64-hg-y5j" userLabel="tvSearchResults">
+                    <rect key="frame" x="0.0" y="150" width="600" height="450"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="450" id="wW8-nC-aY5"/>
+                    </constraints>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="BaN-T2-Uu8"/>
+                        <outlet property="delegate" destination="-1" id="JrN-0G-5Uh"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="Icz-Z3-I2l" secondAttribute="bottom" id="7Zu-pT-ow3"/>
+                <constraint firstItem="Icz-Z3-I2l" firstAttribute="top" secondItem="gLa-Ee-N1O" secondAttribute="bottom" id="Fym-aI-bJM"/>
+                <constraint firstItem="gLa-Ee-N1O" firstAttribute="top" secondItem="I0t-pe-n5m" secondAttribute="top" id="ITr-EJ-pAu"/>
+                <constraint firstAttribute="trailing" secondItem="c64-hg-y5j" secondAttribute="trailing" id="LEc-OP-1Ir"/>
+                <constraint firstItem="gLa-Ee-N1O" firstAttribute="leading" secondItem="I0t-pe-n5m" secondAttribute="leading" id="Lrq-q2-wx9"/>
+                <constraint firstItem="Icz-Z3-I2l" firstAttribute="top" secondItem="I0t-pe-n5m" secondAttribute="top" constant="158" id="S6P-WC-HhX"/>
+                <constraint firstAttribute="trailing" secondItem="25b-aa-33Q" secondAttribute="trailing" constant="24" id="aTF-Kz-q6K"/>
+                <constraint firstItem="Icz-Z3-I2l" firstAttribute="leading" secondItem="I0t-pe-n5m" secondAttribute="leading" id="bft-wE-zoD"/>
+                <constraint firstItem="25b-aa-33Q" firstAttribute="top" secondItem="WKZ-xF-Vhq" secondAttribute="bottom" constant="24" id="buY-PD-BJ9"/>
+                <constraint firstAttribute="trailing" secondItem="Icz-Z3-I2l" secondAttribute="trailing" id="eee-jW-jGI"/>
+                <constraint firstAttribute="bottom" secondItem="c64-hg-y5j" secondAttribute="bottom" id="fL1-lj-lch"/>
+                <constraint firstItem="25b-aa-33Q" firstAttribute="leading" secondItem="I0t-pe-n5m" secondAttribute="leading" constant="24" id="jo6-ue-7dD"/>
+                <constraint firstAttribute="trailing" secondItem="WKZ-xF-Vhq" secondAttribute="trailing" constant="24" id="kbW-FH-MJ4"/>
+                <constraint firstItem="wcJ-7z-gyt" firstAttribute="centerX" secondItem="I0t-pe-n5m" secondAttribute="centerX" id="l2m-O7-v9j"/>
+                <constraint firstAttribute="bottom" secondItem="25b-aa-33Q" secondAttribute="bottom" constant="24" id="m8V-yu-nhs"/>
+                <constraint firstAttribute="trailing" secondItem="gLa-Ee-N1O" secondAttribute="trailing" id="qAJ-vd-j61"/>
+                <constraint firstItem="c64-hg-y5j" firstAttribute="leading" secondItem="I0t-pe-n5m" secondAttribute="leading" id="rFZ-C1-bPt"/>
+                <constraint firstItem="wcJ-7z-gyt" firstAttribute="centerY" secondItem="Icz-Z3-I2l" secondAttribute="centerY" constant="-25" id="seF-aP-3wx"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <point key="canvasLocation" x="150" y="293"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="IconEdit" width="24" height="24"/>
+        <image name="IconSearch" width="24" height="24"/>
+        <image name="Location_Pin" width="55" height="80"/>
+        <image name="User_Location" width="44" height="44"/>
+        <image name="clearButton" width="24" height="24"/>
+        <image name="icon_find_wifi" width="22" height="18"/>
+        <image name="icon_wifi" width="13" height="10"/>
+    </resources>
+</document>

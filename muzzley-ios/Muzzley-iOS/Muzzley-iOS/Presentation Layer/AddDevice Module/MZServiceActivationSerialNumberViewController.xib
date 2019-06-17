@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina3_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SanFranciscoDisplay-Medium.otf">
+            <string>SanFranciscoDisplay-Medium</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MZServiceActivationSerialNumberViewController" customModule="Muzzley_iOS" customModuleProvider="target">
+            <connections>
+                <outlet property="uiBtActivate" destination="Cma-0P-1Tm" id="Mgl-jO-5oy"/>
+                <outlet property="uiLbTop" destination="WBp-Dh-KRG" id="80E-fv-W8U"/>
+                <outlet property="uiTfCode" destination="SP9-vY-qVJ" id="Yuq-3z-btP"/>
+                <outlet property="view" destination="iN0-l3-epB" id="OUj-Ha-5Qs"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Top" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WBp-Dh-KRG" userLabel="uiLbTop">
+                    <rect key="frame" x="30" y="25" width="260" height="21"/>
+                    <fontDescription key="fontDescription" name="SanFranciscoDisplay-Medium" family="San Francisco Display" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SP9-vY-qVJ" userLabel="uiTfCode" customClass="MZTextField" customModule="Muzzley_iOS" customModuleProvider="target">
+                    <rect key="frame" x="30" y="106" width="260" height="30"/>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cma-0P-1Tm" userLabel="uiBtActivate" customClass="MZColorButton">
+                    <rect key="frame" x="30" y="176" width="260" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="Dkf-gw-XiD"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <connections>
+                        <action selector="uiBtActivate_TouchUp:" destination="-1" eventType="touchUpInside" id="nnR-Sd-wdQ"/>
+                    </connections>
+                </button>
+            </subviews>
+            <constraints>
+                <constraint firstItem="Cma-0P-1Tm" firstAttribute="top" secondItem="SP9-vY-qVJ" secondAttribute="bottom" constant="40" id="23f-Ql-w8D"/>
+                <constraint firstItem="WBp-Dh-KRG" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="30" id="R50-4Y-Ct2"/>
+                <constraint firstItem="SP9-vY-qVJ" firstAttribute="top" secondItem="WBp-Dh-KRG" secondAttribute="bottom" constant="60" id="Vjb-eH-TJm"/>
+                <constraint firstAttribute="trailing" secondItem="Cma-0P-1Tm" secondAttribute="trailing" constant="30" id="aq8-TU-9Bj"/>
+                <constraint firstItem="Cma-0P-1Tm" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="30" id="g4Y-Lr-Utj"/>
+                <constraint firstAttribute="trailing" secondItem="WBp-Dh-KRG" secondAttribute="trailing" constant="30" id="hGE-rj-jL2"/>
+                <constraint firstItem="WBp-Dh-KRG" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="25" id="hcL-XZ-1Hd"/>
+                <constraint firstItem="SP9-vY-qVJ" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="30" id="kNE-B6-qC2"/>
+                <constraint firstAttribute="trailing" secondItem="SP9-vY-qVJ" secondAttribute="trailing" constant="30" id="knh-wB-5fA"/>
+            </constraints>
+            <point key="canvasLocation" x="-18" y="3"/>
+        </view>
+    </objects>
+</document>

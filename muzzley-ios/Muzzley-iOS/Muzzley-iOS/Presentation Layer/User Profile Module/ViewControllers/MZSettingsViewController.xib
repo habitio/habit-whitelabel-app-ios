@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MZSettingsViewController" customModule="Muzzley_iOS" customModuleProvider="target">
+            <connections>
+                <outlet property="tableView" destination="ePn-Go-2fY" id="h3g-PH-pa3"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" bounces="NO" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="50" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ePn-Go-2fY">
+                    <frame key="frameInset" width="600" height="464"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <inset key="separatorInset" minX="8" minY="0.0" maxX="8" maxY="0.0"/>
+                    <color key="sectionIndexBackgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="7dR-xr-taS"/>
+                        <outlet property="delegate" destination="-1" id="vQd-E6-jeA"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="ePn-Go-2fY" secondAttribute="trailing" id="3H6-zn-dy3" userLabel="trailing = Table View.trailing"/>
+                <constraint firstAttribute="bottom" secondItem="ePn-Go-2fY" secondAttribute="bottom" constant="20" id="AxD-E6-qKK"/>
+                <constraint firstItem="ePn-Go-2fY" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="M5w-rd-jgg" userLabel="Table View.leading = leading"/>
+                <constraint firstItem="ePn-Go-2fY" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Nwg-wc-0jE" userLabel="Table View.top = top "/>
+            </constraints>
+        </view>
+    </objects>
+</document>

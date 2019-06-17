@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SanFranciscoDisplay-Regular.otf">
+            <string>SanFranciscoDisplay-Regular</string>
+        </array>
+        <array key="SanFranciscoDisplay-Semibold.otf">
+            <string>SanFranciscoDisplay-Semibold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MZCardLocationPickerViewController" customModule="Muzzley_iOS" customModuleProvider="target">
+            <connections>
+                <outlet property="mapView" destination="Mgv-ZR-QCQ" id="f68-nt-ERy"/>
+                <outlet property="pinView" destination="noF-LM-A19" id="BaY-Ed-sXH"/>
+                <outlet property="setNewLocationBtn" destination="MUh-Kf-p3l" id="V44-KQ-v3e"/>
+                <outlet property="setUserLocationBtn" destination="cxb-qB-xuH" id="Y7n-KH-is1"/>
+                <outlet property="subtitleLabel" destination="7zc-Id-H9i" id="siW-pB-OfI"/>
+                <outlet property="titleLabel" destination="Nvs-q6-j4Q" id="2Qd-J7-mk9"/>
+                <outlet property="view" destination="iN0-l3-epB" id="z0V-9b-p4W"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Mgv-ZR-QCQ" customClass="GMSMapView">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </view>
+                <imageView opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Location_Pin" translatesAutoresizingMaskIntoConstraints="NO" id="noF-LM-A19">
+                    <rect key="frame" x="135" y="190" width="50" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="50" id="2ou-uc-yLP"/>
+                        <constraint firstAttribute="height" constant="50" id="PbZ-Xd-Uyu"/>
+                    </constraints>
+                </imageView>
+                <view alpha="0.59999999999999998" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2Ma-aJ-faw">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nvs-q6-j4Q">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="25"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="25" id="BoO-BP-7Qv"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="SanFranciscoDisplay-Regular" family="San Francisco Display" pointSize="15"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7zc-Id-H9i">
+                            <rect key="frame" x="0.0" y="25" width="320" height="25"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="25" id="cW0-l0-VVU"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="SanFranciscoDisplay-Semibold" family="San Francisco Display" pointSize="15"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="7zc-Id-H9i" secondAttribute="trailing" id="AP6-CN-9Rk"/>
+                        <constraint firstAttribute="height" constant="50" id="K7F-ik-MD2"/>
+                        <constraint firstItem="7zc-Id-H9i" firstAttribute="leading" secondItem="2Ma-aJ-faw" secondAttribute="leading" id="KLQ-59-O7y"/>
+                        <constraint firstAttribute="bottom" secondItem="7zc-Id-H9i" secondAttribute="bottom" id="Sge-kS-dsF"/>
+                        <constraint firstAttribute="trailing" secondItem="Nvs-q6-j4Q" secondAttribute="trailing" id="kxb-ie-2Df"/>
+                        <constraint firstItem="Nvs-q6-j4Q" firstAttribute="top" secondItem="2Ma-aJ-faw" secondAttribute="top" id="oaI-76-Bfe"/>
+                        <constraint firstItem="Nvs-q6-j4Q" firstAttribute="leading" secondItem="2Ma-aJ-faw" secondAttribute="leading" id="opm-bt-5jR"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleAspectFit" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cxb-qB-xuH">
+                    <rect key="frame" x="252" y="344" width="44" height="44"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="7se-ng-w5l"/>
+                        <constraint firstAttribute="width" constant="44" id="Ds0-sC-JZU"/>
+                    </constraints>
+                    <color key="tintColor" red="0.062745101750000004" green="0.70980393890000004" blue="0.84705883260000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <inset key="imageEdgeInsets" minX="11" minY="11" maxX="11" maxY="11"/>
+                    <state key="normal" image="User_Location"/>
+                    <connections>
+                        <action selector="toggleShowUserLocation" destination="-1" eventType="touchUpInside" id="Y1c-ua-pMo"/>
+                    </connections>
+                </button>
+                <button opaque="NO" alpha="0.29999999999999999" contentMode="scaleAspectFit" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MUh-Kf-p3l">
+                    <rect key="frame" x="24" y="412" width="272" height="44"/>
+                    <color key="backgroundColor" red="0.062745101750000004" green="0.70980393890000004" blue="0.84705883260000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="NDS-Xp-Ujg"/>
+                        <constraint firstAttribute="width" constant="44" id="voo-yK-dhc"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="SanFranciscoDisplay-Regular" family="San Francisco Display" pointSize="15"/>
+                    <color key="tintColor" red="0.062745101750000004" green="0.70980393890000004" blue="0.84705883260000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <inset key="imageEdgeInsets" minX="11" minY="11" maxX="11" maxY="11"/>
+                    <state key="normal" title="Set Location">
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="voo-yK-dhc"/>
+                        </mask>
+                    </variation>
+                    <connections>
+                        <action selector="setLocationBtnTapped" destination="-1" eventType="touchUpInside" id="btM-fX-Pjd"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Mgv-ZR-QCQ" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="65Z-0D-sVw"/>
+                <constraint firstAttribute="bottom" secondItem="Mgv-ZR-QCQ" secondAttribute="bottom" id="6jC-v3-hwS"/>
+                <constraint firstItem="noF-LM-A19" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Bha-Yw-f7G"/>
+                <constraint firstItem="noF-LM-A19" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="190" id="Cdd-JO-kO6"/>
+                <constraint firstAttribute="trailing" secondItem="MUh-Kf-p3l" secondAttribute="trailing" constant="24" id="E0U-Xh-njS"/>
+                <constraint firstAttribute="trailing" secondItem="2Ma-aJ-faw" secondAttribute="trailing" id="Eyq-qg-JMQ"/>
+                <constraint firstItem="Mgv-ZR-QCQ" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="GmT-sd-08h"/>
+                <constraint firstItem="2Ma-aJ-faw" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="NSc-gI-QH9"/>
+                <constraint firstAttribute="trailing" secondItem="cxb-qB-xuH" secondAttribute="trailing" constant="24" id="RRo-Ib-7wf"/>
+                <constraint firstAttribute="trailing" secondItem="Mgv-ZR-QCQ" secondAttribute="trailing" id="W5j-hm-N14"/>
+                <constraint firstItem="2Ma-aJ-faw" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Zis-gX-bPi"/>
+                <constraint firstItem="noF-LM-A19" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="aub-wn-Baa"/>
+                <constraint firstItem="MUh-Kf-p3l" firstAttribute="top" secondItem="cxb-qB-xuH" secondAttribute="bottom" constant="24" id="bAq-u1-msd"/>
+                <constraint firstItem="Mgv-ZR-QCQ" firstAttribute="top" secondItem="2Ma-aJ-faw" secondAttribute="bottom" id="bed-5L-z2O"/>
+                <constraint firstAttribute="bottom" secondItem="MUh-Kf-p3l" secondAttribute="bottom" constant="24" id="hFY-JL-Fao"/>
+                <constraint firstItem="noF-LM-A19" firstAttribute="top" secondItem="Mgv-ZR-QCQ" secondAttribute="bottom" constant="-265" id="oGk-bu-oWq"/>
+                <constraint firstItem="MUh-Kf-p3l" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="24" id="ua9-5b-B1q"/>
+                <constraint firstItem="noF-LM-A19" firstAttribute="centerY" secondItem="Mgv-ZR-QCQ" secondAttribute="centerY" constant="-25" id="wVF-Yu-x2y"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="bed-5L-z2O"/>
+                    <exclude reference="Cdd-JO-kO6"/>
+                    <exclude reference="aub-wn-Baa"/>
+                    <exclude reference="oGk-bu-oWq"/>
+                </mask>
+            </variation>
+            <point key="canvasLocation" x="158" y="309"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Location_Pin" width="55" height="80"/>
+        <image name="User_Location" width="44" height="44"/>
+    </resources>
+</document>

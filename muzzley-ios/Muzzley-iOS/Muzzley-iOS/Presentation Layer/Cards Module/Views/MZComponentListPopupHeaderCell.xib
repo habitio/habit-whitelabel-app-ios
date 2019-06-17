@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SanFranciscoText-Regular.otf">
+            <string>SanFranciscoText-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="headerCell" id="urM-qZ-LAv" customClass="MZComponentListPopupHeaderCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="38"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="urM-qZ-LAv" id="2tK-ib-hOM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="37.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Make your selection" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qHQ-TI-hYr">
+                        <rect key="frame" x="8" y="8" width="304" height="22"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="jyJ-cB-yBS"/>
+                            <constraint firstAttribute="height" constant="22" id="rLZ-8E-kPK"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="SanFranciscoText-Regular" family="San Francisco Text" pointSize="17"/>
+                        <color key="textColor" red="0.5296475887298584" green="0.52963173389434814" blue="0.52964073419570923" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="jyJ-cB-yBS"/>
+                            </mask>
+                        </variation>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailingMargin" secondItem="qHQ-TI-hYr" secondAttribute="trailing" id="LvA-h7-rZ3"/>
+                    <constraint firstItem="qHQ-TI-hYr" firstAttribute="leading" secondItem="2tK-ib-hOM" secondAttribute="leadingMargin" id="XnC-SI-vZH"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="qHQ-TI-hYr" secondAttribute="bottom" constant="8" id="mLP-qe-RaL"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="qHQ-TI-hYr" secondAttribute="bottom" id="me4-wr-7vv"/>
+                    <constraint firstItem="qHQ-TI-hYr" firstAttribute="top" secondItem="2tK-ib-hOM" secondAttribute="topMargin" constant="8" id="q1q-7h-NBq"/>
+                </constraints>
+                <variation key="default">
+                    <mask key="constraints">
+                        <exclude reference="mLP-qe-RaL"/>
+                        <exclude reference="q1q-7h-NBq"/>
+                    </mask>
+                </variation>
+            </tableViewCellContentView>
+            <inset key="separatorInset" minX="16" minY="0.0" maxX="16" maxY="0.0"/>
+            <point key="canvasLocation" x="180" y="181.5"/>
+        </tableViewCell>
+    </objects>
+</document>

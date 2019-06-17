@@ -1,0 +1,8 @@
+"NSCameraUsageDescription" = "Pour numériser des QR codes, veuillez autoriser l\'accès à l\'appareil photo.";
+"NSLocationAlwaysUsageDescription" = "Si l\'application sait où vous êtes, elle peut mieux s\'adapter à vos besoins. Nous ne partagerons pas votre position sans votre permission.";
+"NSLocationAlwaysAndWhenInUseUsageDescription" = "Si l\'application sait où vous êtes, elle peut mieux s\'adapter à vos besoins. Nous ne partagerons pas votre position sans votre permission.";
+"NSLocationWhenInUseUsageDescription" = "Si l\'application sait où vous êtes, elle peut mieux s\'adapter à vos besoins. Nous ne partagerons pas votre position sans votre permission.";
+"NSLocationUsageDescription" = "Afin d\'assurer une expérience optimale, merci d\'activer les services de localisation sur votre téléphone.";
+"NSMicrophoneUsageDescription" = "Cela vous permettra de parler à votre bébé à tout moment! Nous ne partagerons pas vos interactions sonores.";
+"NSPhotoLibraryUsageDescription" = "Cette action vous permettra de modifier votre photo de profil.";
+"NSMotionUsageDescription" = "En connaissant votre activité, nous serons en mesure de mieux vous protéger";

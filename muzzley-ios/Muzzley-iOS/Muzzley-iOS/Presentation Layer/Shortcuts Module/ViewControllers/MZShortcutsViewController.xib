@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MZShortcutsViewController" customModule="Muzzley_iOS" customModuleProvider="target">
+            <connections>
+                <outlet property="lessButton" destination="TS4-FW-uNU" id="djt-Vq-wwo"/>
+                <outlet property="tableView" destination="Un8-d2-aQy" id="QmS-xt-juZ"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TS4-FW-uNU">
+                    <rect key="frame" x="309" y="8" width="46" height="30"/>
+                    <state key="normal" title="Button"/>
+                </button>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" allowsSelectionDuringEditing="YES" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Un8-d2-aQy">
+                    <rect key="frame" x="0.0" y="46" width="375" height="621"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <inset key="separatorInset" minX="16" minY="0.0" maxX="16" maxY="0.0"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="nf9-CD-kqh"/>
+                        <outlet property="delegate" destination="-1" id="jMa-7K-Fsh"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="TS4-FW-uNU" secondAttribute="trailing" constant="20" id="CUl-pd-QvF"/>
+                <constraint firstAttribute="trailing" secondItem="Un8-d2-aQy" secondAttribute="trailing" id="IN5-rf-z8i"/>
+                <constraint firstItem="TS4-FW-uNU" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="8" id="g55-Ll-FUm"/>
+                <constraint firstItem="Un8-d2-aQy" firstAttribute="top" secondItem="TS4-FW-uNU" secondAttribute="bottom" constant="8" id="gRg-Ww-ygT"/>
+                <constraint firstAttribute="bottom" secondItem="Un8-d2-aQy" secondAttribute="bottom" id="ggz-hm-PVq"/>
+                <constraint firstItem="Un8-d2-aQy" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="neU-4R-5P7"/>
+            </constraints>
+        </view>
+    </objects>
+</document>

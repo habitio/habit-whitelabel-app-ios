@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SanFranciscoText-Light.otf">
+            <string>SanFranciscoText-Light</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="elementCell" id="NjT-jP-slv" customClass="MZComponentListPopupCell" customModule="Muzzley_iOS" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="NjT-jP-slv" id="7Un-ri-I4j">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="49.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EWt-ZH-glP">
+                        <rect key="frame" x="284" y="15" width="20" height="20"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MPCheckmark" translatesAutoresizingMaskIntoConstraints="NO" id="t8H-VH-uvg">
+                                <rect key="frame" x="3" y="4" width="13" height="13"/>
+                                <color key="backgroundColor" red="0.062745101750000004" green="0.70980393890000004" blue="0.84705883260000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="13" id="AGS-NS-C9D"/>
+                                    <constraint firstAttribute="height" constant="13" id="ViR-y3-GFf"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.062745101750000004" green="0.70980393890000004" blue="0.84705883260000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="LAJ-fW-Lok"/>
+                            <constraint firstAttribute="width" constant="20" id="aeb-vg-l2x"/>
+                            <constraint firstItem="t8H-VH-uvg" firstAttribute="centerY" secondItem="EWt-ZH-glP" secondAttribute="centerY" id="mBa-M9-9C7"/>
+                            <constraint firstItem="t8H-VH-uvg" firstAttribute="centerX" secondItem="EWt-ZH-glP" secondAttribute="centerX" id="x8S-Zy-jLu"/>
+                        </constraints>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j6D-9O-UxU">
+                        <rect key="frame" x="16" y="15" width="260" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="Ybl-qO-Q3X"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="SanFranciscoText-Light" family="San Francisco Text" pointSize="20"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="EWt-ZH-glP" firstAttribute="leading" secondItem="j6D-9O-UxU" secondAttribute="trailing" constant="8" id="60d-Xq-Kq3"/>
+                    <constraint firstItem="EWt-ZH-glP" firstAttribute="centerY" secondItem="7Un-ri-I4j" secondAttribute="centerY" id="AzS-Qt-qjG"/>
+                    <constraint firstItem="j6D-9O-UxU" firstAttribute="leading" secondItem="7Un-ri-I4j" secondAttribute="leadingMargin" id="Oys-la-OKS"/>
+                    <constraint firstItem="j6D-9O-UxU" firstAttribute="top" secondItem="7Un-ri-I4j" secondAttribute="topMargin" constant="8" id="RDd-2G-Rt4"/>
+                    <constraint firstItem="j6D-9O-UxU" firstAttribute="centerY" secondItem="7Un-ri-I4j" secondAttribute="centerY" id="S6Q-bV-wOv"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="j6D-9O-UxU" secondAttribute="bottom" constant="8" id="gkL-CZ-U3c"/>
+                    <constraint firstAttribute="trailing" secondItem="EWt-ZH-glP" secondAttribute="trailing" constant="16" id="hMA-eD-CHq"/>
+                </constraints>
+                <variation key="default">
+                    <mask key="constraints">
+                        <exclude reference="RDd-2G-Rt4"/>
+                        <exclude reference="gkL-CZ-U3c"/>
+                    </mask>
+                </variation>
+            </tableViewCellContentView>
+            <inset key="separatorInset" minX="16" minY="0.0" maxX="16" maxY="0.0"/>
+            <connections>
+                <outlet property="checkmark" destination="EWt-ZH-glP" id="env-y3-mDH"/>
+                <outlet property="deviceNameLabel" destination="j6D-9O-UxU" id="nik-Se-oYT"/>
+            </connections>
+            <point key="canvasLocation" x="180" y="181.5"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="MPCheckmark" width="13" height="14"/>
+    </resources>
+</document>

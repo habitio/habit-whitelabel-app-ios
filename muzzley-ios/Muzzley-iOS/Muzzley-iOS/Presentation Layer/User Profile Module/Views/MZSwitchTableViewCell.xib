@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SanFranciscoDisplay-Light.otf">
+            <string>SanFranciscoDisplay-Light</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="76" id="KGk-i7-Jjw" customClass="MZSwitchTableViewCell" customModule="Muzzley_iOS" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="76"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="75.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yWe-5n-jEf">
+                        <rect key="frame" x="16" y="14" width="231" height="18"/>
+                        <fontDescription key="fontDescription" name="SanFranciscoDisplay-Light" family="San Francisco Display" pointSize="15"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="center" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bWp-zj-joZ" userLabel="Toggle" customClass="MZTriStateToggle">
+                        <rect key="frame" x="255" y="9" width="50" height="30"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="icon_info" translatesAutoresizingMaskIntoConstraints="NO" id="4V2-dA-tm4" userLabel="iconInfo">
+                        <rect key="frame" x="216" y="12" width="24" height="24"/>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailingMargin" secondItem="bWp-zj-joZ" secondAttribute="trailing" constant="7" id="3Qh-Bz-wsM"/>
+                    <constraint firstItem="bWp-zj-joZ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="IZm-4o-RXX"/>
+                    <constraint firstItem="yWe-5n-jEf" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="8" id="J54-vI-Lon"/>
+                    <constraint firstItem="yWe-5n-jEf" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="14" id="KQo-SU-kpo"/>
+                    <constraint firstItem="bWp-zj-joZ" firstAttribute="leading" secondItem="4V2-dA-tm4" secondAttribute="trailing" constant="15" id="PRw-X9-H0K"/>
+                    <constraint firstItem="yWe-5n-jEf" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="WHr-MB-P99"/>
+                    <constraint firstAttribute="bottom" secondItem="bWp-zj-joZ" secondAttribute="bottom" constant="8" id="Z8n-8g-D3s"/>
+                    <constraint firstAttribute="trailing" secondItem="bWp-zj-joZ" secondAttribute="trailing" constant="8" id="h8Z-Qu-GmW"/>
+                    <constraint firstItem="yWe-5n-jEf" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="6" id="isM-f6-jsq"/>
+                    <constraint firstItem="4V2-dA-tm4" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="jJj-nb-Unt"/>
+                    <constraint firstItem="bWp-zj-joZ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="1" id="q2o-1I-kI4"/>
+                    <constraint firstItem="bWp-zj-joZ" firstAttribute="leading" secondItem="yWe-5n-jEf" secondAttribute="trailing" constant="8" id="tuf-x9-vKS"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+            <connections>
+                <outlet property="iconInfo" destination="4V2-dA-tm4" id="o5b-Ok-uqI"/>
+                <outlet property="title" destination="yWe-5n-jEf" id="JuV-iQ-U5f"/>
+                <outlet property="toggle" destination="bWp-zj-joZ" id="xuP-Jo-KO9"/>
+            </connections>
+            <point key="canvasLocation" x="273" y="271"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="icon_info" width="24" height="24"/>
+    </resources>
+</document>

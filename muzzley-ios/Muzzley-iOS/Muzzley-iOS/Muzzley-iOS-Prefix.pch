@@ -1,0 +1,56 @@
+//
+// Prefix header for all source files of the 'Muzzley-iOS' target in the 'Muzzley-iOS' project
+//
+
+#import <Availability.h>
+
+#ifndef __IPHONE_8_0
+#warning "This project uses features only available in iOS SDK 8.0 and later."
+#endif
+
+#ifdef DEBUG
+#   define DLog(fmt, ...) NSLog((@"%s [Line %d] " fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__);
+#else
+#   define DLog(...)
+#endif
+
+#define ALog(fmt, ...) NSLog((@"%s [Line %d] " fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__);
+
+#ifdef DEBUG
+#   define ULog(fmt, ...)  { UIAlertView *alert = [[UIAlertView alloc] initWithTitle:[NSString stringWithFormat:@"%s\n [Line %d] ", __PRETTY_FUNCTION__, __LINE__] message:[NSString stringWithFormat:fmt, ##__VA_ARGS__]  delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil]; [alert show]; }
+#else
+#   define ULog(...)
+#endif
+
+
+#ifdef __OBJC__
+    #import <UIKit/UIKit.h>
+    #import <Foundation/Foundation.h>
+    #import <MobileCoreServices/MobileCoreServices.h>
+
+    //PODS
+    #import <AFNetworking/AFNetworking.h>
+    #import <GPUImage/GPUImage.h>
+    #import <UIScrollView_Keyboard/UIScrollView+Keyboard.h>
+    #import <KLCPopup/KLCPopup.h>
+    #import <KLCPopup/KLCPopup.h>
+    #import <RxCocoa/RxCocoa.h>
+    #import <Fabric/Fabric.h>
+    #import <Crashlytics/Crashlytics.h>
+    #import <AFNetworking/UIImageView+AFNetworking.h>
+
+    #import "AppConstants.h"
+    #import "UIDevice+SystemVersionAdditions.h"
+    #import "UIView+Borders.h"
+    #import "UIColor+Muzzley.h"
+    #import "UIImage+Resize.h"
+    #import "UIImage+Alpha.h"
+    #import "UIImage+RoundedCorner.h"
+    #import "NSObject+KJSerializer.h"
+    #import "NSDate+Additions.h"
+    #import "Muzzley_iOS-Swift.h"
+
+    @import CocoaLumberjack;
+
+    static const DDLogLevel ddLogLevel = DDLogLevelDebug;
+#endif

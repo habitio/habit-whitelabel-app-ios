@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MZHTMLViewController">
+            <connections>
+                <outlet property="activityIndicator" destination="OZ3-1k-JQ9" id="SqJ-ez-K4x"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="webview" destination="aUX-68-naJ" id="RqO-xo-DbW"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <webView contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aUX-68-naJ">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                    <dataDetectorType key="dataDetectorTypes"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="jGT-hf-HOg"/>
+                    </connections>
+                </webView>
+                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" hidesWhenStopped="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="OZ3-1k-JQ9">
+                    <rect key="frame" x="141" y="221" width="38" height="38"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="38" id="1CL-1K-P6G"/>
+                        <constraint firstAttribute="height" constant="38" id="YY7-yb-780"/>
+                    </constraints>
+                    <color key="color" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </activityIndicatorView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="centerY" secondItem="OZ3-1k-JQ9" secondAttribute="centerY" id="2Z2-ok-AKr"/>
+                <constraint firstItem="aUX-68-naJ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="9ps-9E-DhE"/>
+                <constraint firstAttribute="centerX" secondItem="OZ3-1k-JQ9" secondAttribute="centerX" id="OMb-Ky-lhe"/>
+                <constraint firstItem="aUX-68-naJ" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="TPV-wP-tcS"/>
+                <constraint firstAttribute="trailing" secondItem="aUX-68-naJ" secondAttribute="trailing" id="tsG-wx-dCY"/>
+                <constraint firstAttribute="bottom" secondItem="aUX-68-naJ" secondAttribute="bottom" id="w4s-ae-hJq"/>
+            </constraints>
+        </view>
+    </objects>
+</document>

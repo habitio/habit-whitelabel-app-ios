@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SanFranciscoText-Medium.otf">
+            <string>SanFranciscoText-Medium</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MZCardDevicesPicker" customModule="Muzzley_iOS" customModuleProvider="target">
+            <connections>
+                <outlet property="tagListView" destination="xOC-k5-azZ" id="mDk-lu-EJM"/>
+                <outlet property="view" destination="byL-uC-ozo" id="2yy-XS-Yec"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="byL-uC-ozo">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="140"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0O2-5U-Kdf">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="140"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ADD/REMOVE DEVICES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="3zK-Cc-bYJ">
+                            <rect key="frame" x="16" y="8" width="343" height="20"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="288" id="6Zd-9P-Dvr"/>
+                                <constraint firstAttribute="height" constant="15" id="U5v-9l-fWa"/>
+                                <constraint firstAttribute="height" constant="20" id="YaN-gc-QBg"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="SanFranciscoText-Medium" family="San Francisco Text" pointSize="15"/>
+                            <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                            <variation key="default">
+                                <mask key="constraints">
+                                    <exclude reference="6Zd-9P-Dvr"/>
+                                    <exclude reference="U5v-9l-fWa"/>
+                                </mask>
+                            </variation>
+                        </label>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xOC-k5-azZ" customClass="TagListView" customModule="TagListView">
+                            <rect key="frame" x="16" y="36" width="343" height="104"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="14"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="tagBackgroundColor">
+                                    <color key="value" red="0.062745101750000004" green="0.70980393890000004" blue="0.84705883260000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="textColor">
+                                    <color key="value" red="0.93609845638275146" green="0.93607044219970703" blue="0.93608629703521729" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                    <real key="value" value="0.0"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="paddingY">
+                                    <real key="value" value="8"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="paddingX">
+                                    <real key="value" value="8"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="marginY">
+                                    <real key="value" value="5"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="marginX">
+                                    <real key="value" value="5"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="xOC-k5-azZ" firstAttribute="leading" secondItem="0O2-5U-Kdf" secondAttribute="leading" constant="16" id="HaI-0Y-wkb"/>
+                        <constraint firstAttribute="trailing" secondItem="3zK-Cc-bYJ" secondAttribute="trailing" constant="16" id="I93-wi-gEY"/>
+                        <constraint firstItem="3zK-Cc-bYJ" firstAttribute="top" secondItem="0O2-5U-Kdf" secondAttribute="top" constant="8" id="IJO-Xc-aAh"/>
+                        <constraint firstItem="3zK-Cc-bYJ" firstAttribute="top" secondItem="0O2-5U-Kdf" secondAttribute="topMargin" id="PhK-1b-Xtv"/>
+                        <constraint firstAttribute="trailing" secondItem="xOC-k5-azZ" secondAttribute="trailing" constant="16" id="Prc-aq-9yp"/>
+                        <constraint firstItem="xOC-k5-azZ" firstAttribute="top" secondItem="3zK-Cc-bYJ" secondAttribute="bottom" constant="8" id="SyA-Fi-unf"/>
+                        <constraint firstItem="3zK-Cc-bYJ" firstAttribute="leading" secondItem="0O2-5U-Kdf" secondAttribute="leadingMargin" id="axx-bU-4d2"/>
+                        <constraint firstItem="xOC-k5-azZ" firstAttribute="top" secondItem="3zK-Cc-bYJ" secondAttribute="bottom" constant="4" id="dRv-MJ-m9h"/>
+                        <constraint firstItem="xOC-k5-azZ" firstAttribute="top" secondItem="3zK-Cc-bYJ" secondAttribute="bottom" constant="7.5" id="iqb-h3-LM6"/>
+                        <constraint firstAttribute="bottom" secondItem="xOC-k5-azZ" secondAttribute="bottom" id="l7I-ds-Wkk"/>
+                        <constraint firstItem="3zK-Cc-bYJ" firstAttribute="leading" secondItem="0O2-5U-Kdf" secondAttribute="leading" constant="16" id="zN2-Xn-kyu"/>
+                    </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="PhK-1b-Xtv"/>
+                            <exclude reference="axx-bU-4d2"/>
+                            <exclude reference="dRv-MJ-m9h"/>
+                            <exclude reference="iqb-h3-LM6"/>
+                        </mask>
+                    </variation>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="0O2-5U-Kdf" secondAttribute="trailing" id="OGB-cD-H8p"/>
+                <constraint firstItem="0O2-5U-Kdf" firstAttribute="leading" secondItem="byL-uC-ozo" secondAttribute="leading" id="Pt6-DN-5b7"/>
+                <constraint firstItem="0O2-5U-Kdf" firstAttribute="top" secondItem="byL-uC-ozo" secondAttribute="top" id="ZkP-uo-ksd"/>
+                <constraint firstAttribute="bottom" secondItem="0O2-5U-Kdf" secondAttribute="bottom" id="yVK-P9-Lu2"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+        </view>
+    </objects>
+</document>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>MZ_FEATURE_MIXPANEL_ENABLED</key>
+	<true/>
+	<key>MZ_FEATURE_SPLASH_SCREEN_ANIMATION</key>
+	<false/>
+	<key>MZ_FEATURE_MOCK_DATA</key>
+	<false/>
+</dict>
+</plist>

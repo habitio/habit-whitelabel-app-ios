@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MZDeviceSettingsViewController" customModule="Muzzley_iOS" customModuleProvider="target">
+            <connections>
+                <outlet property="doneButton" destination="gc3-Ww-UPm" id="Wu1-2X-JWq"/>
+                <outlet property="footerView" destination="ekr-Fs-tiO" id="2xu-6g-mW6"/>
+                <outlet property="tableView" destination="wVG-ut-u5x" id="7S7-fH-lll"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" keyboardDismissMode="onDrag" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="wVG-ut-u5x">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="577"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="lZT-NI-xFt"/>
+                        <outlet property="delegate" destination="-1" id="Sfx-FI-CiF"/>
+                    </connections>
+                </tableView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ekr-Fs-tiO">
+                    <rect key="frame" x="0.0" y="577" width="375" height="90"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gc3-Ww-UPm" userLabel="Done Button" customClass="MZColorButton">
+                            <rect key="frame" x="36" y="25" width="303" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="JoC-yV-dBq"/>
+                            </constraints>
+                            <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <state key="normal" title="Button"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="invertedButton" value="YES"/>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="doneButtonPressed:" destination="-1" eventType="touchUpInside" id="hSK-fB-oG5"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="gc3-Ww-UPm" firstAttribute="centerX" secondItem="ekr-Fs-tiO" secondAttribute="centerX" id="6fm-AL-qUO"/>
+                        <constraint firstAttribute="height" constant="90" id="I13-BI-QOo"/>
+                        <constraint firstItem="gc3-Ww-UPm" firstAttribute="centerY" secondItem="ekr-Fs-tiO" secondAttribute="centerY" id="WAP-b3-h1c"/>
+                        <constraint firstItem="gc3-Ww-UPm" firstAttribute="leading" secondItem="ekr-Fs-tiO" secondAttribute="leading" constant="36" id="cav-vt-bbU"/>
+                        <constraint firstAttribute="trailing" secondItem="gc3-Ww-UPm" secondAttribute="trailing" constant="36" id="f0t-1A-HD2"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="tintColor" red="1" green="0.99997437000274658" blue="0.99999129772186279" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="ekr-Fs-tiO" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="0RN-24-QuR"/>
+                <constraint firstAttribute="bottom" secondItem="ekr-Fs-tiO" secondAttribute="bottom" id="CT7-fc-Gaa"/>
+                <constraint firstItem="ekr-Fs-tiO" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="RrC-jE-9Gg"/>
+                <constraint firstItem="wVG-ut-u5x" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Tcv-8y-1gv"/>
+                <constraint firstAttribute="trailing" secondItem="wVG-ut-u5x" secondAttribute="trailing" id="ZkC-rQ-vLz"/>
+                <constraint firstItem="wVG-ut-u5x" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="hcH-Tc-FTc"/>
+                <constraint firstItem="wVG-ut-u5x" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="kLD-AL-Fds"/>
+                <constraint firstItem="ekr-Fs-tiO" firstAttribute="top" secondItem="wVG-ut-u5x" secondAttribute="bottom" id="ocx-Sq-Fzc"/>
+                <constraint firstAttribute="trailing" secondItem="ekr-Fs-tiO" secondAttribute="trailing" id="ovQ-jE-qAN"/>
+            </constraints>
+        </view>
+    </objects>
+</document>

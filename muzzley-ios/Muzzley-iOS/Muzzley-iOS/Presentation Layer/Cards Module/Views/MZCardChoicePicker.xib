@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SanFranciscoText-Medium.otf">
+            <string>SanFranciscoText-Medium</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MZCardChoicePicker" customModule="Muzzley_iOS" customModuleProvider="target">
+            <connections>
+                <outlet property="uiButtonsStackView" destination="5cF-lw-3tc" id="N7j-IG-AwC"/>
+                <outlet property="view" destination="b76-XU-Dql" id="kyp-77-Bra"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="b76-XU-Dql">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lmN-Ve-RRv">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CHOICES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="YxK-8U-qdX">
+                            <rect key="frame" x="16" y="8" width="343" height="20"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="20" id="hvH-pB-UBv"/>
+                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="20" id="xyg-Iu-ih3"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="SanFranciscoText-Medium" family="San Francisco Text" pointSize="15"/>
+                            <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                            <variation key="default">
+                                <mask key="constraints">
+                                    <exclude reference="xyg-Iu-ih3"/>
+                                </mask>
+                            </variation>
+                        </label>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="5cF-lw-3tc">
+                            <rect key="frame" x="8" y="36" width="359" height="56"/>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="YxK-8U-qdX" firstAttribute="leading" secondItem="lmN-Ve-RRv" secondAttribute="leading" constant="16" id="474-37-t5I"/>
+                        <constraint firstAttribute="trailing" secondItem="YxK-8U-qdX" secondAttribute="trailing" constant="16" id="5o6-5H-vsX"/>
+                        <constraint firstItem="5cF-lw-3tc" firstAttribute="top" secondItem="YxK-8U-qdX" secondAttribute="bottom" constant="8" id="FL6-YL-Xg7"/>
+                        <constraint firstItem="5cF-lw-3tc" firstAttribute="leading" secondItem="lmN-Ve-RRv" secondAttribute="leading" constant="8" id="QBh-tC-pir"/>
+                        <constraint firstAttribute="bottom" secondItem="5cF-lw-3tc" secondAttribute="bottom" constant="8" id="hl1-PP-65y"/>
+                        <constraint firstAttribute="trailing" secondItem="5cF-lw-3tc" secondAttribute="trailing" constant="8" id="oAT-Dh-Kse"/>
+                        <constraint firstItem="YxK-8U-qdX" firstAttribute="top" secondItem="lmN-Ve-RRv" secondAttribute="top" constant="8" id="yR5-BR-ItY"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="lmN-Ve-RRv" firstAttribute="leading" secondItem="b76-XU-Dql" secondAttribute="leading" id="2FZ-rW-KsJ"/>
+                <constraint firstAttribute="bottom" secondItem="lmN-Ve-RRv" secondAttribute="bottom" id="LMY-cJ-2ZN"/>
+                <constraint firstItem="lmN-Ve-RRv" firstAttribute="top" secondItem="b76-XU-Dql" secondAttribute="top" id="do7-8w-PhI"/>
+                <constraint firstAttribute="trailing" secondItem="lmN-Ve-RRv" secondAttribute="trailing" id="nG0-nV-agU"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+        </view>
+    </objects>
+</document>

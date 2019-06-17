@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MZUserProfileViewController" customModule="Muzzley_iOS" customModuleProvider="target">
+            <connections>
+                <outlet property="tableView" destination="uYK-nU-frb" id="S5v-xb-XA0"/>
+                <outlet property="view" destination="iN0-l3-epB" id="p8G-IP-LHr"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="uYK-nU-frb">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="uYK-nU-frb" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="D9k-wI-psT"/>
+                <constraint firstItem="uYK-nU-frb" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Jf5-rr-URk"/>
+                <constraint firstItem="uYK-nU-frb" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="QPq-zr-N8g"/>
+                <constraint firstAttribute="bottom" secondItem="uYK-nU-frb" secondAttribute="bottom" id="hRC-pa-9U0"/>
+                <constraint firstAttribute="trailing" secondItem="uYK-nU-frb" secondAttribute="trailing" id="wZR-Wh-Tml"/>
+                <constraint firstItem="uYK-nU-frb" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="xDg-w1-ymv"/>
+            </constraints>
+        </view>
+    </objects>
+</document>

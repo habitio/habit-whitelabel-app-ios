@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SanFranciscoDisplay-Regular.otf">
+            <string>SanFranciscoDisplay-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="y4T-Mn-3GV" customClass="PopupContentView" customModule="Muzzley_iOS" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="300" height="315"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dSt-Y1-SW5">
+                    <rect key="frame" x="0.0" y="0.0" width="300" height="265"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Y4y-CR-axQ">
+                            <rect key="frame" x="100" y="40" width="100" height="100"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="Y4y-CR-axQ" secondAttribute="height" multiplier="1:1" id="Qwz-sj-zSZ"/>
+                                <constraint firstAttribute="height" relation="lessThanOrEqual" constant="100" id="gjV-4o-Y6s"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Text Text Text Text Text Text Text Text Text Text Text Text " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4fb-9z-fCM">
+                            <rect key="frame" x="30" y="160" width="240" height="85"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="70" id="c7F-rX-bvu"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="SanFranciscoDisplay-Regular" family="San Francisco Display" pointSize="17"/>
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                            <variation key="default">
+                                <mask key="constraints">
+                                    <exclude reference="c7F-rX-bvu"/>
+                                </mask>
+                            </variation>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="Y4y-CR-axQ" firstAttribute="top" secondItem="dSt-Y1-SW5" secondAttribute="top" constant="40" id="79z-ua-123"/>
+                        <constraint firstItem="4fb-9z-fCM" firstAttribute="leading" secondItem="dSt-Y1-SW5" secondAttribute="leading" constant="30" id="FbP-ko-hcD"/>
+                        <constraint firstItem="Y4y-CR-axQ" firstAttribute="centerX" secondItem="dSt-Y1-SW5" secondAttribute="centerX" id="Uso-KU-Glq"/>
+                        <constraint firstAttribute="trailing" secondItem="4fb-9z-fCM" secondAttribute="trailing" constant="30" id="m9P-Jo-XNP"/>
+                        <constraint firstAttribute="bottom" secondItem="4fb-9z-fCM" secondAttribute="bottom" constant="20" id="uQJ-ZG-Mf2"/>
+                        <constraint firstItem="4fb-9z-fCM" firstAttribute="top" secondItem="Y4y-CR-axQ" secondAttribute="bottom" constant="20" id="y7I-r1-SbZ"/>
+                    </constraints>
+                </view>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="n5z-CD-Ime">
+                    <rect key="frame" x="0.0" y="265" width="300" height="50"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="2" minimumInteritemSpacing="2" id="HHQ-UC-dBm">
+                        <size key="itemSize" width="120" height="45"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                    <connections>
+                        <outlet property="dataSource" destination="y4T-Mn-3GV" id="X13-hB-qSP"/>
+                        <outlet property="delegate" destination="y4T-Mn-3GV" id="WkQ-XN-FRW"/>
+                    </connections>
+                </collectionView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="n5z-CD-Ime" secondAttribute="trailing" id="Mz6-ec-bCe"/>
+                <constraint firstItem="n5z-CD-Ime" firstAttribute="top" secondItem="dSt-Y1-SW5" secondAttribute="bottom" id="SmZ-5J-moK"/>
+                <constraint firstItem="dSt-Y1-SW5" firstAttribute="leading" secondItem="y4T-Mn-3GV" secondAttribute="leading" id="ZVn-Sl-Gxj"/>
+                <constraint firstAttribute="bottom" secondItem="n5z-CD-Ime" secondAttribute="bottom" id="b0G-fg-uEH"/>
+                <constraint firstAttribute="trailing" secondItem="dSt-Y1-SW5" secondAttribute="trailing" id="lIN-ND-bGP"/>
+                <constraint firstItem="n5z-CD-Ime" firstAttribute="leading" secondItem="y4T-Mn-3GV" secondAttribute="leading" id="qQZ-2C-jZh"/>
+                <constraint firstAttribute="bottom" secondItem="dSt-Y1-SW5" secondAttribute="bottom" constant="50" id="r9D-8k-GwC"/>
+                <constraint firstItem="dSt-Y1-SW5" firstAttribute="top" secondItem="y4T-Mn-3GV" secondAttribute="top" id="yym-iU-5bf"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="btnCollectionView" destination="n5z-CD-Ime" id="mG7-Bi-gaB"/>
+                <outlet property="containerView" destination="dSt-Y1-SW5" id="AFV-d0-Z8h"/>
+                <outlet property="imageView" destination="Y4y-CR-axQ" id="hSH-ld-ors"/>
+                <outlet property="messageLabel" destination="4fb-9z-fCM" id="iiq-Jd-lxH"/>
+            </connections>
+            <point key="canvasLocation" x="702" y="235.5"/>
+        </view>
+    </objects>
+</document>

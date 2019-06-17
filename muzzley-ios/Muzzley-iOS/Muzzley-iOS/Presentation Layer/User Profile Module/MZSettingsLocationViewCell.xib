@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SanFranciscoDisplay-Light.otf">
+            <string>SanFranciscoDisplay-Light</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MZSettingsLocationViewCell" customModule="Muzzley_iOS" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="81" id="NQp-Ju-ajE" customClass="MZSettingsLocationViewCell" customModule="Muzzley_iOS" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="421" height="81"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="NQp-Ju-ajE" id="lRA-Nd-T8i">
+                <rect key="frame" x="0.0" y="0.0" width="421" height="80.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D3Z-Se-Ke6">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iuQ-F7-x92" userLabel="lbName">
+                                <rect key="frame" x="36" y="8" width="353" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="SanFranciscoDisplay-Light" family="San Francisco Display" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wYe-MO-K6x" userLabel="imgPlaceIcon">
+                                <rect key="frame" x="8" y="9" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GIS-Bj-k3C" userLabel="lbAddress">
+                                <rect key="frame" x="36" y="30" width="353" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="SanFranciscoDisplay-Light" family="San Francisco Display" pointSize="13"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BM0-h8-szy" userLabel="lbWifi">
+                                <rect key="frame" x="55" y="49" width="326" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="SanFranciscoDisplay-Light" family="San Francisco Display" pointSize="13"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_arrow_right" translatesAutoresizingMaskIntoConstraints="NO" id="wfk-Fn-g92">
+                                <rect key="frame" x="407" y="36" width="6" height="10"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ytd-aV-LV3" userLabel="imgWifi">
+                                <rect key="frame" x="36" y="53" width="13" height="13"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="81" id="5pS-5n-OuE"/>
+                            <constraint firstItem="wfk-Fn-g92" firstAttribute="centerY" secondItem="D3Z-Se-Ke6" secondAttribute="centerY" id="SI0-tA-oPc"/>
+                            <constraint firstAttribute="trailing" secondItem="wfk-Fn-g92" secondAttribute="trailing" constant="15" id="VpC-l2-UJP"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="D3Z-Se-Ke6" secondAttribute="trailing" id="0Gt-el-kNq"/>
+                    <constraint firstItem="D3Z-Se-Ke6" firstAttribute="leading" secondItem="lRA-Nd-T8i" secondAttribute="leading" id="Kgn-pn-hLY"/>
+                    <constraint firstAttribute="bottom" secondItem="D3Z-Se-Ke6" secondAttribute="bottom" id="RBX-R8-bXj"/>
+                    <constraint firstItem="D3Z-Se-Ke6" firstAttribute="top" secondItem="lRA-Nd-T8i" secondAttribute="top" id="act-cD-aOW"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="imgPlaceIcon" destination="wYe-MO-K6x" id="fvW-8k-pF2"/>
+                <outlet property="imgWifi" destination="ytd-aV-LV3" id="grY-H3-dOe"/>
+                <outlet property="lbAddress" destination="GIS-Bj-k3C" id="o9J-VD-A04"/>
+                <outlet property="lbName" destination="iuQ-F7-x92" id="oHm-wE-fPQ"/>
+                <outlet property="lbWifi" destination="BM0-h8-szy" id="hdf-vW-Rtg"/>
+            </connections>
+            <point key="canvasLocation" x="588.5" y="349.5"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="icon_arrow_right" width="8" height="13"/>
+    </resources>
+</document>

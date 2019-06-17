@@ -1,0 +1,8 @@
+"NSCameraUsageDescription" = "Pentru a efectua coduri de scanare QR, vă rugăm să acordați permisiunea de a accesa camera foto.";
+"NSLocationAlwaysUsageDescription" = "Dacă casa dvs. inteligentă știe locația proprietarului, se poate adapta la nevoile la acestuia. Nu vom împărtăși locația fără permisiunea dvs.";
+"NSLocationAlwaysAndWhenInUseUsageDescription" = "Dacă casa dvs. inteligentă știe locația proprietarului, se poate adapta la nevoile la acestuia. Nu vom împărtăși locația fără permisiunea dvs.";
+"NSLocationWhenInUseUsageDescription" = "Dacă casa dvs. inteligentă știe locația proprietarului, se poate adapta la nevoile la acestuia. Nu vom împărtăși locația fără permisiunea dvs.";
+"NSLocationUsageDescription" = "Pentru a vă bucura de o mai bună și mai potrivită experiență, vă rugăm să activați serviciile de localizare.";
+"NSMicrophoneUsageDescription" = "Acest lucru vă va permite să vorbiți cu copilul dumneavoastră în orice moment! Nu vom împărtăși sau  înregistra nici o interacțiune vocală.";
+"NSPhotoLibraryUsageDescription" = "Acest lucru va permite să vă schimbați fotografia de profil.";
+"NSMotionUsageDescription" = "Prin cunoașterea activității dvs. de mișcare veți putea să vă protejați mai bine";

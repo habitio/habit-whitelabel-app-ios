@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="MZCollectionItemLabel">
+            <rect key="frame" x="0.0" y="0.0" width="120" height="69"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="120" height="69"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="middleTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sA4-lX-BJm">
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" red="0.54903299825174656" green="0.5490329982517469" blue="0.54903299825174812" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="highlightedColor" red="0.81960784310000001" green="0.035294117649999998" blue="0.16862745100000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </label>
+                </subviews>
+            </view>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="sA4-lX-BJm" secondAttribute="trailing" id="BjV-ij-zjE"/>
+                <constraint firstItem="sA4-lX-BJm" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Yxt-MC-Cvl"/>
+                <constraint firstAttribute="bottom" secondItem="sA4-lX-BJm" secondAttribute="bottom" id="j4J-VF-kkp"/>
+                <constraint firstItem="sA4-lX-BJm" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="pGj-Es-wUK"/>
+            </constraints>
+            <size key="customSize" width="120" height="69"/>
+            <connections>
+                <outlet property="label" destination="sA4-lX-BJm" id="xyo-1B-ZrW"/>
+            </connections>
+            <point key="canvasLocation" x="261" y="270.5"/>
+        </collectionViewCell>
+    </objects>
+</document>

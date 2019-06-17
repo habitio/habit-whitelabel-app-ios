@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SanFranciscoDisplay-Light.otf">
+            <string>SanFranciscoDisplay-Light</string>
+        </array>
+        <array key="SanFranciscoDisplay-Medium.otf">
+            <string>SanFranciscoDisplay-Medium</string>
+        </array>
+        <array key="SanFranciscoDisplay-Regular.otf">
+            <string>SanFranciscoDisplay-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MZServiceActivationViewController">
+            <connections>
+                <outlet property="uiActivationView" destination="yNs-pE-I22" id="zbR-LT-IEV"/>
+                <outlet property="uiBtCollapseExpand" destination="YXB-Iv-RTi" id="dBJ-2J-Hro"/>
+                <outlet property="uiBtShop" destination="XLk-Od-Gkq" id="wij-ml-FkO"/>
+                <outlet property="uiBtShopBottomMarginConstraint" destination="u9Q-8D-IoT" id="vpT-WU-1NX"/>
+                <outlet property="uiBtShopHeightConstraint" destination="GeI-az-5ac" id="2OY-dq-Wm0"/>
+                <outlet property="uiBtShopLeadingConstraint" destination="drc-zY-FM7" id="El8-QC-eQW"/>
+                <outlet property="uiBtShopTrailingConstraint" destination="gje-la-rqU" id="AtD-C8-8wx"/>
+                <outlet property="uiLbShopDescription" destination="DUy-3P-xG4" id="E8v-wQ-dSl"/>
+                <outlet property="uiLbShopText" destination="2tf-4f-jp2" id="hR5-cS-y63"/>
+                <outlet property="uiLbTopText" destination="egq-ob-XGr" id="GZI-vY-616"/>
+                <outlet property="uiShopView" destination="jFC-un-rSa" id="VpI-9C-qEB"/>
+                <outlet property="uiShopViewHeightConstraint" destination="Nj4-cn-Uv5" id="nXY-Pr-vi8"/>
+                <outlet property="uiViewCollapsed" destination="qGL-pd-RQv" id="EzZ-St-N6m"/>
+                <outlet property="uiViewExpanded" destination="h24-cQ-Ds4" id="0wQ-FO-KbY"/>
+                <outlet property="view" destination="iN0-l3-epB" id="6R6-Jz-I6T"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yNs-pE-I22" userLabel="uiActivationView">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="267"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jFC-un-rSa" userLabel="uiShopView">
+                    <rect key="frame" x="0.0" y="267" width="375" height="400"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qGL-pd-RQv" userLabel="uiViewCollapsed">
+                            <rect key="frame" x="0.0" y="345" width="375" height="55"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2tf-4f-jp2" userLabel="uiLbShopText">
+                                    <rect key="frame" x="20" y="19.5" width="30" height="16"/>
+                                    <fontDescription key="fontDescription" name="SanFranciscoDisplay-Regular" family="San Francisco Display" pointSize="13"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" red="0.34509803919999998" green="0.74901960779999999" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstItem="2tf-4f-jp2" firstAttribute="leading" secondItem="qGL-pd-RQv" secondAttribute="leading" constant="20" id="QtR-3d-cpY"/>
+                                <constraint firstAttribute="height" constant="55" id="UQe-66-chM"/>
+                                <constraint firstItem="2tf-4f-jp2" firstAttribute="centerY" secondItem="qGL-pd-RQv" secondAttribute="centerY" id="VZL-Jg-J5w"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h24-cQ-Ds4" userLabel="uiViewExpanded">
+                            <rect key="frame" x="0.0" y="18" width="375" height="382"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="egq-ob-XGr" userLabel="uiLbTopText">
+                                    <rect key="frame" x="30" y="40" width="315" height="20.5"/>
+                                    <fontDescription key="fontDescription" name="SanFranciscoDisplay-Medium" family="San Francisco Display" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DUy-3P-xG4" userLabel="uiLbShopDescription">
+                                    <rect key="frame" x="30" y="100.5" width="315" height="17"/>
+                                    <fontDescription key="fontDescription" name="SanFranciscoDisplay-Light" family="San Francisco Display" pointSize="14"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstItem="DUy-3P-xG4" firstAttribute="leading" secondItem="h24-cQ-Ds4" secondAttribute="leading" constant="30" id="A27-DR-WWJ"/>
+                                <constraint firstItem="egq-ob-XGr" firstAttribute="top" secondItem="h24-cQ-Ds4" secondAttribute="top" constant="40" id="Bod-gm-AWf"/>
+                                <constraint firstItem="egq-ob-XGr" firstAttribute="leading" secondItem="h24-cQ-Ds4" secondAttribute="leading" constant="30" id="HJR-YH-Th8"/>
+                                <constraint firstAttribute="trailing" secondItem="DUy-3P-xG4" secondAttribute="trailing" constant="30" id="cPU-gk-x2q"/>
+                                <constraint firstItem="DUy-3P-xG4" firstAttribute="top" secondItem="egq-ob-XGr" secondAttribute="bottom" constant="40" id="dKQ-Eh-RFx"/>
+                                <constraint firstAttribute="trailing" secondItem="egq-ob-XGr" secondAttribute="trailing" constant="30" id="iKB-xf-XZX"/>
+                            </constraints>
+                        </view>
+                        <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YXB-Iv-RTi" userLabel="uiBtCollapseExpand">
+                            <rect key="frame" x="168.5" y="0.0" width="38" height="38"/>
+                            <color key="backgroundColor" red="0.34509803919999998" green="0.74901960779999999" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="38" id="cbx-vK-qMR"/>
+                                <constraint firstAttribute="width" constant="38" id="tYT-tf-eL9"/>
+                            </constraints>
+                            <state key="normal" image="icon_arrow_right"/>
+                            <connections>
+                                <action selector="uiBtCollapseExpand:" destination="-1" eventType="touchUpInside" id="Kzv-el-JTE"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XLk-Od-Gkq" userLabel="uiBtShop" customClass="MZColorButton">
+                            <rect key="frame" x="20" y="340" width="335" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="GeI-az-5ac"/>
+                            </constraints>
+                            <inset key="contentEdgeInsets" minX="1" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            <state key="normal" title="Button"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="invertedButton" value="YES"/>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="uiBtShop_TouchUpInside:" destination="-1" eventType="touchUpInside" id="U1f-CP-LiI"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="h24-cQ-Ds4" secondAttribute="trailing" id="0ga-dh-AgW"/>
+                        <constraint firstItem="YXB-Iv-RTi" firstAttribute="centerX" secondItem="jFC-un-rSa" secondAttribute="centerX" id="3vp-gn-Gzc"/>
+                        <constraint firstAttribute="bottom" secondItem="qGL-pd-RQv" secondAttribute="bottom" id="EEz-UG-4XE"/>
+                        <constraint firstAttribute="height" constant="400" id="Nj4-cn-Uv5"/>
+                        <constraint firstItem="qGL-pd-RQv" firstAttribute="leading" secondItem="jFC-un-rSa" secondAttribute="leading" id="Vko-qL-xi6"/>
+                        <constraint firstAttribute="trailing" secondItem="qGL-pd-RQv" secondAttribute="trailing" id="dHB-me-sBf"/>
+                        <constraint firstItem="XLk-Od-Gkq" firstAttribute="leading" secondItem="jFC-un-rSa" secondAttribute="leading" constant="20" id="drc-zY-FM7"/>
+                        <constraint firstAttribute="trailing" secondItem="XLk-Od-Gkq" secondAttribute="trailing" constant="20" id="gje-la-rqU"/>
+                        <constraint firstItem="h24-cQ-Ds4" firstAttribute="top" secondItem="jFC-un-rSa" secondAttribute="top" constant="18" id="iVX-bS-LCm"/>
+                        <constraint firstItem="YXB-Iv-RTi" firstAttribute="top" secondItem="jFC-un-rSa" secondAttribute="top" id="nsX-2C-80R"/>
+                        <constraint firstItem="h24-cQ-Ds4" firstAttribute="leading" secondItem="jFC-un-rSa" secondAttribute="leading" id="oJh-BO-J2K"/>
+                        <constraint firstAttribute="bottom" secondItem="h24-cQ-Ds4" secondAttribute="bottom" id="swr-Fq-BUi"/>
+                        <constraint firstAttribute="bottom" secondItem="XLk-Od-Gkq" secondAttribute="bottom" constant="20" id="u9Q-8D-IoT"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="jFC-un-rSa" firstAttribute="top" secondItem="yNs-pE-I22" secondAttribute="bottom" id="7Hw-pv-IO1"/>
+                <constraint firstItem="yNs-pE-I22" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="OXW-4G-o86"/>
+                <constraint firstAttribute="bottom" secondItem="jFC-un-rSa" secondAttribute="bottom" id="RyM-dk-suP"/>
+                <constraint firstAttribute="trailing" secondItem="jFC-un-rSa" secondAttribute="trailing" id="S4A-KH-Evp"/>
+                <constraint firstItem="jFC-un-rSa" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="ct1-C7-BdO"/>
+                <constraint firstAttribute="trailing" secondItem="yNs-pE-I22" secondAttribute="trailing" id="dmK-24-dpz"/>
+                <constraint firstItem="yNs-pE-I22" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="xSY-ay-4V9"/>
+            </constraints>
+            <point key="canvasLocation" x="33.5" y="78.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="icon_arrow_right" width="8" height="13"/>
+    </resources>
+</document>

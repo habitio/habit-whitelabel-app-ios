@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SanFranciscoDisplay-Regular.otf">
+            <string>SanFranciscoDisplay-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MZFeedbackViewController" customModule="Muzzley_iOS" customModuleProvider="target">
+            <connections>
+                <outlet property="commentTextView" destination="S7b-JZ-nMC" id="ZO9-61-UD3"/>
+                <outlet property="contentView" destination="38d-1N-3wW" id="kDF-U4-GS9"/>
+                <outlet property="doneButton" destination="eeq-EH-Kus" id="kCj-WL-3He"/>
+                <outlet property="scrollView" destination="gZQ-bl-eAp" id="G5h-yC-O5Y"/>
+                <outlet property="titleLabel" destination="EJw-JP-fbx" id="kKV-Wj-SKf"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" bounces="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gZQ-bl-eAp">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="38d-1N-3wW" userLabel="ContentView">
+                            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EJw-JP-fbx">
+                                    <rect key="frame" x="24" y="16" width="552" height="21"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="KG7-R7-Hf9"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="SanFranciscoDisplay-Regular" family="San Francisco Display" pointSize="17"/>
+                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <button opaque="NO" tag="201" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sCR-Ei-vko" customClass="MZFeedbackButton" customModule="Muzzley_iOS" customModuleProvider="target">
+                                    <rect key="frame" x="24" y="87" width="552" height="38"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                    <state key="normal" title="Button"/>
+                                    <connections>
+                                        <action selector="selectResponseAction:" destination="-1" eventType="touchUpInside" id="8nO-ZR-rfq"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" tag="202" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jmq-dV-g7v" customClass="MZFeedbackButton" customModule="Muzzley_iOS" customModuleProvider="target">
+                                    <rect key="frame" x="24" y="129" width="552" height="38"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                    <state key="normal" title="Button"/>
+                                    <connections>
+                                        <action selector="selectResponseAction:" destination="-1" eventType="touchUpInside" id="TCd-5G-T9C"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" tag="203" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oXK-0l-6JT" customClass="MZFeedbackButton" customModule="Muzzley_iOS" customModuleProvider="target">
+                                    <rect key="frame" x="24" y="171" width="552" height="38"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                    <state key="normal" title="Button"/>
+                                    <connections>
+                                        <action selector="selectResponseAction:" destination="-1" eventType="touchUpInside" id="Jd2-xn-WRM"/>
+                                    </connections>
+                                </button>
+                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="S7b-JZ-nMC" customClass="MZTextView" customModule="Muzzley_iOS" customModuleProvider="target">
+                                    <rect key="frame" x="24" y="225" width="552" height="287"/>
+                                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    <connections>
+                                        <outlet property="delegate" destination="-1" id="29N-23-KwO"/>
+                                    </connections>
+                                </textView>
+                                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eeq-EH-Kus" customClass="MZColorButton">
+                                    <rect key="frame" x="24" y="536" width="552" height="40"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="40" id="scD-8z-IJ0"/>
+                                    </constraints>
+                                    <state key="normal" title="Button"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="boolean" keyPath="invertedButton" value="YES"/>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="doneAction:" destination="-1" eventType="touchUpInside" id="Qh0-ml-3Fg"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" tag="200" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n38-V7-0nG" customClass="MZFeedbackButton" customModule="Muzzley_iOS" customModuleProvider="target">
+                                    <rect key="frame" x="24" y="45" width="552" height="38"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="38" id="taq-ZT-gjX"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                    <state key="normal" title="Button"/>
+                                    <connections>
+                                        <action selector="selectResponseAction:" destination="-1" eventType="touchUpInside" id="f1T-nN-pYa"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="EJw-JP-fbx" secondAttribute="trailing" constant="24" id="2dT-HN-fpm"/>
+                                <constraint firstItem="Jmq-dV-g7v" firstAttribute="height" secondItem="sCR-Ei-vko" secondAttribute="height" id="2rE-XV-JUa"/>
+                                <constraint firstItem="oXK-0l-6JT" firstAttribute="height" secondItem="Jmq-dV-g7v" secondAttribute="height" id="6z4-Np-tVG"/>
+                                <constraint firstItem="oXK-0l-6JT" firstAttribute="width" secondItem="Jmq-dV-g7v" secondAttribute="width" id="8JK-hj-pk3"/>
+                                <constraint firstItem="oXK-0l-6JT" firstAttribute="centerX" secondItem="Jmq-dV-g7v" secondAttribute="centerX" id="BVv-V7-wdP"/>
+                                <constraint firstItem="sCR-Ei-vko" firstAttribute="top" secondItem="n38-V7-0nG" secondAttribute="bottom" constant="4" id="BcI-gi-ZiP"/>
+                                <constraint firstItem="eeq-EH-Kus" firstAttribute="top" secondItem="S7b-JZ-nMC" secondAttribute="bottom" constant="24" id="ChD-iW-Ahw"/>
+                                <constraint firstItem="n38-V7-0nG" firstAttribute="leading" secondItem="38d-1N-3wW" secondAttribute="leading" constant="24" id="DD9-J7-0be"/>
+                                <constraint firstItem="sCR-Ei-vko" firstAttribute="centerX" secondItem="n38-V7-0nG" secondAttribute="centerX" id="DyV-05-8kv"/>
+                                <constraint firstItem="Jmq-dV-g7v" firstAttribute="top" secondItem="sCR-Ei-vko" secondAttribute="bottom" constant="4" id="ET2-R7-aV7"/>
+                                <constraint firstItem="S7b-JZ-nMC" firstAttribute="leading" secondItem="38d-1N-3wW" secondAttribute="leading" constant="24" id="Exv-Fa-wMV"/>
+                                <constraint firstAttribute="bottom" secondItem="eeq-EH-Kus" secondAttribute="bottom" constant="24" id="Ii7-Ew-Msm"/>
+                                <constraint firstItem="Jmq-dV-g7v" firstAttribute="centerX" secondItem="sCR-Ei-vko" secondAttribute="centerX" id="Ize-UF-M40"/>
+                                <constraint firstItem="sCR-Ei-vko" firstAttribute="width" secondItem="n38-V7-0nG" secondAttribute="width" id="OqG-VS-d0R"/>
+                                <constraint firstItem="S7b-JZ-nMC" firstAttribute="top" secondItem="oXK-0l-6JT" secondAttribute="bottom" constant="16" id="Qnm-ip-vwH"/>
+                                <constraint firstItem="oXK-0l-6JT" firstAttribute="top" secondItem="Jmq-dV-g7v" secondAttribute="bottom" constant="4" id="Vs7-fh-3V6"/>
+                                <constraint firstItem="sCR-Ei-vko" firstAttribute="height" secondItem="n38-V7-0nG" secondAttribute="height" id="WPL-tf-NnS"/>
+                                <constraint firstAttribute="trailing" secondItem="eeq-EH-Kus" secondAttribute="trailing" constant="24" id="WPl-eM-KyV"/>
+                                <constraint firstItem="eeq-EH-Kus" firstAttribute="leading" secondItem="38d-1N-3wW" secondAttribute="leading" constant="24" id="YCc-UB-hAO"/>
+                                <constraint firstItem="Jmq-dV-g7v" firstAttribute="width" secondItem="sCR-Ei-vko" secondAttribute="width" id="bsT-ZB-WIB"/>
+                                <constraint firstItem="n38-V7-0nG" firstAttribute="top" secondItem="EJw-JP-fbx" secondAttribute="bottom" constant="8" id="h8K-M0-CBf"/>
+                                <constraint firstAttribute="trailing" secondItem="n38-V7-0nG" secondAttribute="trailing" constant="24" id="hAD-MN-Fi1"/>
+                                <constraint firstItem="EJw-JP-fbx" firstAttribute="top" secondItem="38d-1N-3wW" secondAttribute="top" constant="16" id="jL6-DO-YHN"/>
+                                <constraint firstItem="EJw-JP-fbx" firstAttribute="leading" secondItem="38d-1N-3wW" secondAttribute="leading" constant="24" id="u8d-t1-HVT"/>
+                                <constraint firstAttribute="trailing" secondItem="S7b-JZ-nMC" secondAttribute="trailing" constant="24" id="yIT-uf-nYQ"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="38d-1N-3wW" secondAttribute="bottom" id="3UC-8P-8yJ"/>
+                        <constraint firstAttribute="trailing" secondItem="38d-1N-3wW" secondAttribute="trailing" id="3kv-DN-JCR"/>
+                        <constraint firstItem="38d-1N-3wW" firstAttribute="leading" secondItem="gZQ-bl-eAp" secondAttribute="leading" id="BPb-lh-98y"/>
+                        <constraint firstItem="38d-1N-3wW" firstAttribute="centerX" secondItem="gZQ-bl-eAp" secondAttribute="centerX" id="Pct-AZ-KLj"/>
+                        <constraint firstItem="38d-1N-3wW" firstAttribute="top" secondItem="gZQ-bl-eAp" secondAttribute="top" id="PqU-Oc-lG0"/>
+                        <constraint firstItem="38d-1N-3wW" firstAttribute="centerY" secondItem="gZQ-bl-eAp" secondAttribute="centerY" id="f5d-S1-bws"/>
+                    </constraints>
+                </scrollView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="gZQ-bl-eAp" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="EfV-zQ-rES"/>
+                <constraint firstAttribute="trailing" secondItem="gZQ-bl-eAp" secondAttribute="trailing" id="NDL-dP-Uuz"/>
+                <constraint firstItem="gZQ-bl-eAp" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="RDY-nl-tLV"/>
+                <constraint firstItem="gZQ-bl-eAp" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="X09-7F-eVf"/>
+                <constraint firstItem="gZQ-bl-eAp" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="b6j-wb-4kS"/>
+                <constraint firstAttribute="bottom" secondItem="gZQ-bl-eAp" secondAttribute="bottom" id="nae-rR-neQ"/>
+            </constraints>
+        </view>
+    </objects>
+</document>

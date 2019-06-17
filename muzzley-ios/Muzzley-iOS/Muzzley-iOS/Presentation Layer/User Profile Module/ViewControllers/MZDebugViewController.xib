@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MZDebugViewController" customModule="Muzzley_iOS" customModuleProvider="target">
+            <connections>
+                <outlet property="textArea" destination="Lr2-xS-VIO" id="pfx-j2-SGR"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Loading..." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Lr2-xS-VIO">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="592"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QeH-PD-Bnu">
+                    <rect key="frame" x="0.0" y="597" width="375" height="70"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="1q5-0K-F07">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="70"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7El-7P-sau">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="70"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="70" id="95v-4i-WK4"/>
+                                    </constraints>
+                                    <state key="normal" title="Email"/>
+                                    <connections>
+                                        <action selector="uiBtEmail:" destination="-1" eventType="touchUpInside" id="JTy-r6-T8K"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="1q5-0K-F07" secondAttribute="trailing" id="0ux-ad-aor"/>
+                        <constraint firstAttribute="bottom" secondItem="1q5-0K-F07" secondAttribute="bottom" id="d1d-sV-CKe"/>
+                        <constraint firstItem="1q5-0K-F07" firstAttribute="leading" secondItem="QeH-PD-Bnu" secondAttribute="leading" id="t7D-98-yaL"/>
+                        <constraint firstItem="1q5-0K-F07" firstAttribute="top" secondItem="QeH-PD-Bnu" secondAttribute="top" id="wDN-4z-0bS"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Lr2-xS-VIO" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="2qO-hi-GWJ"/>
+                <constraint firstItem="QeH-PD-Bnu" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="5Ta-wa-a0t"/>
+                <constraint firstAttribute="bottom" secondItem="QeH-PD-Bnu" secondAttribute="bottom" id="BMz-Lh-l8m"/>
+                <constraint firstItem="Lr2-xS-VIO" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="OJq-8f-ddw"/>
+                <constraint firstItem="QeH-PD-Bnu" firstAttribute="top" secondItem="Lr2-xS-VIO" secondAttribute="bottom" constant="5" id="PVN-Jb-WfR"/>
+                <constraint firstItem="Lr2-xS-VIO" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="YgO-OU-mBX"/>
+                <constraint firstAttribute="trailing" secondItem="Lr2-xS-VIO" secondAttribute="trailing" id="hXs-Nt-rZL"/>
+                <constraint firstAttribute="trailing" secondItem="QeH-PD-Bnu" secondAttribute="trailing" id="soW-Jl-pRm"/>
+            </constraints>
+            <point key="canvasLocation" x="138.40000000000001" y="131.78410794602701"/>
+        </view>
+    </objects>
+</document>

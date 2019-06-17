@@ -1,0 +1,9 @@
+
+/* Class = "UIButton"; normalTitle = "Try again"; ObjectID = "DBF-0H-P73"; */
+"DBF-0H-P73.normalTitle" = "Try again";
+
+/* Class = "UILabel"; text = "Sorry, there seems to be a problem updating your device."; ObjectID = "F2L-ei-Y2b"; */
+"F2L-ei-Y2b.text" = "Sorry, there seems to be a problem updating your device.";
+
+/* Class = "UIButton"; normalTitle = "Cancel"; ObjectID = "SAe-73-ND3"; */
+"SAe-73-ND3.normalTitle" = "Cancel";

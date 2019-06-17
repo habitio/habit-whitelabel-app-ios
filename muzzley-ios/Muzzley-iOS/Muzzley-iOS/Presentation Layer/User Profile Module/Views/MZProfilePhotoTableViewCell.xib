@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SanFranciscoDisplay-Regular.otf">
+            <string>SanFranciscoDisplay-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="224" id="qmy-wi-ehU" customClass="MZProfilePhotoTableViewCell" customModule="Muzzley_iOS" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="224"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="qmy-wi-ehU" id="khC-Ds-vkg">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="223"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fLl-MU-CkE">
+                        <rect key="frame" x="110" y="20" width="100" height="100"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="fLl-MU-CkE" secondAttribute="height" multiplier="1:1" id="4IH-dg-33c"/>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="100" id="Czk-e4-WCw"/>
+                            <constraint firstAttribute="height" constant="100" id="mx4-Eo-WxC"/>
+                        </constraints>
+                    </imageView>
+                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="asdasd " textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="S54-8E-jHH">
+                        <rect key="frame" x="16" y="136" width="288" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="Jbk-kl-Ita"/>
+                        </constraints>
+                        <color key="textColor" red="0.32584697008132935" green="0.32583722472190857" blue="0.32584273815155029" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <fontDescription key="fontDescription" name="SanFranciscoDisplay-Regular" family="San Francisco Display" pointSize="17"/>
+                        <textInputTraits key="textInputTraits"/>
+                    </textField>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="27r-qP-6bl" customClass="MZEditButton" customModule="Muzzley_iOS" customModuleProvider="target">
+                        <rect key="frame" x="274" y="16" width="30" height="26"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="26" id="5FQ-6G-ppy"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="image" keyPath="editIcon" value="IconEdit"/>
+                            <userDefinedRuntimeAttribute type="color" keyPath="normalColor">
+                                <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="onEditColor">
+                                <color key="value" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="string" keyPath="onEditingLabel" value="Done"/>
+                        </userDefinedRuntimeAttributes>
+                    </button>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T6D-yG-b7d">
+                        <rect key="frame" x="0.0" y="169" width="320" height="52"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="44" id="FtP-wF-WN9"/>
+                        </constraints>
+                    </view>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="power_muzzley" translatesAutoresizingMaskIntoConstraints="NO" id="Bao-p9-ALH">
+                        <rect key="frame" x="291" y="30" width="19" height="129"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="129" id="7fT-pP-cm3"/>
+                            <constraint firstAttribute="width" constant="19" id="N8Q-Se-Q4h"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="T6D-yG-b7d" secondAttribute="trailing" id="02N-l5-LCH"/>
+                    <constraint firstItem="Bao-p9-ALH" firstAttribute="top" secondItem="khC-Ds-vkg" secondAttribute="top" constant="30" id="2H6-4h-fD8"/>
+                    <constraint firstItem="S54-8E-jHH" firstAttribute="centerX" secondItem="khC-Ds-vkg" secondAttribute="centerX" id="6lo-94-ZDH"/>
+                    <constraint firstAttribute="trailing" secondItem="27r-qP-6bl" secondAttribute="trailing" constant="16" id="BbU-1R-FdW"/>
+                    <constraint firstItem="T6D-yG-b7d" firstAttribute="top" secondItem="S54-8E-jHH" secondAttribute="bottom" constant="12" id="C1y-sz-EkN"/>
+                    <constraint firstAttribute="trailing" secondItem="S54-8E-jHH" secondAttribute="trailing" constant="16" id="UC9-HD-hY7"/>
+                    <constraint firstItem="S54-8E-jHH" firstAttribute="leading" secondItem="khC-Ds-vkg" secondAttribute="leading" constant="16" id="ULD-4v-Pg6"/>
+                    <constraint firstItem="T6D-yG-b7d" firstAttribute="centerX" secondItem="khC-Ds-vkg" secondAttribute="centerX" id="WPI-nm-vUF"/>
+                    <constraint firstItem="fLl-MU-CkE" firstAttribute="centerX" secondItem="khC-Ds-vkg" secondAttribute="centerX" id="WWj-3W-DAe"/>
+                    <constraint firstAttribute="bottom" secondItem="T6D-yG-b7d" secondAttribute="bottom" constant="2" id="aOF-p8-7Qi"/>
+                    <constraint firstAttribute="trailing" secondItem="Bao-p9-ALH" secondAttribute="trailing" constant="10" id="f4k-3x-S7i"/>
+                    <constraint firstItem="fLl-MU-CkE" firstAttribute="top" secondItem="khC-Ds-vkg" secondAttribute="top" constant="20" id="jOU-NX-pw6"/>
+                    <constraint firstItem="T6D-yG-b7d" firstAttribute="leading" secondItem="khC-Ds-vkg" secondAttribute="leading" id="rR8-jR-1fV"/>
+                    <constraint firstItem="27r-qP-6bl" firstAttribute="top" secondItem="khC-Ds-vkg" secondAttribute="top" constant="16" id="uCG-gE-FyJ"/>
+                    <constraint firstItem="S54-8E-jHH" firstAttribute="top" secondItem="fLl-MU-CkE" secondAttribute="bottom" constant="16" id="uZY-6t-GHO"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <connections>
+                <outlet property="editButton" destination="27r-qP-6bl" id="Msz-Eh-1ir"/>
+                <outlet property="placeholderView" destination="T6D-yG-b7d" id="haX-95-X2J"/>
+                <outlet property="profilePhotoImageView" destination="fLl-MU-CkE" id="eK2-GW-Z5a"/>
+                <outlet property="userNameField" destination="S54-8E-jHH" id="uL2-cB-PF1"/>
+            </connections>
+            <point key="canvasLocation" x="391" y="247"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="IconEdit" width="24" height="24"/>
+        <image name="power_muzzley" width="19" height="129"/>
+    </resources>
+</document>

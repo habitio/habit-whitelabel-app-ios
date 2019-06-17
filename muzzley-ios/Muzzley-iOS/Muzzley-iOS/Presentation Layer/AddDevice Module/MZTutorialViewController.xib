@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="17C88" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MZTutorialViewController" customModule="Muzzley_iOS" customModuleProvider="target">
+            <connections>
+                <outlet property="uiBtDone" destination="qSm-CE-26y" id="f6p-si-Q7P"/>
+                <outlet property="uiBtNext" destination="LbT-kV-tfY" id="mA8-iL-LAY"/>
+                <outlet property="uiBtPrevious" destination="Lpg-9f-7Rx" id="2gf-5q-M9D"/>
+                <outlet property="uiLoading" destination="mla-rJ-M4T" id="BBl-O1-D9l"/>
+                <outlet property="uiPageControl" destination="Bw5-Ih-9fd" id="Etd-N4-rQv"/>
+                <outlet property="uiViewStepContent" destination="DfS-1P-cOg" id="zPU-VK-Ycp"/>
+                <outlet property="view" destination="iN0-l3-epB" id="fZB-Yp-3Ta"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <pageControl opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" hidesForSinglePage="YES" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="Bw5-Ih-9fd">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="qhF-Lc-ujm"/>
+                    </constraints>
+                </pageControl>
+                <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DfS-1P-cOg" userLabel="uiViewStepContent">
+                    <rect key="frame" x="0.0" y="40" width="375" height="562"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IYe-tz-25i" userLabel="uiViewBottom">
+                    <rect key="frame" x="20" y="602" width="335" height="40"/>
+                    <subviews>
+                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="mla-rJ-M4T">
+                            <rect key="frame" x="149" y="2" width="37" height="37"/>
+                            <color key="color" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        </activityIndicatorView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qSm-CE-26y" userLabel="uiBtDone" customClass="MZColorButton">
+                            <rect key="frame" x="0.0" y="0.0" width="335" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="Vkg-QR-luf"/>
+                                <constraint firstAttribute="height" constant="40" id="v2J-fX-56R"/>
+                            </constraints>
+                            <state key="normal" title="Button"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="invertedButton" value="YES"/>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="uiBtDone_TouchUpInside:" destination="-1" eventType="touchUpInside" id="nrV-44-UUg"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="mla-rJ-M4T" firstAttribute="centerX" secondItem="IYe-tz-25i" secondAttribute="centerX" id="8Cb-i2-gxN"/>
+                        <constraint firstAttribute="height" constant="40" id="GAW-TR-S4Z"/>
+                        <constraint firstAttribute="trailing" secondItem="qSm-CE-26y" secondAttribute="trailing" id="IAB-MO-DoI"/>
+                        <constraint firstItem="mla-rJ-M4T" firstAttribute="centerY" secondItem="IYe-tz-25i" secondAttribute="centerY" id="Z9u-G2-VbH"/>
+                        <constraint firstItem="qSm-CE-26y" firstAttribute="leading" secondItem="IYe-tz-25i" secondAttribute="leading" id="iQD-lK-g7D"/>
+                        <constraint firstItem="qSm-CE-26y" firstAttribute="centerY" secondItem="IYe-tz-25i" secondAttribute="centerY" id="mQs-bQ-ArM"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lpg-9f-7Rx" userLabel="uiBtPrevious">
+                    <rect key="frame" x="5" y="180" width="20" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="ZoK-DO-mbG"/>
+                        <constraint firstAttribute="width" constant="20" id="gqZ-ns-UfG"/>
+                    </constraints>
+                    <state key="normal" image="icon_card_arrow"/>
+                    <connections>
+                        <action selector="uiBtPrevious_TouchUpInside:" destination="-1" eventType="touchUpInside" id="v89-w7-wae"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LbT-kV-tfY" userLabel="uiBtNext">
+                    <rect key="frame" x="350" y="180" width="20" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="hzY-vO-Idz"/>
+                        <constraint firstAttribute="width" constant="20" id="vYg-vq-oLo"/>
+                    </constraints>
+                    <state key="normal" image="icon_card_arrow"/>
+                    <connections>
+                        <action selector="uiBtNext_TouchUpInside:" destination="-1" eventType="touchUpInside" id="uQU-vr-cbm"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="LbT-kV-tfY" firstAttribute="top" secondItem="Bw5-Ih-9fd" secondAttribute="bottom" constant="140" id="0EG-Nd-uFk"/>
+                <constraint firstItem="Lpg-9f-7Rx" firstAttribute="top" secondItem="Bw5-Ih-9fd" secondAttribute="bottom" constant="140" id="0Tr-uZ-yft"/>
+                <constraint firstAttribute="trailing" secondItem="IYe-tz-25i" secondAttribute="trailing" constant="20" id="13Q-Lo-KiR"/>
+                <constraint firstItem="DfS-1P-cOg" firstAttribute="top" secondItem="Bw5-Ih-9fd" secondAttribute="bottom" id="2t8-vG-LiD"/>
+                <constraint firstAttribute="trailing" secondItem="LbT-kV-tfY" secondAttribute="trailing" constant="5" id="PxX-Pw-svS"/>
+                <constraint firstItem="Lpg-9f-7Rx" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="5" id="WnE-d6-eOM"/>
+                <constraint firstItem="IYe-tz-25i" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="bgy-Kq-cpg"/>
+                <constraint firstItem="IYe-tz-25i" firstAttribute="top" secondItem="DfS-1P-cOg" secondAttribute="bottom" id="fNp-Mb-c5n"/>
+                <constraint firstItem="Bw5-Ih-9fd" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="iZ3-hK-k8A"/>
+                <constraint firstAttribute="trailing" secondItem="Bw5-Ih-9fd" secondAttribute="trailing" id="lwL-Lg-IWF"/>
+                <constraint firstItem="Bw5-Ih-9fd" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="myr-ud-bJc"/>
+                <constraint firstAttribute="bottom" secondItem="IYe-tz-25i" secondAttribute="bottom" constant="25" id="noP-6R-BMg"/>
+                <constraint firstItem="DfS-1P-cOg" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="qXy-c2-3pg"/>
+                <constraint firstAttribute="trailing" secondItem="DfS-1P-cOg" secondAttribute="trailing" id="ro9-DH-lSM"/>
+                <constraint firstItem="Bw5-Ih-9fd" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="tBe-33-gcG"/>
+            </constraints>
+            <point key="canvasLocation" x="34.5" y="53.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="icon_card_arrow" width="12" height="30"/>
+    </resources>
+</document>

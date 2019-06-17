@@ -1,0 +1,8 @@
+"NSCameraUsageDescription" = "Para efetuar scan de QR Codes, por favor conceda permissões para acesso à câmara.";
+"NSLocationAlwaysUsageDescription" = "Se casa inteligente sabe da localização do proprietário, pode adaptar-se melhor às necessidades do mesmo.  Não iremos partilhar a sua localização sem a sua permissão";
+"NSLocationAlwaysAndWhenInUseUsageDescription" = "Se casa inteligente sabe da localização do proprietário, pode adaptar-se melhor às necessidades do mesmo.  Não iremos partilhar a sua localização sem a sua permissão";
+"NSLocationWhenInUseUsageDescription" = "Se casa inteligente sabe da localização do proprietário, pode adaptar-se melhor às necessidades do mesmo.  Não iremos partilhar a sua localização sem a sua permissão";
+"NSLocationUsageDescription" = "Para usufruir de uma melhor e mais adequada experiência, por favor active os serviços de localização. ";
+"NSMicrophoneUsageDescription" = "Isto irá permitir-lhe falar com o seu bebé a qualquer altura! Não iremos partilhar ou gravar nenhuma interação de voz.";
+"NSPhotoLibraryUsageDescription" = "Esta ação irá permitir mudar a sua foto de perfil.";
+"NSMotionUsageDescription" = "Ao saber que sua atividade de movimento será capaz de protegê-lo melhor";

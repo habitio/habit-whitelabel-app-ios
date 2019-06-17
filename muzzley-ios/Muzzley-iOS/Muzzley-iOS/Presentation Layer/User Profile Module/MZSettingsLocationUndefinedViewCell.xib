@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SanFranciscoDisplay-Light.otf">
+            <string>SanFranciscoDisplay-Light</string>
+        </array>
+        <array key="SanFranciscoDisplay-Medium.otf">
+            <string>SanFranciscoDisplay-Medium</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="K2q-2C-Iqj" customClass="MZSettingsLocationUndefinedViewCell" customModule="Muzzley_iOS" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="K2q-2C-Iqj" id="IhP-0o-0Jr">
+                <frame key="frameInset" width="320" height="43"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ylY-SJ-fpc">
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gVP-d9-Q7r" userLabel="lbName">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="188" id="kMh-vl-IWO"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="SanFranciscoDisplay-Light" family="San Francisco Display" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XYX-Db-UfR" userLabel="imgPlaceIcon"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_arrow_right" translatesAutoresizingMaskIntoConstraints="NO" id="oR1-H1-HT7">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="6" id="Px1-FC-t8U"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="oR1-H1-HT7" secondAttribute="trailing" constant="15" id="Gfl-oT-So2"/>
+                            <constraint firstItem="gVP-d9-Q7r" firstAttribute="centerY" secondItem="XYX-Db-UfR" secondAttribute="centerY" id="JPN-Om-RZK"/>
+                            <constraint firstItem="gVP-d9-Q7r" firstAttribute="leading" secondItem="XYX-Db-UfR" secondAttribute="trailing" constant="8" id="Qzm-tg-w8O"/>
+                            <constraint firstItem="gVP-d9-Q7r" firstAttribute="top" secondItem="XYX-Db-UfR" secondAttribute="top" id="SW3-1Q-4m2"/>
+                            <constraint firstItem="gVP-d9-Q7r" firstAttribute="leading" secondItem="XYX-Db-UfR" secondAttribute="trailing" constant="8" symbolic="YES" id="Sgr-KN-mPD"/>
+                            <constraint firstItem="oR1-H1-HT7" firstAttribute="top" secondItem="ylY-SJ-fpc" secondAttribute="top" constant="17" id="TzT-O4-YMN"/>
+                            <constraint firstItem="oR1-H1-HT7" firstAttribute="centerY" secondItem="gVP-d9-Q7r" secondAttribute="centerY" id="ULK-e1-2nx"/>
+                            <constraint firstItem="XYX-Db-UfR" firstAttribute="leading" secondItem="ylY-SJ-fpc" secondAttribute="leadingMargin" id="Y3x-fe-7RB"/>
+                            <constraint firstItem="oR1-H1-HT7" firstAttribute="centerY" secondItem="ylY-SJ-fpc" secondAttribute="centerY" id="sYn-qE-M4O"/>
+                            <constraint firstItem="gVP-d9-Q7r" firstAttribute="leading" secondItem="ylY-SJ-fpc" secondAttribute="leading" constant="36" id="y7U-xS-I4P"/>
+                        </constraints>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="+ Add" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bd5-tN-eUP" userLabel="lbAdd">
+                        <frame key="frameInset" minX="246" minY="11" width="50" height="21"/>
+                        <fontDescription key="fontDescription" name="SanFranciscoDisplay-Medium" family="San Francisco Display" pointSize="14"/>
+                        <color key="textColor" red="0.34509803919999998" green="0.74901960779999999" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailingMargin" secondItem="Bd5-tN-eUP" secondAttribute="trailing" constant="25" id="E2G-LM-iD8"/>
+                    <constraint firstItem="ylY-SJ-fpc" firstAttribute="centerY" secondItem="IhP-0o-0Jr" secondAttribute="centerY" id="Scd-ZV-FGD"/>
+                    <constraint firstItem="ylY-SJ-fpc" firstAttribute="leading" secondItem="IhP-0o-0Jr" secondAttribute="leading" id="hTG-fH-K9r"/>
+                    <constraint firstItem="ylY-SJ-fpc" firstAttribute="top" secondItem="IhP-0o-0Jr" secondAttribute="top" id="j3U-yr-UkA"/>
+                    <constraint firstAttribute="trailing" secondItem="ylY-SJ-fpc" secondAttribute="trailing" id="nvv-ai-MdT"/>
+                    <constraint firstItem="Bd5-tN-eUP" firstAttribute="centerY" secondItem="IhP-0o-0Jr" secondAttribute="centerY" id="uMx-mG-dw0"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="imgPlaceIcon" destination="XYX-Db-UfR" id="n8X-Fl-vae"/>
+                <outlet property="lbAdd" destination="Bd5-tN-eUP" id="CpB-Wd-cbZ"/>
+                <outlet property="lbName" destination="gVP-d9-Q7r" id="ftc-xs-koc"/>
+            </connections>
+            <point key="canvasLocation" x="268" y="254"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="icon_arrow_right" width="8" height="13"/>
+    </resources>
+</document>

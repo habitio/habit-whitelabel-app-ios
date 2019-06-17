@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SanFranciscoDisplay-Medium.otf">
+            <string>SanFranciscoDisplay-Medium</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MZLoadingTopRightViewController" customModule="Muzzley_iOS" customModuleProvider="target">
+            <connections>
+                <outlet property="uiActivityIndicator" destination="zNY-u6-guz" id="bfQ-ij-SlE"/>
+                <outlet property="uiLbSideDescription" destination="NuB-ob-l7n" id="1qh-IO-kGK"/>
+                <outlet property="uiLbTopDescription" destination="qVB-z0-3e3" id="0fy-rM-dEQ"/>
+                <outlet property="view" destination="iN0-l3-epB" id="zYt-cS-J1t"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="zNY-u6-guz" userLabel="uiActivityIndicator">
+                    <rect key="frame" x="345" y="26" width="20" height="20"/>
+                    <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="color" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </activityIndicatorView>
+                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qVB-z0-3e3" userLabel="uiLbTopDescription">
+                    <rect key="frame" x="70" y="4" width="295" height="15"/>
+                    <fontDescription key="fontDescription" name="SanFranciscoDisplay-Medium" family="San Francisco Display" pointSize="12"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NuB-ob-l7n" userLabel="uiLbSideDescription">
+                    <rect key="frame" x="70" y="26" width="265" height="18"/>
+                    <fontDescription key="fontDescription" name="SanFranciscoDisplay-Medium" family="San Francisco Display" pointSize="15"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.19507170376712329" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="NuB-ob-l7n" firstAttribute="top" secondItem="qVB-z0-3e3" secondAttribute="bottom" constant="7" id="HIE-GQ-nbK"/>
+                <constraint firstItem="zNY-u6-guz" firstAttribute="leading" secondItem="NuB-ob-l7n" secondAttribute="trailing" constant="10" id="REJ-PR-Xls"/>
+                <constraint firstItem="qVB-z0-3e3" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="70" id="ZJe-sb-XJb"/>
+                <constraint firstItem="NuB-ob-l7n" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="70" id="aUN-T5-Sus"/>
+                <constraint firstAttribute="trailing" secondItem="zNY-u6-guz" secondAttribute="trailing" constant="10" id="cRs-ze-Aor"/>
+                <constraint firstItem="zNY-u6-guz" firstAttribute="top" secondItem="qVB-z0-3e3" secondAttribute="bottom" constant="7" id="l84-kJ-wCF"/>
+                <constraint firstAttribute="trailing" secondItem="qVB-z0-3e3" secondAttribute="trailing" constant="10" id="tJf-tx-Tnj"/>
+                <constraint firstItem="qVB-z0-3e3" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="4" id="uBV-uc-aKS"/>
+            </constraints>
+            <point key="canvasLocation" x="35.5" y="54.5"/>
+        </view>
+    </objects>
+</document>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12121"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MZWorkerConfigViewController" customModule="Muzzley_iOS" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="iN0-l3-epB" id="M2B-YH-7dM"/>
+                <outlet property="webViewPlaceholder" destination="sGc-xs-Rtm" id="zqb-Ey-T00"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sGc-xs-Rtm">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <color key="backgroundColor" red="0.66666666666666663" green="0.24229943972647119" blue="0.15262443698251471" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="sGc-xs-Rtm" secondAttribute="trailing" id="BQu-Am-b7u"/>
+                <constraint firstAttribute="bottom" secondItem="sGc-xs-Rtm" secondAttribute="bottom" id="KDu-kv-L2b"/>
+                <constraint firstItem="sGc-xs-Rtm" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Vq7-gf-qVU"/>
+                <constraint firstItem="sGc-xs-Rtm" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="xgZ-A7-gU2"/>
+            </constraints>
+        </view>
+    </objects>
+</document>

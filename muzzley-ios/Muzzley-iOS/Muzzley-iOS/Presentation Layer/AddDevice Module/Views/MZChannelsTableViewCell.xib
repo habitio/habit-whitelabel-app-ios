@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="MZChannelsTableViewCell" rowHeight="144" id="KGk-i7-Jjw" customClass="MZChannelsTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="324" height="144"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <frame key="frameInset" width="324" height="143.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="middleTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M3V-Kk-ORl" userLabel="Channel Label">
+                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="15"/>
+                        <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="NsV-wq-Su6" userLabel="Channel Image View">
+                        <constraints>
+                            <constraint firstAttribute="height" constant="45" id="cle-Sl-sVy"/>
+                            <constraint firstAttribute="width" constant="45" id="xhN-iW-PXx"/>
+                        </constraints>
+                    </imageView>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_item_unselected.png" highlightedImage="icon_item_selected.png" translatesAutoresizingMaskIntoConstraints="NO" id="rtk-1y-hLL" userLabel="Selected Item Image View">
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="30" id="eJs-WY-piE"/>
+                            <constraint firstAttribute="height" constant="30" id="shr-TW-Vsc"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="M3V-Kk-ORl" secondAttribute="bottom" constant="15" id="2P7-ks-AIL"/>
+                    <constraint firstItem="M3V-Kk-ORl" firstAttribute="leading" secondItem="NsV-wq-Su6" secondAttribute="trailing" constant="15" id="5Os-sH-ReQ"/>
+                    <constraint firstAttribute="centerY" secondItem="NsV-wq-Su6" secondAttribute="centerY" id="DfS-eA-gaI"/>
+                    <constraint firstItem="M3V-Kk-ORl" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="DfV-Sa-UIT"/>
+                    <constraint firstAttribute="trailing" secondItem="rtk-1y-hLL" secondAttribute="trailing" constant="23" id="PQu-no-qiO"/>
+                    <constraint firstAttribute="centerY" secondItem="rtk-1y-hLL" secondAttribute="centerY" id="YVT-bH-Q0z"/>
+                    <constraint firstItem="rtk-1y-hLL" firstAttribute="leading" secondItem="M3V-Kk-ORl" secondAttribute="trailing" constant="8" id="atH-wK-x6R"/>
+                    <constraint firstItem="NsV-wq-Su6" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="7" id="iv8-cV-dfg"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="channelImageView" destination="NsV-wq-Su6" id="LBY-Qc-Lj3"/>
+                <outlet property="channelLabel" destination="M3V-Kk-ORl" id="MuN-Ce-gPN"/>
+                <outlet property="channelSelectedImageView" destination="rtk-1y-hLL" id="EDu-F4-Uez"/>
+            </connections>
+            <point key="canvasLocation" x="482" y="456"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="icon_item_selected.png" width="30" height="30"/>
+        <image name="icon_item_unselected.png" width="30" height="30"/>
+    </resources>
+</document>

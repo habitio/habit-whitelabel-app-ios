@@ -1,0 +1,8 @@
+"NSCameraUsageDescription" = "In order to scan QR Codes, please grant permission to access the camera.";
+"NSLocationAlwaysUsageDescription" = "If your smart home knows where you are it can better adapt to your needs. We will not share your location without your permission.";
+"NSLocationAlwaysAndWhenInUseUsageDescription" = "If your smart home knows where you are it can better adapt to your needs. We will not share your location without your permission.";
+"NSLocationWhenInUseUsageDescription" = "If your smart home knows where you are it can better adapt to your needs. We will not share your location without your permission.";
+"NSLocationUsageDescription" = "In order to have a powerful and engaging experience, please turn on your location services.";
+"NSMicrophoneUsageDescription" = "This will enable you to talk to your baby at anytime! We will not share or record your voice interactions.";
+"NSPhotoLibraryUsageDescription" = "This action will allow you to change your profile picture.";
+"NSMotionUsageDescription" = "By knowing your motion activity, we will be able to better protect you";

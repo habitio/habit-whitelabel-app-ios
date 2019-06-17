@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.59999999999999964" contentMode="center" id="gTV-IL-0wX" customClass="PlaceholderCollectionViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="330" height="458"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="330" height="458"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EU3-Bn-kN4" customClass="MZInfoPlaceholderView">
+                        <rect key="frame" x="0.0" y="0.0" width="330" height="458"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </subviews>
+                <animations/>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            </view>
+            <animations/>
+            <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="EU3-Bn-kN4" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Iph-3o-96D"/>
+                <constraint firstAttribute="trailing" secondItem="EU3-Bn-kN4" secondAttribute="trailing" id="Meo-tz-j8s"/>
+                <constraint firstItem="EU3-Bn-kN4" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="V71-oh-6QF"/>
+                <constraint firstAttribute="bottom" secondItem="EU3-Bn-kN4" secondAttribute="bottom" id="WkI-6t-DWu"/>
+            </constraints>
+            <size key="customSize" width="330" height="458"/>
+            <connections>
+                <outlet property="infoPlaceholderView" destination="EU3-Bn-kN4" id="YiI-jR-XSx"/>
+            </connections>
+            <point key="canvasLocation" x="412" y="300"/>
+        </collectionViewCell>
+    </objects>
+</document>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MZCardFieldTestView" customModule="Muzzley_iOS" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bFS-wo-5vA">
+                    <rect key="frame" x="30" y="50" width="315" height="587"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.046759896320000001" green="0.75126700099999999" blue="0.7904792746" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="0.41799587669999999" green="0.5695721225" blue="0.75982606279999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <constraints>
+                <constraint firstItem="bFS-wo-5vA" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="30" id="8Uy-vH-dA5"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="bFS-wo-5vA" secondAttribute="bottom" constant="30" id="Woc-Hy-k2A"/>
+                <constraint firstItem="bFS-wo-5vA" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="30" id="pXh-CV-Jp1"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="bFS-wo-5vA" secondAttribute="trailing" constant="30" id="uxS-ea-d32"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="441" y="-1"/>
+        </view>
+    </objects>
+</document>

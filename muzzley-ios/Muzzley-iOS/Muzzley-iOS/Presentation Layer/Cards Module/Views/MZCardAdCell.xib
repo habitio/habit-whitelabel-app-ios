@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" contentMode="center" reuseIdentifier="MZCardAdCell" id="Hbi-nP-X7q" customClass="MZCardAdCell" customModule="Muzzley_iOS" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="150" height="200"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="150" height="200"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="erB-wz-fg1">
+                        <rect key="frame" x="8" y="119" width="134" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wa3-RP-Bn4">
+                        <rect key="frame" x="8" y="155" width="134" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="HQO-iE-qRZ">
+                        <rect key="frame" x="0.0" y="0.0" width="150" height="104"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                    </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iRd-Zp-zIZ" customClass="MZColorButton">
+                        <rect key="frame" x="0.0" y="0.0" width="150" height="200"/>
+                        <connections>
+                            <action selector="onAdTap:" destination="Hbi-nP-X7q" eventType="touchUpInside" id="FVw-b2-Zdi"/>
+                        </connections>
+                    </button>
+                </subviews>
+            </view>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Wa3-RP-Bn4" firstAttribute="trailing" secondItem="erB-wz-fg1" secondAttribute="trailing" id="3sL-ls-RGJ"/>
+                <constraint firstAttribute="bottom" secondItem="iRd-Zp-zIZ" secondAttribute="bottom" id="9q7-dC-Xgl"/>
+                <constraint firstItem="erB-wz-fg1" firstAttribute="leading" secondItem="Hbi-nP-X7q" secondAttribute="leading" constant="8" id="AQS-VR-Xj1"/>
+                <constraint firstAttribute="trailing" secondItem="erB-wz-fg1" secondAttribute="trailing" constant="8" id="FjU-vN-g9K"/>
+                <constraint firstItem="iRd-Zp-zIZ" firstAttribute="top" secondItem="Hbi-nP-X7q" secondAttribute="top" id="JNm-uj-xVJ"/>
+                <constraint firstItem="iRd-Zp-zIZ" firstAttribute="top" secondItem="Hbi-nP-X7q" secondAttribute="top" id="KBP-KE-Ttn"/>
+                <constraint firstAttribute="trailing" secondItem="HQO-iE-qRZ" secondAttribute="trailing" id="Oba-vy-jfp"/>
+                <constraint firstItem="erB-wz-fg1" firstAttribute="top" secondItem="HQO-iE-qRZ" secondAttribute="bottom" constant="8" id="VHl-rh-9da"/>
+                <constraint firstItem="HQO-iE-qRZ" firstAttribute="top" secondItem="Hbi-nP-X7q" secondAttribute="top" id="YaJ-Ki-FlG"/>
+                <constraint firstAttribute="trailing" secondItem="iRd-Zp-zIZ" secondAttribute="trailing" id="aLi-AR-NDP"/>
+                <constraint firstItem="Wa3-RP-Bn4" firstAttribute="leading" secondItem="erB-wz-fg1" secondAttribute="leading" id="bR0-Kw-fMn"/>
+                <constraint firstItem="iRd-Zp-zIZ" firstAttribute="leading" secondItem="Hbi-nP-X7q" secondAttribute="leading" id="d6r-DW-83c"/>
+                <constraint firstAttribute="bottom" secondItem="HQO-iE-qRZ" secondAttribute="bottom" constant="96" id="i4u-lg-ndE"/>
+                <constraint firstItem="erB-wz-fg1" firstAttribute="top" secondItem="iRd-Zp-zIZ" secondAttribute="bottom" id="ktC-Yk-6ZM"/>
+                <constraint firstItem="Wa3-RP-Bn4" firstAttribute="top" secondItem="erB-wz-fg1" secondAttribute="bottom" constant="15" id="lma-68-kHM"/>
+                <constraint firstItem="iRd-Zp-zIZ" firstAttribute="centerX" secondItem="Hbi-nP-X7q" secondAttribute="centerX" id="mD1-b1-p0v"/>
+                <constraint firstItem="HQO-iE-qRZ" firstAttribute="leading" secondItem="Hbi-nP-X7q" secondAttribute="leading" id="qjA-mj-GS6"/>
+                <constraint firstAttribute="bottom" secondItem="iRd-Zp-zIZ" secondAttribute="bottom" id="raS-iI-qNN"/>
+                <constraint firstItem="erB-wz-fg1" firstAttribute="top" secondItem="HQO-iE-qRZ" secondAttribute="bottom" constant="15" id="yAA-rL-lpU"/>
+            </constraints>
+            <size key="customSize" width="256" height="283"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="JNm-uj-xVJ"/>
+                    <exclude reference="mD1-b1-p0v"/>
+                    <exclude reference="raS-iI-qNN"/>
+                    <exclude reference="VHl-rh-9da"/>
+                    <exclude reference="ktC-Yk-6ZM"/>
+                </mask>
+            </variation>
+            <connections>
+                <outlet property="btnAd" destination="iRd-Zp-zIZ" id="Ctx-Pn-GUF"/>
+                <outlet property="productImage" destination="HQO-iE-qRZ" id="1NS-fH-269"/>
+                <outlet property="productName" destination="erB-wz-fg1" id="PG5-WB-YEM"/>
+                <outlet property="productPrice" destination="Wa3-RP-Bn4" id="n6M-UF-fHH"/>
+            </connections>
+            <point key="canvasLocation" x="360" y="277"/>
+        </collectionViewCell>
+    </objects>
+</document>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="SF-Compact-Display-Light.otf">
+            <string>SFCompactDisplay-Light</string>
+        </mutableArray>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="48o-CZ-3Sk" customClass="PopupButton" customModule="Muzzley_iOS" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="120" height="45"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="120" height="45"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lZc-4i-RJk">
+                        <rect key="frame" x="0.0" y="0.0" width="120" height="45"/>
+                        <fontDescription key="fontDescription" name="SFCompactDisplay-Light" family="SF Compact Display" pointSize="17"/>
+                        <color key="textColor" red="0.062745101750000004" green="0.70980393890000004" blue="0.84705883260000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view alpha="0.34999999403953552" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hZK-k2-NjJ">
+                        <rect key="frame" x="118" y="13" width="1" height="20"/>
+                        <color key="backgroundColor" red="0.60271793600000001" green="0.60269987579999995" blue="0.60271006819999995" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="1" id="UQj-xG-aVv"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            </view>
+            <constraints>
+                <constraint firstItem="lZc-4i-RJk" firstAttribute="top" secondItem="48o-CZ-3Sk" secondAttribute="top" id="DGd-KK-u8o"/>
+                <constraint firstAttribute="bottom" secondItem="hZK-k2-NjJ" secondAttribute="bottom" constant="12" id="E30-29-RYK"/>
+                <constraint firstAttribute="bottom" secondItem="lZc-4i-RJk" secondAttribute="bottom" id="J1W-Gf-wEe"/>
+                <constraint firstAttribute="trailing" secondItem="hZK-k2-NjJ" secondAttribute="trailing" constant="1" id="p8G-MX-1dt"/>
+                <constraint firstItem="lZc-4i-RJk" firstAttribute="leading" secondItem="48o-CZ-3Sk" secondAttribute="leading" id="tjU-Iz-Sg0"/>
+                <constraint firstItem="hZK-k2-NjJ" firstAttribute="top" secondItem="48o-CZ-3Sk" secondAttribute="top" constant="13" id="vnk-V8-ON2"/>
+                <constraint firstAttribute="trailing" secondItem="lZc-4i-RJk" secondAttribute="trailing" id="yzC-cs-qgu"/>
+            </constraints>
+            <connections>
+                <outlet property="btnLabel" destination="lZc-4i-RJk" id="GsQ-eq-FOC"/>
+            </connections>
+            <point key="canvasLocation" x="469" y="144"/>
+        </collectionViewCell>
+    </objects>
+</document>

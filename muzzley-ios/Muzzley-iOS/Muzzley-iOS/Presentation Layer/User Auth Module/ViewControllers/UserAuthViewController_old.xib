@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="ios_social_network_icons.ttf">
+            <string>ios_social_network_icons</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner">
+            <connections>
+                <outlet property="activityIndicator" destination="7Ms-9K-uPK" id="3Xu-jX-WgS"/>
+                <outlet property="backgroundImageView" destination="pPY-K2-XSG" id="cOu-n6-NRw"/>
+                <outlet property="facebookButton" destination="TZt-1g-X73" id="MtT-ro-HjN"/>
+                <outlet property="googlePlusButton" destination="UIk-Cu-sz3" id="aJ3-3P-jxL"/>
+                <outlet property="signInButton" destination="vR8-gw-Ufk" id="LVR-KB-BYi"/>
+                <outlet property="signInViewArea" destination="EEd-1f-O6A" id="HTn-1o-9Qr"/>
+                <outlet property="signUpButton" destination="31R-OU-HoH" id="ITe-Zx-C5A"/>
+                <outlet property="uiImage" destination="pQ8-1v-xjI" id="8yF-Lm-umy"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pPY-K2-XSG">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                    <color key="backgroundColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pQ8-1v-xjI" userLabel="uiImage">
+                    <rect key="frame" x="225" y="225" width="150" height="150"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="150" id="0CN-OT-3I7"/>
+                        <constraint firstAttribute="height" constant="150" id="zag-TT-dPQ"/>
+                    </constraints>
+                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EEd-1f-O6A" userLabel="SignIn Area">
+                    <rect key="frame" x="0.0" y="470" width="600" height="130"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TZt-1g-X73" customClass="MZFadeOutOnHighlightButton">
+                            <rect key="frame" x="155" y="0.0" width="140" height="44"/>
+                            <color key="backgroundColor" red="0.31326085329055786" green="0.41598254442214966" blue="0.71793991327285767" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="140" id="08L-Ca-WWP"/>
+                                <constraint firstAttribute="height" constant="44" id="EzF-NS-7pB"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="ios_social_network_icons" family="ios_social_network_icons" pointSize="13"/>
+                            <state key="normal" title="Facebook">
+                                <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <state key="highlighted">
+                                <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="facebookButtonClicked:" destination="-1" eventType="touchUpInside" id="nsL-f1-B7s"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="31R-OU-HoH" customClass="MZFadeOutOnHighlightButton">
+                            <rect key="frame" x="10" y="98" width="580" height="29"/>
+                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="14"/>
+                            <state key="normal" title="Don't have an account yet?">
+                                <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <state key="highlighted">
+                                <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="signUpButtonClicked:" destination="-1" eventType="touchUpInside" id="OOs-q6-NEO"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UIk-Cu-sz3" customClass="MZFadeOutOnHighlightButton">
+                            <rect key="frame" x="306" y="0.0" width="140" height="44"/>
+                            <color key="backgroundColor" red="0.98676514625549316" green="0.16478528082370758" blue="0.20832236111164093" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="44" id="0mw-jB-lYx"/>
+                                <constraint firstAttribute="width" constant="140" id="M8i-oq-RG2"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="ios_social_network_icons" family="ios_social_network_icons" pointSize="13"/>
+                            <state key="normal" title="Google">
+                                <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <state key="highlighted">
+                                <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="googlePlusButtonClicked:" destination="-1" eventType="touchUpInside" id="P42-g7-vMb"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vR8-gw-Ufk" customClass="MZColorButton">
+                            <rect key="frame" x="160" y="54" width="280" height="44"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="44" id="Ffa-eE-LUn"/>
+                                <constraint firstAttribute="width" constant="280" id="SeR-pC-UrG"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
+                            <state key="normal" title="SIGN IN">
+                                <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <state key="highlighted">
+                                <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="signInButtonClicked:" destination="-1" eventType="touchUpInside" id="MtK-nm-SMp"/>
+                            </connections>
+                        </button>
+                        <activityIndicatorView hidden="YES" opaque="NO" alpha="0.69999999999999973" contentMode="scaleToFill" hidesWhenStopped="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="7Ms-9K-uPK">
+                            <rect key="frame" x="290" y="34" width="20" height="20"/>
+                        </activityIndicatorView>
+                        <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TQi-m2-RcY" userLabel="centerPoint">
+                            <rect key="frame" x="300" y="48" width="1" height="1"/>
+                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="1" id="GXS-tm-4TC"/>
+                                <constraint firstAttribute="height" constant="1" id="Xt7-0a-Ovo"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="centerX" secondItem="TQi-m2-RcY" secondAttribute="centerX" id="49W-ol-AWO"/>
+                        <constraint firstItem="TZt-1g-X73" firstAttribute="bottom" secondItem="7Ms-9K-uPK" secondAttribute="centerY" id="4dd-9q-EoZ"/>
+                        <constraint firstAttribute="bottom" secondItem="31R-OU-HoH" secondAttribute="bottom" constant="3" id="4e4-pG-2FZ"/>
+                        <constraint firstItem="vR8-gw-Ufk" firstAttribute="top" secondItem="UIk-Cu-sz3" secondAttribute="bottom" constant="10" id="65Z-Os-F21"/>
+                        <constraint firstItem="TQi-m2-RcY" firstAttribute="bottom" secondItem="vR8-gw-Ufk" secondAttribute="top" constant="-5" id="JRb-al-2xF"/>
+                        <constraint firstItem="UIk-Cu-sz3" firstAttribute="leading" secondItem="TQi-m2-RcY" secondAttribute="trailing" constant="5" id="Khh-cp-Tyd"/>
+                        <constraint firstItem="TQi-m2-RcY" firstAttribute="leading" secondItem="TZt-1g-X73" secondAttribute="trailing" constant="5" id="eAj-k1-GoJ"/>
+                        <constraint firstItem="31R-OU-HoH" firstAttribute="leading" secondItem="EEd-1f-O6A" secondAttribute="leading" constant="10" id="gXk-1z-gdz"/>
+                        <constraint firstAttribute="trailing" secondItem="31R-OU-HoH" secondAttribute="trailing" constant="10" id="hQh-VD-nb5"/>
+                        <constraint firstAttribute="centerX" secondItem="7Ms-9K-uPK" secondAttribute="centerX" id="jEn-l6-bQe"/>
+                        <constraint firstItem="31R-OU-HoH" firstAttribute="top" secondItem="vR8-gw-Ufk" secondAttribute="bottom" id="jfx-sj-j6C"/>
+                        <constraint firstItem="vR8-gw-Ufk" firstAttribute="top" secondItem="TZt-1g-X73" secondAttribute="bottom" constant="10" id="mBs-7t-Eg0"/>
+                        <constraint firstAttribute="centerX" secondItem="vR8-gw-Ufk" secondAttribute="centerX" id="nMi-2P-s6h"/>
+                        <constraint firstAttribute="height" constant="130" id="xLp-OT-Gai"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="pPY-K2-XSG" secondAttribute="trailing" id="8R4-d8-LTA"/>
+                <constraint firstItem="pPY-K2-XSG" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="HgE-B7-zhu"/>
+                <constraint firstAttribute="bottom" secondItem="EEd-1f-O6A" secondAttribute="bottom" id="K4M-gX-ZPt"/>
+                <constraint firstItem="EEd-1f-O6A" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="MSf-IM-Ay6"/>
+                <constraint firstAttribute="bottom" secondItem="pPY-K2-XSG" secondAttribute="bottom" id="PVV-2I-Yke"/>
+                <constraint firstItem="pPY-K2-XSG" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="TYb-jq-6jh"/>
+                <constraint firstAttribute="trailing" secondItem="EEd-1f-O6A" secondAttribute="trailing" id="VjD-Xu-65s"/>
+                <constraint firstItem="pQ8-1v-xjI" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="bCm-ZD-Ls7"/>
+                <constraint firstItem="pQ8-1v-xjI" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="uEH-Zt-Qbv"/>
+            </constraints>
+            <point key="canvasLocation" x="33" y="336"/>
+        </view>
+    </objects>
+</document>

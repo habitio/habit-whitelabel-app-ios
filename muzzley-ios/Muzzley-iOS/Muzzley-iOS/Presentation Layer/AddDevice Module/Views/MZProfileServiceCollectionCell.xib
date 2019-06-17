@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SanFranciscoDisplay-Light.otf">
+            <string>SanFranciscoDisplay-Light</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MZProfileServiceCollectionCell" customModule="Muzzley_iOS"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MZProfileServiceCollectionCell" id="eXS-bN-u9x" customClass="MZProfileServiceCollectionCell" customModule="Muzzley_iOS">
+            <rect key="frame" x="0.0" y="0.0" width="229" height="192"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="229" height="192"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0b0-Al-CxV" userLabel="uiImage">
+                        <rect key="frame" x="0.0" y="0.0" width="229" height="192"/>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="oWb-7O-B1Y" userLabel="uiOverlayImage">
+                        <rect key="frame" x="0.0" y="0.0" width="229" height="192"/>
+                    </imageView>
+                    <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="VerticalGradient" translatesAutoresizingMaskIntoConstraints="NO" id="F7a-aj-KPr" userLabel="FadeImageView">
+                        <rect key="frame" x="0.0" y="0.0" width="229" height="192"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                        <gestureRecognizers/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="8" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9id-kd-xyc" userLabel="uiLabel">
+                        <rect key="frame" x="8" y="157.5" width="213" height="20.5"/>
+                        <fontDescription key="fontDescription" name="SanFranciscoDisplay-Light" family="San Francisco Display" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="F7a-aj-KPr" secondAttribute="bottom" id="3RI-6v-wM0"/>
+                <constraint firstItem="F7a-aj-KPr" firstAttribute="top" secondItem="eXS-bN-u9x" secondAttribute="top" id="4ia-Hx-lzx"/>
+                <constraint firstItem="oWb-7O-B1Y" firstAttribute="top" secondItem="eXS-bN-u9x" secondAttribute="top" id="6cj-Ob-bIv"/>
+                <constraint firstAttribute="trailing" secondItem="F7a-aj-KPr" secondAttribute="trailing" id="7J5-8a-dOA"/>
+                <constraint firstAttribute="bottom" secondItem="0b0-Al-CxV" secondAttribute="bottom" id="8zN-AL-2YY"/>
+                <constraint firstItem="9id-kd-xyc" firstAttribute="leading" secondItem="eXS-bN-u9x" secondAttribute="leading" constant="8" id="Etg-hX-77C"/>
+                <constraint firstItem="0b0-Al-CxV" firstAttribute="leading" secondItem="eXS-bN-u9x" secondAttribute="leading" id="Fj5-rQ-cP7"/>
+                <constraint firstItem="F7a-aj-KPr" firstAttribute="leading" secondItem="eXS-bN-u9x" secondAttribute="leading" id="G5C-pP-E5G"/>
+                <constraint firstItem="0b0-Al-CxV" firstAttribute="top" secondItem="eXS-bN-u9x" secondAttribute="top" id="K1b-St-mVd"/>
+                <constraint firstItem="9id-kd-xyc" firstAttribute="centerX" secondItem="eXS-bN-u9x" secondAttribute="centerX" id="LCG-jh-tWP"/>
+                <constraint firstItem="oWb-7O-B1Y" firstAttribute="leading" secondItem="eXS-bN-u9x" secondAttribute="leading" id="Ok8-0w-iMG"/>
+                <constraint firstAttribute="bottom" secondItem="oWb-7O-B1Y" secondAttribute="bottom" id="aDa-Ch-aap"/>
+                <constraint firstAttribute="trailing" secondItem="0b0-Al-CxV" secondAttribute="trailing" id="aZM-Kl-zeg"/>
+                <constraint firstAttribute="trailing" secondItem="oWb-7O-B1Y" secondAttribute="trailing" id="esG-hL-hTe"/>
+                <constraint firstAttribute="trailing" secondItem="9id-kd-xyc" secondAttribute="trailing" constant="8" id="pOY-M7-G7c"/>
+                <constraint firstAttribute="bottom" secondItem="9id-kd-xyc" secondAttribute="bottom" constant="14" id="yoM-My-qWh"/>
+            </constraints>
+            <size key="customSize" width="229" height="192"/>
+            <connections>
+                <outlet property="uiImage" destination="0b0-Al-CxV" id="Zau-yQ-LIv"/>
+                <outlet property="uiLabel" destination="9id-kd-xyc" id="kb4-1Q-Dwm"/>
+                <outlet property="uiOverlayImage" destination="oWb-7O-B1Y" id="UNK-Pf-YK8"/>
+            </connections>
+            <point key="canvasLocation" x="-240.5" y="8"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="VerticalGradient" width="177" height="177"/>
+    </resources>
+</document>

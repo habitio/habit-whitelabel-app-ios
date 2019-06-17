@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SanFranciscoDisplay-Light.otf">
+            <string>SanFranciscoDisplay-Light</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MZNotificationsSwitchTableViewCell" customModule="Muzzley_iOS" customModuleProvider="target">
+            <connections>
+                <outlet property="title" destination="XV1-uo-joL" id="dvM-Zh-M4Y"/>
+                <outlet property="toggle" destination="kzv-DT-kVf" id="jP5-cu-2Sn"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="MZNotificationsSwitchTableViewCell" rowHeight="76" id="nKO-MW-S1V" customClass="MZSwitchTableViewCell" customModule="Muzzley_iOS" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="76"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="nKO-MW-S1V" id="hSb-eW-RJp">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="75.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XV1-uo-joL">
+                        <rect key="frame" x="16" y="14" width="231" height="18"/>
+                        <fontDescription key="fontDescription" name="SanFranciscoDisplay-Light" family="San Francisco Display" pointSize="15"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="center" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kzv-DT-kVf" userLabel="Toggle" customClass="MZTriStateToggle">
+                        <rect key="frame" x="255" y="9" width="50" height="30"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="kzv-DT-kVf" firstAttribute="leading" secondItem="XV1-uo-joL" secondAttribute="trailing" constant="8" id="1dj-Py-R7f"/>
+                    <constraint firstAttribute="bottom" secondItem="kzv-DT-kVf" secondAttribute="bottom" constant="8" id="4C4-hb-PdR"/>
+                    <constraint firstAttribute="trailing" secondItem="kzv-DT-kVf" secondAttribute="trailing" constant="8" id="5aK-ci-egl"/>
+                    <constraint firstItem="XV1-uo-joL" firstAttribute="leading" secondItem="hSb-eW-RJp" secondAttribute="leadingMargin" constant="8" id="HEU-pC-PWy"/>
+                    <constraint firstItem="XV1-uo-joL" firstAttribute="leading" secondItem="hSb-eW-RJp" secondAttribute="leading" constant="16" id="XFU-Fh-aef"/>
+                    <constraint firstItem="XV1-uo-joL" firstAttribute="top" secondItem="hSb-eW-RJp" secondAttribute="top" constant="14" id="esg-Tk-tUe"/>
+                    <constraint firstItem="XV1-uo-joL" firstAttribute="top" secondItem="hSb-eW-RJp" secondAttribute="topMargin" constant="6" id="f5W-tM-SI3"/>
+                    <constraint firstItem="kzv-DT-kVf" firstAttribute="top" secondItem="hSb-eW-RJp" secondAttribute="top" constant="8" id="wUU-WO-3At"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+            <point key="canvasLocation" x="273" y="271"/>
+        </tableViewCell>
+    </objects>
+</document>

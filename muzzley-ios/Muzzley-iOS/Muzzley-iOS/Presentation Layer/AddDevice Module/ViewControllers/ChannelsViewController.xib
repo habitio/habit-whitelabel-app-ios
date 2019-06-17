@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="17C205" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ChannelsViewController">
+            <connections>
+                <outlet property="selectChannelsButton" destination="ZyH-VC-TDs" id="2B0-Z7-o0n"/>
+                <outlet property="tableView" destination="VhC-PI-SyL" id="d3X-Ij-Vha"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" allowsMultipleSelection="YES" rowHeight="75" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="VhC-PI-SyL">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="583"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="separatorColor" red="0.0" green="0.0" blue="0.0" alpha="0.14999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
+                </tableView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZyH-VC-TDs" customClass="MZColorButton">
+                    <rect key="frame" x="30" y="593" width="315" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="44" id="030-4w-1Ym"/>
+                        <constraint firstAttribute="height" constant="44" id="gi4-Zb-BcA"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <connections>
+                        <action selector="selectChannelsButtonTouchUpInside:" destination="-1" eventType="touchUpInside" id="5js-9o-ccn"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="ZyH-VC-TDs" firstAttribute="top" secondItem="VhC-PI-SyL" secondAttribute="bottom" constant="10" id="7ot-6P-TGF"/>
+                <constraint firstItem="VhC-PI-SyL" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Ekx-Lc-YU0"/>
+                <constraint firstItem="VhC-PI-SyL" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="HKA-B2-Dr9"/>
+                <constraint firstAttribute="trailing" secondItem="ZyH-VC-TDs" secondAttribute="trailing" constant="30" id="TWH-0s-nvo"/>
+                <constraint firstItem="ZyH-VC-TDs" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="30" id="V3r-Lq-1Fb"/>
+                <constraint firstAttribute="trailing" secondItem="VhC-PI-SyL" secondAttribute="trailing" id="mOf-5a-7tL"/>
+                <constraint firstAttribute="bottom" secondItem="ZyH-VC-TDs" secondAttribute="bottom" constant="30" id="n16-rt-NcT"/>
+            </constraints>
+            <point key="canvasLocation" x="480.5" y="402.5"/>
+        </view>
+    </objects>
+</document>

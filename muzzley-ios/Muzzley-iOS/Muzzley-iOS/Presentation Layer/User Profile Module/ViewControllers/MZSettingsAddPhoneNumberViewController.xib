@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SF-Compact-Display-Light.otf">
+            <string>SFCompactDisplay-Light</string>
+        </array>
+        <array key="SanFranciscoDisplay-Light.otf">
+            <string>SanFranciscoDisplay-Light</string>
+        </array>
+        <array key="SanFranciscoDisplay-Regular.otf">
+            <string>SanFranciscoDisplay-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MZSettingsAddPhoneNumberViewController" customModule="Muzzley_iOS" customModuleProvider="target">
+            <connections>
+                <outlet property="searchDisplayController" destination="erE-pm-eKn" id="S2K-09-CFt"/>
+                <outlet property="uiCountriesTable" destination="1nC-g5-uiC" id="4CA-40-gNE"/>
+                <outlet property="uiCountryResultsView" destination="gvW-sO-clU" id="cRs-yf-Yqd"/>
+                <outlet property="uiDescription" destination="7Zp-cT-QBb" id="BuF-BC-SOa"/>
+                <outlet property="uiIconSearch" destination="amR-ps-8w2" id="8OQ-7W-52v"/>
+                <outlet property="uiLbCountry" destination="OBJ-1p-MLV" id="sYd-W1-b0N"/>
+                <outlet property="uiLbError" destination="MwE-hF-NqE" id="Knb-Wl-2zQ"/>
+                <outlet property="uiSearchView" destination="eum-AP-i5n" id="v5i-6I-zZf"/>
+                <outlet property="view" destination="iN0-l3-epB" id="6Rh-Hr-8Q8"/>
+                <outletCollection property="uiTfPhoneNumber" destination="zeY-io-1Xx" collectionClass="NSMutableArray" id="9YP-oN-bme"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Zp-cT-QBb" userLabel="uiDescription">
+                    <rect key="frame" x="30" y="40" width="315" height="24"/>
+                    <fontDescription key="fontDescription" name="SanFranciscoDisplay-Regular" family="San Francisco Display" pointSize="20"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eum-AP-i5n" userLabel="uiSearchView">
+                    <rect key="frame" x="15" y="98" width="345" height="32"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IconSearch" translatesAutoresizingMaskIntoConstraints="NO" id="amR-ps-8w2" userLabel="uiIconSearch">
+                            <rect key="frame" x="318" y="8" width="16" height="16"/>
+                            <color key="tintColor" red="0.34509803919999998" green="0.74901960779999999" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="16" id="nSQ-k9-NVe"/>
+                                <constraint firstAttribute="width" constant="16" id="pmM-AS-vMP"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OBJ-1p-MLV" userLabel="uiLbCountry">
+                            <rect key="frame" x="15" y="6" width="295" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.93725490199999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="amR-ps-8w2" firstAttribute="centerY" secondItem="eum-AP-i5n" secondAttribute="centerY" id="2bH-fQ-p97"/>
+                        <constraint firstItem="OBJ-1p-MLV" firstAttribute="leading" secondItem="eum-AP-i5n" secondAttribute="leading" constant="15" id="GKJ-Oj-u3X"/>
+                        <constraint firstItem="amR-ps-8w2" firstAttribute="leading" secondItem="OBJ-1p-MLV" secondAttribute="trailing" constant="8" id="ZVw-Vb-FdC"/>
+                        <constraint firstAttribute="height" constant="32" id="ZpH-uY-EYH"/>
+                        <constraint firstItem="amR-ps-8w2" firstAttribute="top" secondItem="eum-AP-i5n" secondAttribute="top" constant="8" id="ao5-HX-jq7"/>
+                        <constraint firstItem="OBJ-1p-MLV" firstAttribute="centerY" secondItem="eum-AP-i5n" secondAttribute="centerY" id="tNI-ZO-g5P"/>
+                        <constraint firstAttribute="trailing" secondItem="amR-ps-8w2" secondAttribute="trailing" constant="11" id="zgs-zX-kfu"/>
+                    </constraints>
+                </view>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="zeY-io-1Xx" userLabel="uiTfPhoneNumber" customClass="MZTextField" customModule="Muzzley_iOS" customModuleProvider="target">
+                    <rect key="frame" x="15" y="155" width="345" height="32"/>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" name="SFCompactDisplay-Light" family="SF Compact Display" pointSize="26"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MwE-hF-NqE" userLabel="uiLbError">
+                    <rect key="frame" x="16" y="195" width="343" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gvW-sO-clU" userLabel="uiCountryResults">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <subviews>
+                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="1nC-g5-uiC" userLabel="uiCountriesTable">
+                            <rect key="frame" x="8" y="76" width="359" height="583"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </tableView>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FM8-Qg-B07">
+                            <rect key="frame" x="8" y="26" width="359" height="50"/>
+                            <subviews>
+                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="249" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Search address" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="eRT-Py-1QZ" userLabel="uiTfAddress">
+                                    <rect key="frame" x="48" y="15" width="241" height="20"/>
+                                    <fontDescription key="fontDescription" name="SanFranciscoDisplay-Light" family="San Francisco Display" pointSize="16"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                </textField>
+                                <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="752" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oiO-VO-o9w" userLabel="uiBtCancel">
+                                    <rect key="frame" x="297" y="10" width="46" height="30"/>
+                                    <state key="normal" title="Button"/>
+                                </button>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IconSearch" translatesAutoresizingMaskIntoConstraints="NO" id="6Lc-H3-fbm">
+                                    <rect key="frame" x="16" y="13" width="24" height="24"/>
+                                    <color key="tintColor" red="0.23004928690000001" green="0.0" blue="0.21345427850000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </imageView>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstItem="eRT-Py-1QZ" firstAttribute="centerY" secondItem="FM8-Qg-B07" secondAttribute="centerY" id="8HN-9I-mZS"/>
+                                <constraint firstAttribute="trailing" secondItem="oiO-VO-o9w" secondAttribute="trailing" constant="16" id="AP4-qf-Szy"/>
+                                <constraint firstItem="6Lc-H3-fbm" firstAttribute="leading" secondItem="FM8-Qg-B07" secondAttribute="leading" constant="16" id="TTH-1m-8Qf"/>
+                                <constraint firstItem="oiO-VO-o9w" firstAttribute="leading" secondItem="eRT-Py-1QZ" secondAttribute="trailing" constant="8" id="cuD-ao-hMB"/>
+                                <constraint firstAttribute="height" constant="50" id="jDm-I1-5lT"/>
+                                <constraint firstItem="eRT-Py-1QZ" firstAttribute="leading" secondItem="6Lc-H3-fbm" secondAttribute="trailing" constant="8" id="lkL-Eo-KXC"/>
+                                <constraint firstItem="oiO-VO-o9w" firstAttribute="centerY" secondItem="FM8-Qg-B07" secondAttribute="centerY" id="qAN-TE-lX1"/>
+                                <constraint firstItem="6Lc-H3-fbm" firstAttribute="centerY" secondItem="FM8-Qg-B07" secondAttribute="centerY" id="tAc-zm-XW5"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="1nC-g5-uiC" firstAttribute="top" secondItem="FM8-Qg-B07" secondAttribute="bottom" id="OVO-nI-5ON"/>
+                        <constraint firstAttribute="trailing" secondItem="1nC-g5-uiC" secondAttribute="trailing" constant="8" id="dCj-cI-dlH"/>
+                        <constraint firstItem="FM8-Qg-B07" firstAttribute="top" secondItem="gvW-sO-clU" secondAttribute="top" constant="26" id="f4c-FL-Nde"/>
+                        <constraint firstItem="1nC-g5-uiC" firstAttribute="leading" secondItem="gvW-sO-clU" secondAttribute="leading" constant="8" id="ldX-PQ-m57"/>
+                        <constraint firstItem="FM8-Qg-B07" firstAttribute="leading" secondItem="gvW-sO-clU" secondAttribute="leading" constant="8" id="nGI-py-cCS"/>
+                        <constraint firstAttribute="trailing" secondItem="FM8-Qg-B07" secondAttribute="trailing" constant="8" id="ry3-rB-ICf"/>
+                        <constraint firstAttribute="bottom" secondItem="1nC-g5-uiC" secondAttribute="bottom" constant="8" id="vPD-g8-Dzy"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="gvW-sO-clU" secondAttribute="trailing" id="1IP-Jt-lZl"/>
+                <constraint firstItem="7Zp-cT-QBb" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="40" id="2TN-7T-mft"/>
+                <constraint firstItem="7Zp-cT-QBb" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="30" id="A1k-ni-9TA"/>
+                <constraint firstItem="zeY-io-1Xx" firstAttribute="top" secondItem="eum-AP-i5n" secondAttribute="bottom" constant="25" id="DVv-vV-7fF"/>
+                <constraint firstItem="eum-AP-i5n" firstAttribute="top" secondItem="7Zp-cT-QBb" secondAttribute="bottom" constant="34" id="JsS-DG-09t"/>
+                <constraint firstAttribute="trailing" secondItem="eum-AP-i5n" secondAttribute="trailing" constant="15" id="MPL-qy-lQV"/>
+                <constraint firstItem="gvW-sO-clU" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="NnB-cv-Acr"/>
+                <constraint firstAttribute="trailing" secondItem="7Zp-cT-QBb" secondAttribute="trailing" constant="30" id="Wit-xx-W4D"/>
+                <constraint firstItem="MwE-hF-NqE" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="b1Q-F3-g5t"/>
+                <constraint firstItem="MwE-hF-NqE" firstAttribute="top" secondItem="zeY-io-1Xx" secondAttribute="bottom" constant="8" id="bqk-IL-Gw5"/>
+                <constraint firstAttribute="trailing" secondItem="MwE-hF-NqE" secondAttribute="trailing" constant="16" id="c2O-xL-wYF"/>
+                <constraint firstAttribute="bottom" secondItem="gvW-sO-clU" secondAttribute="bottom" id="eVt-bS-qfK"/>
+                <constraint firstItem="eum-AP-i5n" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="15" id="g6Y-Yn-IRJ"/>
+                <constraint firstAttribute="trailing" secondItem="zeY-io-1Xx" secondAttribute="trailing" constant="15" id="nua-t5-wki"/>
+                <constraint firstItem="zeY-io-1Xx" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="15" id="tY0-GI-qi1"/>
+                <constraint firstItem="gvW-sO-clU" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="wxc-TS-xR4"/>
+            </constraints>
+            <point key="canvasLocation" x="49.5" y="52.5"/>
+        </view>
+        <searchDisplayController id="erE-pm-eKn">
+            <connections>
+                <outlet property="delegate" destination="-1" id="KNb-Lt-qIp"/>
+                <outlet property="searchContentsController" destination="-1" id="XOX-de-epm"/>
+                <outlet property="searchResultsDataSource" destination="-1" id="7qY-qC-U0v"/>
+                <outlet property="searchResultsDelegate" destination="-1" id="4u7-3p-bUH"/>
+            </connections>
+        </searchDisplayController>
+    </objects>
+    <resources>
+        <image name="IconSearch" width="24" height="24"/>
+    </resources>
+</document>

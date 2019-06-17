@@ -1,0 +1,72 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "A24B35B371858366E44A0FC067E78C36EAC211F4",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "A24B35B371858366E44A0FC067E78C36EAC211F4" : 0,
+    "08A5CC0000463A61268799D05F03EA43F2408CE2" : 0,
+    "E1679FC111225C1A98EA0394D0D0D5A7DEF963BC" : 0,
+    "8B123162C394A0A0A138779108E4C59DD771865A" : 0,
+    "1787FA53156D6E06DCEC13AA228488A413FE6B09" : 9223372036854775807,
+    "D0F37F555D553E3343EA5D6FA8E766EC6080E759" : 0,
+    "0C48D95678D4E873125E9C19F30DE9E6C581546C" : 0,
+    "6AC0722B7BE3FA27716D8CB58780284FED75DC3C" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "CCD417B4-90A7-4B3C-BD7B-5D4453B2D577",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "A24B35B371858366E44A0FC067E78C36EAC211F4" : "muzzley-ios-workspace-swift-4\/",
+    "08A5CC0000463A61268799D05F03EA43F2408CE2" : "muzzley-ios-workspace-swift-3\/Submodules\/FoscamSDK\/",
+    "E1679FC111225C1A98EA0394D0D0D5A7DEF963BC" : "muzzley-ios-workspace-swift-4\/Submodules\/ijkplayer-bilibili\/",
+    "8B123162C394A0A0A138779108E4C59DD771865A" : "muzzley-ios-workspace\/Submodules\/RxSwift\/",
+    "1787FA53156D6E06DCEC13AA228488A413FE6B09" : "muzzley-ios-workspace\/Submodules\/SwiftMQTT\/",
+    "D0F37F555D553E3343EA5D6FA8E766EC6080E759" : "muzzley-ios-workspace\/Submodules\/TagListView\/",
+    "0C48D95678D4E873125E9C19F30DE9E6C581546C" : "muzzley-ios-workspace\/Submodules\/ijkplayer\/",
+    "6AC0722B7BE3FA27716D8CB58780284FED75DC3C" : "muzzley-ios-workspace\/Submodules\/CocoaMQTT\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "muzzley-app",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "muzzley-app.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/bitbucket.org\/muzzley\/muzzley-ios-foscam.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "08A5CC0000463A61268799D05F03EA43F2408CE2"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/bitbucket.org\/muzzley\/muzzley-ios-ijkplayer.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "0C48D95678D4E873125E9C19F30DE9E6C581546C"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/aciidb0mb3r\/SwiftMQTT.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "1787FA53156D6E06DCEC13AA228488A413FE6B09"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/emqtt\/CocoaMQTT",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "6AC0722B7BE3FA27716D8CB58780284FED75DC3C"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/ReactiveX\/RxSwift.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "8B123162C394A0A0A138779108E4C59DD771865A"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/bitbucket.org\/muzzley\/muzzley-ios-workspace",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "A24B35B371858366E44A0FC067E78C36EAC211F4"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/xhacker\/TagListView.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "D0F37F555D553E3343EA5D6FA8E766EC6080E759"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/Bilibili\/ijkplayer",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "E1679FC111225C1A98EA0394D0D0D5A7DEF963BC"
+    }
+  ]
+}

@@ -1,0 +1,202 @@
+
+;(function() {
+	if (window.WebViewJavascriptBridge) { return }
+	var messagingIframe
+	var sendMessageQueue = []
+	var receiveMessageQueue = []
+	var messageHandlers = {}
+	
+	var MESSAGE_SEPARATOR = '__WVJB_MESSAGE_SEPERATOR__'
+	var CUSTOM_PROTOCOL_SCHEME = 'wvjbscheme'
+	var QUEUE_HAS_MESSAGE = '__WVJB_QUEUE_MESSAGE__'
+	
+	var responseCallbacks = {}
+	var uniqueId = 1
+	
+	function _createQueueReadyIframe(doc) {
+		messagingIframe = doc.createElement('iframe')
+		messagingIframe.style.display = 'none'
+		doc.documentElement.appendChild(messagingIframe)
+	}
+
+	function init(messageHandler) {
+		if (WebViewJavascriptBridge._messageHandler) { throw new Error('WebViewJavascriptBridge.init called twice') }
+		WebViewJavascriptBridge._messageHandler = messageHandler
+		var receivedMessages = receiveMessageQueue
+		receiveMessageQueue = null
+		for (var i=0; i<receivedMessages.length; i++) {
+			_dispatchMessageFromObjC(receivedMessages[i])
+		}
+	}
+
+	function send(data, responseCallback) {
+		_doSend({ data: { 'a':'signal', 'd':JSON.parse(data) } } , responseCallback)
+	}
+	
+    function publish(data, responseCallback) {
+		_doSend({ data: { 'a':'publish', 'd':JSON.parse(data) } }, responseCallback)
+    }
+  
+    function subscribe(data, responseCallback) {
+		_doSend({ data: { 'a':'subscribe', 'd':JSON.parse(data) } }, responseCallback)
+    }
+  
+    function unsubscribe(data, responseCallback) {
+		_doSend({ data: { 'a':'unsubscribe', 'd':JSON.parse(data) } }, responseCallback)
+    }
+  
+    function saveRule(data, responseCallback) {
+		_doSend({ data: { 'a':'saveRule', 'd':JSON.parse(data) } }, responseCallback)
+    }
+
+	function openUrl(data, responseCallback) {
+		_doSend({ data: { 'a':'openUrl', 'd': data } }, responseCallback)
+	}
+
+	function getGrammar(data, responseCallback) {
+		_doSend({ data: { 'a':'getGrammar', 'd':JSON.parse(data) } }, responseCallback)
+	}
+
+	function getUnitsSpec(responseCallback) {
+		_doSend({ data: { 'a':'getUnitsSpec' } }, responseCallback)
+	}
+
+	function getCurrencySpec(responseCallback) {
+		_doSend({ data: { 'a':'getCurrencySpec' } }, responseCallback)
+	}
+
+	function getGrammar(data, responseCallback) {
+		_doSend({ data: { 'a':'getGrammar', 'd':JSON.parse(data) } }, responseCallback)
+	}
+
+
+    function bridgeReady() {
+        _doSend({ data: { 'a':'bridgeReady' } })
+    }
+  
+	function registerHandler(handlerName, handler) {
+		messageHandlers[handlerName] = handler
+	}
+	
+	function callHandler(handlerName, data, responseCallback) {
+		_doSend({ handlerName:handlerName, data:JSON.parse(data) }, responseCallback)
+	}
+
+    function getAll(responseCallback) {
+        _doSend({ data: { 'a':'getAllComponents' } } , responseCallback)
+    }
+
+    function get(data, responseCallback) {
+        _doSend({ data: { 'a':'getComponent', 'd':JSON.parse(data) } } , responseCallback)
+    }
+
+    function onComponent(nativeComponentID, event, handler) {
+        _doSend({ data: { 'a':'onComponent', 'd':event } }, handler)
+        /*WebViewVideoJavascriptBridge.on(nativeComponentID, event, handler)*/
+    }
+
+    function sendComponent(nativeComponentID, message, handler) {
+        message = JSON.parse(message);
+        message.componentId = nativeComponentID;
+        _doSend({ data: { 'a':'sendComponent', 'd':message } }, handler)
+    }
+
+
+	function _doSend(message, responseCallback) {
+		if (responseCallback) {
+			var callbackId = 'cb_'+(uniqueId++)+'_'+new Date().getTime()
+			responseCallbacks[callbackId] = responseCallback
+			message['callbackId'] = callbackId
+		}
+		sendMessageQueue.push(JSON.stringify(message))
+		messagingIframe.src = CUSTOM_PROTOCOL_SCHEME + '://' + QUEUE_HAS_MESSAGE
+	}
+
+	function _fetchQueue() {
+		var messageQueueString = sendMessageQueue.join(MESSAGE_SEPARATOR)
+		sendMessageQueue = []
+		return messageQueueString
+	}
+
+	function _dispatchMessageFromObjC(messageJSON) {
+		setTimeout(function _timeoutDispatchMessageFromObjC() {
+			var message = JSON.parse(messageJSON)
+			var messageHandler
+			
+			if (message.responseId) {
+				var responseCallback = responseCallbacks[message.responseId]
+				if (!responseCallback) { return; }
+				responseCallback(message.responseData)
+				delete responseCallbacks[message.responseId]
+			} else {
+				var responseCallback
+				if (message.callbackId) {
+					var callbackResponseId = message.callbackId
+					responseCallback = function(responseData) {
+						_doSend({ responseId:callbackResponseId, responseData:responseData })
+					}
+				}
+				
+				var handler = WebViewJavascriptBridge._messageHandler
+				if (message.handlerName) {
+					handler = messageHandlers[message.handlerName]
+				}
+				
+				try {
+					handler(message.data, responseCallback)
+				} catch(exception) {
+					if (typeof console != 'undefined') {
+						console.log("WebViewJavascriptBridge: WARNING: javascript handler threw.", message, exception)
+					}
+				}
+			}
+		})
+	}
+	
+	function _handleMessageFromObjC(messageJSON) {
+		if (receiveMessageQueue) {
+			receiveMessageQueue.push(messageJSON)
+		} else {
+			_dispatchMessageFromObjC(messageJSON)
+		}
+	}
+
+	window.WebViewJavascriptBridge = {
+		init: init,
+		send: send,
+        publish: publish,
+        subscribe: subscribe,
+        unsubscribe: unsubscribe,
+		saveRule: saveRule,
+		openUrl : openUrl,
+		getUnitsSpec: getUnitsSpec,
+		getGrammar: getGrammar,
+		registerHandler: registerHandler,
+		callHandler: callHandler,
+		_fetchQueue: _fetchQueue,
+        _handleMessageFromObjC: _handleMessageFromObjC,
+        nativeComponents: {
+            getAll: getAll,
+            get: get
+        }
+	}
+
+
+    window.WebViewVideoJavascriptBridge = {
+        on: onComponent,
+        send: sendComponent
+    }
+
+
+	var doc = document
+	_createQueueReadyIframe(doc)
+	var readyEvent = doc.createEvent('Events')
+	readyEvent.initEvent('WebViewJavascriptBridgeReady')
+    readyEvent.options = options || '{}'
+	readyEvent.bridge = WebViewJavascriptBridge
+    readyEvent.bridgeVideo = WebViewVideoJavascriptBridge
+	doc.dispatchEvent(readyEvent)
+    setTimeout(function () {
+        bridgeReady()
+    }, 0);
+})();
